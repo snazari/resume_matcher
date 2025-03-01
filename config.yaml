@@ -1,0 +1,10 @@
+file_paths:
+  candidate_file: "./data/candidate_data-gap-solutions-only.csv"
+  listings_file: "./data/t04_itid.csv"
+  output_dir: "./output"
+
+hugging_face:
+  model_id: "sentence-transformers/all-MiniLM-L6-v2"
+  hf_token: "${HUGGINGFACE_TOKEN}"
+
+debug_mode: true

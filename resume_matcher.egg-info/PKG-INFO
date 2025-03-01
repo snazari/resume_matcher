@@ -1,0 +1,158 @@
+Metadata-Version: 2.1
+Name: resume-matcher
+Version: 0.1.1
+Summary: Match candidate resumes with job openings using NLP and embeddings
+Home-page: https://github.com/yourusername/resume-matcher
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Human Resources
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Office/Business :: Office Suites
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: plotly>=5.3.0
+Requires-Dist: huggingface-hub>=0.12.0
+Requires-Dist: langchain>=0.0.200
+Requires-Dist: langchain-community>=0.0.12
+Requires-Dist: langchain-text-splitters>=0.0.1
+Requires-Dist: pydantic>=1.9.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: requests>=2.27.0
+Requires-Dist: backoff>=2.0.0
+Requires-Dist: python-docx>=0.8.11
+Requires-Dist: python-dotenv>=0.19.0
+Requires-Dist: PyPDF2>=2.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: black>=22.1.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: mypy>=0.930; extra == "dev"
+Requires-Dist: isort>=5.10.0; extra == "dev"
+
+# Resume Matcher
+
+A modern system for matching candidate resumes with job listings using natural language processing and embedding-based semantic search.
+
+## Features
+
+- Extract structured information from resume files (PDF, DOCX)
+- Generate embeddings for candidate profiles and job listings
+- Calculate similarity scores to find the best matches
+- Visualize results with interactive heatmaps and tables
+- Command-line interface for easy use in workflows
+- Export results to CSV for further analysis
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/resume-matcher.git
+cd resume-matcher
+
+# Install the package
+pip install -e .
+
+# Copy the environment template and configure your variables
+cp .env.template .env
+# Edit .env with your API keys and paths
+```
+
+## Configuration
+
+Create a `config.yaml` file with your settings:
+
+```yaml
+file_paths:
+  candidate_file: "./data/candidates.csv"
+  listings_file: "./data/jobs.csv"
+  output_dir: "./output" 
+
+hugging_face:
+  model_id: "sentence-transformers/all-MiniLM-L6-v2"
+  hf_token: "${HUGGINGFACE_TOKEN}"
+
+llm:
+  model_id: "meta-llama/Llama-3.3-70B-Instruct"
+  api_token: "${LLM_TOKEN}"
+
+debug_mode: false
+```
+
+## Usage
+
+### Command Line
+
+```bash
+# Process resume files
+resume-matcher process ./data/resumes --output ./data/candidates.csv
+
+# Match candidates to job listings
+resume-matcher match --candidates ./data/candidates.csv --jobs ./data/jobs.csv
+
+# Run the full pipeline
+resume-matcher pipeline --process-resumes --resume-dir ./data/resumes
+```
+
+### Python API
+
+```python
+from resume_matcher import ResumeMatcherApp
+
+# Initialize the application
+app = ResumeMatcherApp(config_path="config.yaml")
+
+# Run the full pipeline
+results = app.run_full_pipeline(
+    process_resumes=True,
+    resume_dir="./data/resumes",
+    visualize=True
+)
+
+# Get the top matches
+top_matches = results["top_matches"]
+print(top_matches.head(10))
+```
+
+## Data Format
+
+### Candidate CSV Format
+
+```
+Name,Years of experience,Degree,Resume Experience
+John Doe,5,Bachelor of Computer Science,Software development with Python...
+```
+
+### Job Listing CSV Format
+
+```
+Role,Description,Degree,Years of Exp,Expanded Experience,Notes
+Data Scientist,Developing machine learning models...,Master's or PhD,3-5,Python experience...,Remote
+```
+
+## Development
+
+```bash
+# Install development dependencies
+pip install -e ".[dev]"
+
+# Run tests
+pytest
+
+# Format code
+black resume_matcher tests
+```
+
+## License
+
+MIT

@@ -1,0 +1,81 @@
+2025-02-28 18:59:32,960 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-02-28 18:59:32,977 - root - ERROR - Error processing resumes: Candidate file not found: data\candidates.csv
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 141, in command_process
+    app = ResumeMatcherApp(config_path=args.config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 31, in __init__
+    self.config_manager.validate_paths()
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 91, in validate_paths
+    raise FileNotFoundError(f"Candidate file not found: {self.app_config.file_paths.candidate_file}")
+FileNotFoundError: Candidate file not found: data\candidates.csv
+2025-02-28 19:01:18,888 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-02-28 19:01:18,890 - root - ERROR - Error processing resumes: Listings file not found: data\jobs.csv
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 141, in command_process
+    app = ResumeMatcherApp(config_path=args.config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 31, in __init__
+    self.config_manager.validate_paths()
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 94, in validate_paths
+    raise FileNotFoundError(f"Listings file not found: {self.app_config.file_paths.listings_file}")
+FileNotFoundError: Listings file not found: data\jobs.csv
+2025-02-28 19:02:32,368 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-02-28 19:02:32,368 - root - INFO - Processing resumes from data
+2025-02-28 19:02:32,368 - resume_matcher.main - INFO - Processing resumes from data
+2025-02-28 19:02:32,368 - root - ERROR - Error processing resumes: Resume extractor not configured
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 150, in command_process
+    candidates_df = app.process_resumes(str(resume_dir))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 83, in process_resumes
+    raise ValueError("Resume extractor not configured")
+ValueError: Resume extractor not configured
+2025-02-28 19:02:52,038 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-02-28 19:02:52,038 - root - INFO - Processing resumes from data
+2025-02-28 19:02:52,038 - resume_matcher.main - INFO - Processing resumes from data
+2025-02-28 19:02:52,038 - root - ERROR - Error processing resumes: Resume extractor not configured
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 150, in command_process
+    candidates_df = app.process_resumes(str(resume_dir))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 83, in process_resumes
+    raise ValueError("Resume extractor not configured")
+ValueError: Resume extractor not configured
+2025-02-28 19:06:42,114 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-02-28 19:06:42,114 - root - INFO - Processing resumes from data
+2025-02-28 19:06:42,114 - resume_matcher.main - INFO - Processing resumes from data
+2025-02-28 19:06:42,114 - root - ERROR - Error processing resumes: Resume extractor not configured
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 150, in command_process
+    candidates_df = app.process_resumes(str(resume_dir))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 83, in process_resumes
+    raise ValueError("Resume extractor not configured")
+ValueError: Resume extractor not configured
+2025-02-28 19:07:09,370 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-02-28 19:07:09,370 - resume_matcher.main - INFO - Loading data from files
+2025-02-28 19:07:09,377 - root - ERROR - Error matching candidates: [Errno 2] No such file or directory: 'path\\to\\candidates.csv'
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 182, in command_match
+    candidates_df, jobs_df = app.load_data()
+                             ^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 108, in load_data
+    candidates_df = pd.read_csv(self.config.file_paths.candidate_file)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'path\\to\\candidates.csv'
