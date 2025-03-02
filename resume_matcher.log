@@ -1,1272 +1,301 @@
-2025-02-28 18:59:32,960 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-02-28 18:59:32,977 - root - ERROR - Error processing resumes: Candidate file not found: data\candidates.csv
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 141, in command_process
-    app = ResumeMatcherApp(config_path=args.config)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 31, in __init__
-    self.config_manager.validate_paths()
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 91, in validate_paths
-    raise FileNotFoundError(f"Candidate file not found: {self.app_config.file_paths.candidate_file}")
-FileNotFoundError: Candidate file not found: data\candidates.csv
-2025-02-28 19:01:18,888 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-02-28 19:01:18,890 - root - ERROR - Error processing resumes: Listings file not found: data\jobs.csv
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 141, in command_process
-    app = ResumeMatcherApp(config_path=args.config)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 31, in __init__
-    self.config_manager.validate_paths()
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 94, in validate_paths
-    raise FileNotFoundError(f"Listings file not found: {self.app_config.file_paths.listings_file}")
-FileNotFoundError: Listings file not found: data\jobs.csv
-2025-02-28 19:02:32,368 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-02-28 19:02:32,368 - root - INFO - Processing resumes from data
-2025-02-28 19:02:32,368 - resume_matcher.main - INFO - Processing resumes from data
-2025-02-28 19:02:32,368 - root - ERROR - Error processing resumes: Resume extractor not configured
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 150, in command_process
-    candidates_df = app.process_resumes(str(resume_dir))
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 83, in process_resumes
-    raise ValueError("Resume extractor not configured")
-ValueError: Resume extractor not configured
-2025-02-28 19:02:52,038 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-02-28 19:02:52,038 - root - INFO - Processing resumes from data
-2025-02-28 19:02:52,038 - resume_matcher.main - INFO - Processing resumes from data
-2025-02-28 19:02:52,038 - root - ERROR - Error processing resumes: Resume extractor not configured
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 150, in command_process
-    candidates_df = app.process_resumes(str(resume_dir))
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 83, in process_resumes
-    raise ValueError("Resume extractor not configured")
-ValueError: Resume extractor not configured
-2025-02-28 19:06:42,114 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-02-28 19:06:42,114 - root - INFO - Processing resumes from data
-2025-02-28 19:06:42,114 - resume_matcher.main - INFO - Processing resumes from data
-2025-02-28 19:06:42,114 - root - ERROR - Error processing resumes: Resume extractor not configured
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 150, in command_process
-    candidates_df = app.process_resumes(str(resume_dir))
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 83, in process_resumes
-    raise ValueError("Resume extractor not configured")
-ValueError: Resume extractor not configured
-2025-02-28 19:07:09,370 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-02-28 19:07:09,370 - resume_matcher.main - INFO - Loading data from files
-2025-02-28 19:07:09,377 - root - ERROR - Error matching candidates: [Errno 2] No such file or directory: 'path\\to\\candidates.csv'
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 182, in command_match
-    candidates_df, jobs_df = app.load_data()
-                             ^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 108, in load_data
-    candidates_df = pd.read_csv(self.config.file_paths.candidate_file)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
-    return _read(filepath_or_buffer, kwds)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
-    parser = TextFileReader(filepath_or_buffer, **kwds)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
-    self._engine = self._make_engine(f, self.engine)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
-    self.handles = get_handle(
-                   ^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
-    handle = open(
-             ^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'path\\to\\candidates.csv'
-2025-03-01 17:10:30,348 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 17:10:30,370 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 17:10:30,398 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 17:10:30,424 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 17:10:30,428 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 17:10:30,428 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 17:10:30,435 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 17:10:30,437 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 17:10:30,437 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 17:10:30,577 - resume_matcher.data.embedding_service - ERROR - API request failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-2025-03-01 17:10:30,679 - backoff - INFO - Backing off _query_api(...) for 0.9s (requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)'))))
-2025-03-01 17:10:31,653 - resume_matcher.data.embedding_service - ERROR - API request failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-2025-03-01 17:10:31,657 - backoff - INFO - Backing off _query_api(...) for 0.8s (requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)'))))
-2025-03-01 17:10:32,520 - resume_matcher.data.embedding_service - ERROR - API request failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-2025-03-01 17:10:32,523 - backoff - ERROR - Giving up _query_api(...) after 3 tries (requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)'))))
-2025-03-01 17:10:32,523 - root - ERROR - Error matching candidates: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-Traceback (most recent call last):
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
-    self._validate_conn(conn)
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
-    conn.connect()
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connection.py", line 730, in connect
-    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connection.py", line 909, in _ssl_wrap_socket_and_match_hostname
-    ssl_sock = ssl_wrap_socket(
-               ^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
-    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
-    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\ssl.py", line 517, in wrap_socket
-    return self.sslsocket_class._create(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\ssl.py", line 1104, in _create
-    self.do_handshake()
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\ssl.py", line 1382, in do_handshake
-    self._sslobj.do_handshake()
-ssl.SSLError: [SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
-    response = self._make_request(
-               ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
-    raise new_e
-urllib3.exceptions.SSLError: [SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\adapters.py", line 667, in send
-    resp = conn.urlopen(
-           ^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
-    retries = retries.increment(
-              ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
-    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 185, in command_match
-    candidates_df, jobs_df = app.prepare_and_embed_data(candidates_df, jobs_df)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 142, in prepare_and_embed_data
-    candidates_df = self.embedding_service.embed_dataframe(
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 112, in embed_dataframe
-    embeddings = self.generate_embeddings(texts)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 84, in generate_embeddings
-    batch_embeddings = self._query_api(batch_texts)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\backoff\_sync.py", line 105, in retry
-    ret = target(*args, **kwargs)
-          ^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 49, in _query_api
-    response = requests.post(
-               ^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\api.py", line 115, in post
-    return request("post", url, data=data, json=json, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\api.py", line 59, in request
-    return session.request(method=method, url=url, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\sessions.py", line 589, in request
-    resp = self.send(prep, **send_kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\sessions.py", line 703, in send
-    r = adapter.send(request, **kwargs)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\adapters.py", line 698, in send
-    raise SSLError(e, request=request)
-requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-2025-03-01 17:10:53,151 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 17:10:53,151 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 17:10:53,155 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 17:10:53,159 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 17:10:53,159 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 17:10:53,159 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 17:10:53,161 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 17:10:53,163 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 17:10:53,163 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 17:11:15,291 - resume_matcher.data.embedding_service - ERROR - API request failed: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2
-2025-03-01 17:11:15,291 - backoff - ERROR - Giving up _query_api(...) after 1 tries (requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2)
-2025-03-01 17:11:15,291 - root - ERROR - Error matching candidates: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 185, in command_match
-    candidates_df, jobs_df = app.prepare_and_embed_data(candidates_df, jobs_df)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 142, in prepare_and_embed_data
-    candidates_df = self.embedding_service.embed_dataframe(
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 112, in embed_dataframe
-    embeddings = self.generate_embeddings(texts)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 84, in generate_embeddings
-    batch_embeddings = self._query_api(batch_texts)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\backoff\_sync.py", line 105, in retry
-    ret = target(*args, **kwargs)
-          ^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 54, in _query_api
-    response.raise_for_status()
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2
-2025-03-01 17:25:04,562 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 17:25:04,578 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 17:25:04,608 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 17:25:04,638 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 17:25:04,638 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 17:25:04,638 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 17:25:04,638 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 17:25:04,641 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 17:25:04,641 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 17:25:05,460 - resume_matcher.data.embedding_service - ERROR - API request failed: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2
-2025-03-01 17:25:05,460 - backoff - ERROR - Giving up _query_api(...) after 1 tries (requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2)
-2025-03-01 17:25:05,460 - root - ERROR - Error matching candidates: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 185, in command_match
-    candidates_df, jobs_df = app.prepare_and_embed_data(candidates_df, jobs_df)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 142, in prepare_and_embed_data
-    candidates_df = self.embedding_service.embed_dataframe(
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 112, in embed_dataframe
-    embeddings = self.generate_embeddings(texts)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 84, in generate_embeddings
-    batch_embeddings = self._query_api(batch_texts)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\backoff\_sync.py", line 105, in retry
-    ret = target(*args, **kwargs)
-          ^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 54, in _query_api
-    response.raise_for_status()
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2
-2025-03-01 17:33:38,640 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 17:33:38,640 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 17:33:38,640 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 17:33:38,640 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 17:33:38,640 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 17:33:38,640 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 17:33:38,640 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 17:33:38,640 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 17:33:38,640 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 17:33:39,547 - resume_matcher.data.embedding_service - ERROR - API request failed: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2
-2025-03-01 17:33:39,547 - backoff - ERROR - Giving up _query_api(...) after 1 tries (requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2)
-2025-03-01 17:33:39,547 - root - ERROR - Error matching candidates: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 185, in command_match
-    candidates_df, jobs_df = app.prepare_and_embed_data(candidates_df, jobs_df)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 142, in prepare_and_embed_data
-    candidates_df = self.embedding_service.embed_dataframe(
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 112, in embed_dataframe
-    embeddings = self.generate_embeddings(texts)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 84, in generate_embeddings
-    batch_embeddings = self._query_api(batch_texts)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\backoff\_sync.py", line 105, in retry
-    ret = target(*args, **kwargs)
-          ^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 54, in _query_api
-    response.raise_for_status()
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2
-2025-03-01 17:37:55,298 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 17:37:55,298 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 17:37:55,318 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 17:37:55,353 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 17:37:55,353 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 17:37:55,353 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 17:37:55,353 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 17:37:55,357 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 17:37:55,357 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 17:37:56,613 - resume_matcher.data.embedding_service - ERROR - API request failed: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2
-2025-03-01 17:37:56,613 - backoff - ERROR - Giving up _query_api(...) after 1 tries (requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2)
-2025-03-01 17:37:56,613 - root - ERROR - Error matching candidates: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 185, in command_match
-    candidates_df, jobs_df = app.prepare_and_embed_data(candidates_df, jobs_df)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 142, in prepare_and_embed_data
-    candidates_df = self.embedding_service.embed_dataframe(
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 112, in embed_dataframe
-    embeddings = self.generate_embeddings(texts)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 84, in generate_embeddings
-    batch_embeddings = self._query_api(batch_texts)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\backoff\_sync.py", line 105, in retry
-    ret = target(*args, **kwargs)
-          ^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 54, in _query_api
-    response.raise_for_status()
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2
-2025-03-01 18:25:22,614 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 18:25:22,638 - root - ERROR - Error matching candidates: Environment variable HUGGINGFACE_TOKEN not found or empty
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 168, in command_match
-    app = ResumeMatcherApp(config_path=args.config)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 27, in __init__
-    self.config_manager = ConfigManager(config_path)
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 42, in __init__
-    self.app_config = self._create_app_config()
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 75, in _create_app_config
-    raise ValueError(f"Environment variable {env_var_name} not found or empty")
-ValueError: Environment variable HUGGINGFACE_TOKEN not found or empty
-2025-03-01 18:30:23,853 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 18:30:23,853 - root - ERROR - Error matching candidates: Environment variable HUGGINGFACE_TOKEN not found or empty
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 168, in command_match
-    app = ResumeMatcherApp(config_path=args.config)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 27, in __init__
-    self.config_manager = ConfigManager(config_path)
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 42, in __init__
-    self.app_config = self._create_app_config()
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 75, in _create_app_config
-    raise ValueError(f"Environment variable {env_var_name} not found or empty")
-ValueError: Environment variable HUGGINGFACE_TOKEN not found or empty
-2025-03-01 18:31:31,998 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 18:31:32,001 - root - ERROR - Error matching candidates: Environment variable HUGGINGFACE_TOKEN not found or empty
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 168, in command_match
-    app = ResumeMatcherApp(config_path=args.config)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 27, in __init__
-    self.config_manager = ConfigManager(config_path)
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 42, in __init__
-    self.app_config = self._create_app_config()
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 75, in _create_app_config
-    raise ValueError(f"Environment variable {env_var_name} not found or empty")
-ValueError: Environment variable HUGGINGFACE_TOKEN not found or empty
-2025-03-01 18:38:54,466 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 18:38:54,492 - root - ERROR - Error matching candidates: Environment variable HUGGINGFACE_TOKEN not found or empty
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 168, in command_match
-    app = ResumeMatcherApp(config_path=args.config)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 27, in __init__
-    self.config_manager = ConfigManager(config_path)
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 42, in __init__
-    self.app_config = self._create_app_config()
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 76, in _create_app_config
-    raise ValueError(f"Environment variable {env_var_name} not found or empty")
-ValueError: Environment variable HUGGINGFACE_TOKEN not found or empty
-2025-03-01 18:43:14,732 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 18:43:14,732 - root - ERROR - Error matching candidates: Environment variable HUGGINGFACE_TOKEN not found
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 168, in command_match
-    app = ResumeMatcherApp(config_path=args.config)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 27, in __init__
-    self.config_manager = ConfigManager(config_path)
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 42, in __init__
-    self.app_config = self._create_app_config()
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 68, in _create_app_config
-    hf_token = self._resolve_env_vars(self.config_data['hugging_face']['hf_token'])
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 96, in _resolve_env_vars
-    raise ValueError(f"Environment variable {env_var_name} not found")
-ValueError: Environment variable HUGGINGFACE_TOKEN not found
-2025-03-01 18:45:32,787 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 18:45:32,787 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 18:45:32,807 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 18:45:32,846 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 18:45:32,846 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 18:45:32,846 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 18:45:32,848 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 18:45:32,850 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 18:45:32,852 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 18:45:46,985 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 18:45:47,571 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-01 18:45:47,573 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 18:45:48,925 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 18:45:49,690 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-01 18:45:49,690 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-01 18:45:49,720 - root - ERROR - Error matching candidates: 'MatchingEngine' object has no attribute 'visualize_similarity'
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 188, in command_match
-    results = app.match_candidates_to_jobs(
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 185, in match_candidates_to_jobs
-    table_fig, heatmap_fig = self.matching_engine.visualize_similarity(similarity_df)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'MatchingEngine' object has no attribute 'visualize_similarity'
-2025-03-01 18:50:59,506 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 18:50:59,506 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 18:50:59,506 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 18:50:59,526 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 18:50:59,526 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 18:50:59,526 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 18:50:59,530 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 18:50:59,532 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 18:50:59,532 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 18:51:00,823 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 18:51:01,293 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-01 18:51:01,293 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 18:51:02,205 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 18:51:02,810 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-01 18:51:02,810 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-01 18:51:03,073 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-01 18:51:10,083 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
-2025-03-01 18:51:10,083 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
-2025-03-01 18:51:10,092 - resume_matcher.matching.matching_engine - INFO - Saving matching results
-2025-03-01 18:52:57,678 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 18:52:57,678 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 18:52:57,678 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 18:52:57,678 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 18:52:57,678 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 18:52:57,678 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 18:52:57,678 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 18:52:57,693 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 18:52:57,693 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 18:52:59,091 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 18:52:59,889 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-01 18:52:59,889 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 18:53:00,895 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 18:53:01,549 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-01 18:53:01,551 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-01 18:53:01,581 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-01 18:53:03,628 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
-2025-03-01 18:53:03,630 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
-2025-03-01 18:53:03,634 - resume_matcher.matching.matching_engine - INFO - Saving matching results
-2025-03-01 18:55:05,695 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 18:55:05,710 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 18:55:05,726 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 18:55:05,758 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 18:55:05,758 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 18:55:05,758 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 18:55:05,758 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 18:55:05,758 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 18:55:05,758 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 18:55:06,982 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 18:55:07,655 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-01 18:55:07,655 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 18:55:08,471 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 18:55:09,083 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-01 18:55:09,083 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-01 18:55:09,101 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-01 18:55:12,017 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
-2025-03-01 18:55:12,017 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
-2025-03-01 18:55:12,024 - resume_matcher.matching.matching_engine - INFO - Saving matching results
-2025-03-01 18:57:36,764 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 18:57:36,780 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 18:57:36,784 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 18:57:36,784 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 18:57:36,788 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 18:57:36,788 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 18:57:36,788 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 18:57:36,790 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 18:57:36,790 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 18:57:38,236 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 18:57:38,851 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-01 18:57:38,853 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 18:57:39,711 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 18:57:40,389 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-01 18:57:40,389 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-01 18:57:40,414 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-01 18:57:42,547 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
-2025-03-01 18:57:42,547 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
-2025-03-01 18:57:42,552 - resume_matcher.matching.matching_engine - INFO - Saving matching results
-2025-03-01 19:01:44,055 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 19:01:44,071 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 19:01:44,087 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 19:01:44,119 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 19:01:44,119 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 19:01:44,119 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 19:01:44,135 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 19:01:44,135 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 19:01:44,135 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 19:01:45,722 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 19:01:46,469 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-01 19:01:46,471 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 19:01:47,430 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 19:01:48,055 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-01 19:01:48,055 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-01 19:01:48,216 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-01 19:01:49,169 - root - ERROR - Error matching candidates: imshow() got an unexpected keyword argument 'colorscale'
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 188, in command_match
-    results = app.match_candidates_to_jobs(
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 185, in match_candidates_to_jobs
-    table_fig, heatmap_fig = self.matching_engine.visualize_similarity(similarity_df)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\matching\matching_engine.py", line 187, in visualize_similarity
-    heatmap_fig = px.imshow(
-                  ^^^^^^^^^^
-TypeError: imshow() got an unexpected keyword argument 'colorscale'
-2025-03-01 19:02:32,013 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 19:02:32,013 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 19:02:32,022 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 19:02:32,022 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 19:02:32,022 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 19:02:32,022 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 19:02:32,022 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 19:02:32,022 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 19:02:32,022 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 19:02:33,313 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 19:02:33,826 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-01 19:02:33,826 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 19:02:34,645 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 19:02:35,144 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-01 19:02:35,146 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-01 19:02:35,167 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-01 19:02:38,328 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
-2025-03-01 19:02:38,328 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
-2025-03-01 19:02:38,336 - resume_matcher.matching.matching_engine - INFO - Saving matching results
-2025-03-01 20:43:27,995 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 20:43:27,995 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 20:43:28,013 - root - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
-2025-03-01 20:43:28,013 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
-2025-03-01 20:43:28,013 - root - ERROR - Error processing resumes: Resume extractor not configured
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 150, in command_process
-    candidates_df = app.process_resumes(str(resume_dir))
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 84, in process_resumes
-    raise ValueError("Resume extractor not configured")
-ValueError: Resume extractor not configured
-2025-03-01 21:01:49,891 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 21:01:49,891 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 21:01:49,906 - root - ERROR - Error processing resumes: AppConfig.__init__() got an unexpected keyword argument 'llm'
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 141, in command_process
-    app = ResumeMatcherApp(config_path=args.config)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 28, in __init__
-    self.config_manager = ConfigManager(config_path)
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 47, in __init__
-    self.app_config = self._create_app_config()
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 91, in _create_app_config
-    app_config = AppConfig(
-                 ^^^^^^^^^^
-TypeError: AppConfig.__init__() got an unexpected keyword argument 'llm'
-2025-03-01 21:07:20,034 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 21:07:20,034 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 21:07:20,034 - root - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
-2025-03-01 21:07:20,034 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
-2025-03-01 21:07:32,651 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
-2025-03-01 21:07:34,449 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
-2025-03-01 21:07:36,197 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
-2025-03-01 21:07:38,026 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
-2025-03-01 21:07:46,495 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
-2025-03-01 21:07:46,511 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
-2025-03-01 21:07:46,511 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
-2025-03-01 21:07:46,511 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
-2025-03-01 21:07:46,513 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
-2025-03-01 21:07:46,513 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
-2025-03-01 21:07:46,638 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
-2025-03-01 21:07:54,406 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
-2025-03-01 21:07:55,177 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
-2025-03-01 21:08:00,011 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
-2025-03-01 21:08:05,834 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
-2025-03-01 21:08:06,026 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
-2025-03-01 21:08:09,050 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
-2025-03-01 21:08:09,113 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
-2025-03-01 21:08:09,113 - root - INFO - Saved extracted candidate data to candidates-v2.csv
-2025-03-01 21:24:23,488 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 21:24:23,488 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 21:24:23,504 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 21:24:23,511 - resume_matcher.main - INFO - Loaded 12 candidates
-2025-03-01 21:24:23,547 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 21:24:23,550 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 21:24:23,550 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 21:24:23,557 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 21:24:23,559 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 21:24:23,559 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
-2025-03-01 21:24:38,069 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-01 21:24:38,069 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 21:24:39,600 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 21:24:40,478 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-01 21:24:40,480 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-01 21:24:40,818 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-01 21:24:44,695 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
-2025-03-01 21:24:44,697 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
-2025-03-01 21:24:44,703 - resume_matcher.matching.matching_engine - INFO - Saving matching results
-2025-03-01 21:32:01,030 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 21:32:01,030 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 21:32:01,065 - resume_matcher.main - INFO - Running full resume matching pipeline
-2025-03-01 21:32:01,065 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 21:32:01,095 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 21:32:01,135 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 21:32:01,135 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 21:32:01,135 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 21:32:01,141 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 21:32:01,141 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 21:32:01,141 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 21:32:03,262 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 21:32:03,971 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-01 21:32:03,971 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 21:32:04,733 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 21:32:05,213 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-01 21:32:05,213 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-01 21:32:05,247 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-01 21:32:14,225 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
-2025-03-01 21:32:14,226 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
-2025-03-01 21:32:14,238 - resume_matcher.matching.matching_engine - INFO - Saving matching results
-2025-03-01 21:32:14,272 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
-2025-03-01 21:40:49,665 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 21:40:49,665 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 21:40:49,673 - resume_matcher.main - INFO - Running full resume matching pipeline
-2025-03-01 21:40:49,673 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 21:40:49,677 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 21:40:49,679 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 21:40:49,679 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 21:40:49,679 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 21:40:49,679 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 21:40:49,679 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 21:40:49,679 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 21:40:51,522 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 21:40:52,115 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-01 21:40:52,116 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 21:40:53,106 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 21:40:53,887 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-01 21:40:53,887 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-01 21:40:53,920 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-01 21:40:56,013 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
-2025-03-01 21:40:56,013 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
-2025-03-01 21:40:56,019 - resume_matcher.matching.matching_engine - INFO - Saving matching results
-2025-03-01 21:40:56,035 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
-2025-03-01 21:42:19,094 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 21:42:19,094 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 21:42:19,103 - root - ERROR - Error in pipeline: Failed to load configuration: while scanning a double-quoted scalar
-  in "config.yaml", line 2, column 19
-expected escape sequence of 8 hexadecimal numbers, but found 's'
-  in "config.yaml", line 2, column 24
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 54, in _load_config
-    config = yaml.safe_load(file)
-             ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
-    return load(stream, SafeLoader)
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\__init__.py", line 81, in load
-    return loader.get_single_data()
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\constructor.py", line 49, in get_single_data
-    node = self.get_single_node()
-           ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 36, in get_single_node
-    document = self.compose_document()
-               ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 55, in compose_document
-    node = self.compose_node(None, None)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 84, in compose_node
-    node = self.compose_mapping_node(anchor)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
-    item_value = self.compose_node(node, item_key)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 84, in compose_node
-    node = self.compose_mapping_node(anchor)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
-    item_value = self.compose_node(node, item_key)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 64, in compose_node
-    if self.check_event(AliasEvent):
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\parser.py", line 98, in check_event
-    self.current_event = self.state()
-                         ^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\parser.py", line 449, in parse_block_mapping_value
-    if not self.check_token(KeyToken, ValueToken, BlockEndToken):
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 116, in check_token
-    self.fetch_more_tokens()
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 251, in fetch_more_tokens
-    return self.fetch_double()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 655, in fetch_double
-    self.fetch_flow_scalar(style='"')
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 666, in fetch_flow_scalar
-    self.tokens.append(self.scan_flow_scalar(style))
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 1149, in scan_flow_scalar
-    chunks.extend(self.scan_flow_scalar_non_spaces(double, start_mark))
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 1213, in scan_flow_scalar_non_spaces
-    raise ScannerError("while scanning a double-quoted scalar", start_mark,
-yaml.scanner.ScannerError: while scanning a double-quoted scalar
-  in "config.yaml", line 2, column 19
-expected escape sequence of 8 hexadecimal numbers, but found 's'
-  in "config.yaml", line 2, column 24
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 215, in command_pipeline
-    app = ResumeMatcherApp(config_path=args.config)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 28, in __init__
-    self.config_manager = ConfigManager(config_path)
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 47, in __init__
-    self.config_data = self._load_config()
-                       ^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 62, in _load_config
-    raise ValueError(f"Failed to load configuration: {str(e)}")
-ValueError: Failed to load configuration: while scanning a double-quoted scalar
-  in "config.yaml", line 2, column 19
-expected escape sequence of 8 hexadecimal numbers, but found 's'
-  in "config.yaml", line 2, column 24
-2025-03-01 21:43:29,961 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 21:43:29,963 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 21:43:29,963 - resume_matcher.main - INFO - Running full resume matching pipeline
-2025-03-01 21:43:29,965 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 21:43:29,965 - root - ERROR - Error in pipeline: [Errno 13] Permission denied: 'C:\\Users\\Sam.Nazari\\PycharmProjects\\resume-pixy-dust\\semantic_search\\data\\t04'
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
-    results = app.run_full_pipeline(
-              ^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 240, in run_full_pipeline
-    candidates_df, jobs_df = self.load_data()
-                             ^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 109, in load_data
-    candidates_df = pd.read_csv(self.config.file_paths.candidate_file)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
-    return _read(filepath_or_buffer, kwds)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
-    parser = TextFileReader(filepath_or_buffer, **kwds)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
-    self._engine = self._make_engine(f, self.engine)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
-    self.handles = get_handle(
-                   ^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
-    handle = open(
-             ^^^^^
-PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Sam.Nazari\\PycharmProjects\\resume-pixy-dust\\semantic_search\\data\\t04'
-2025-03-01 21:44:42,474 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 21:44:42,474 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 21:44:42,474 - root - ERROR - Error in pipeline: Candidate file not found: r"C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04"
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 215, in command_pipeline
-    app = ResumeMatcherApp(config_path=args.config)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 32, in __init__
-    self.config_manager.validate_paths()
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 119, in validate_paths
-    raise FileNotFoundError(f"Candidate file not found: {self.app_config.file_paths.candidate_file}")
-FileNotFoundError: Candidate file not found: r"C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04"
-2025-03-01 23:30:44,181 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 23:30:44,181 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 23:30:44,205 - resume_matcher.main - INFO - Running full resume matching pipeline
-2025-03-01 23:30:44,205 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
-2025-03-01 23:30:45,749 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: ebeba42a-bf66-4bff-80b5-dc896a8f521a)')
-2025-03-01 23:30:45,749 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 448bc15f-a713-4282-a5c2-d14290bfa2f7)')
-2025-03-01 23:30:45,749 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: fa872082-6620-4b7e-a820-b576acaac604)')
-2025-03-01 23:30:45,753 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: aebd3055-fc34-4998-b37a-3878aeee7783)')
-2025-03-01 23:30:45,877 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 5735746c-cdb0-43b9-9b4d-75f5d20080bd)')
-2025-03-01 23:30:45,877 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 44d222c6-b5b0-4573-93c1-a115f79f5757)')
-2025-03-01 23:30:45,884 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 04d43bf8-c3e3-4f86-adc5-711c56d9ff84)')
-2025-03-01 23:30:45,884 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: e5174610-3484-43b4-ad77-941f1f36bb94)')
-2025-03-01 23:30:46,012 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 16783e0f-dd4e-42fd-a238-be501490b07c)')
-2025-03-01 23:30:46,014 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 200905ca-458a-4f46-b4f9-3c189e414427)')
-2025-03-01 23:30:46,014 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 55bf97be-62a5-4a50-9e6c-44dd172255cc)')
-2025-03-01 23:30:46,016 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 90b0f6ec-b325-4cd6-a45a-4da92ce61215)')
-2025-03-01 23:30:46,140 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: a1cb1491-839d-4e1c-b153-444f147f0d4a)')
-2025-03-01 23:30:46,144 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
-2025-03-01 23:30:46,144 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 2ff6ba66-2ced-4a5e-97a1-29448df73281)')
-2025-03-01 23:30:46,164 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 222eda0f-65f0-4d60-83bb-5a602e78aae7)')
-2025-03-01 23:30:46,164 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 14a5fc62-e3bb-4492-88e9-bf612dc82c76)')
-2025-03-01 23:30:46,196 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
-2025-03-01 23:30:46,278 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
-2025-03-01 23:30:46,294 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
-2025-03-01 23:30:46,809 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 10d0182c-4f62-4871-832b-f5c2df8af9b1)')
-2025-03-01 23:30:46,811 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: e3fc54ad-3f10-4e62-b152-8d3f735f08ef)')
-2025-03-01 23:30:47,005 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: df890597-a127-43f1-b612-2101e0c812bb)')
-2025-03-01 23:30:47,022 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 00f9a744-ad76-4253-9957-6613edfee11b)')
-2025-03-01 23:30:47,023 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: cccc659e-0e4c-4108-afe0-d8a2ed4546d4)')
-2025-03-01 23:30:47,227 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 81ca46de-7695-4e5f-b621-283b8fa11060)')
-2025-03-01 23:30:47,227 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 47af0f13-670c-4d42-a7b7-7596df0aabc4)')
-2025-03-01 23:30:47,286 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 6e25fa05-b944-4a65-99cc-84e15e387679)')
-2025-03-01 23:30:47,371 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 02d1dafa-6be9-4ca6-9480-0f3db450fd5e)')
-2025-03-01 23:30:47,373 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 37e72873-a66e-4a11-8570-bcacb428f587)')
-2025-03-01 23:30:47,374 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
-2025-03-01 23:30:47,374 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: ba7bd14c-8d19-4437-9332-0a33f6c2c6ed)')
-2025-03-01 23:30:47,395 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
-2025-03-01 23:30:47,395 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
-2025-03-01 23:30:47,395 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
-2025-03-01 23:30:47,395 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
-2025-03-01 23:30:47,395 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
-2025-03-01 23:30:47,431 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 320a7256-87f0-497e-9ef1-71d1f28b357f)')
-2025-03-01 23:30:47,465 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
-2025-03-01 23:30:47,529 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 4220f03e-3e80-46c0-99f0-f3486a428a57)')
-2025-03-01 23:30:47,529 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: aeedbf75-b2c6-46cb-aae6-1465f2598cfa)')
-2025-03-01 23:30:47,595 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
-2025-03-01 23:30:47,718 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: c95f60c9-b46c-42b8-b9e4-c45377196457)')
-2025-03-01 23:30:47,798 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: c1e27813-b023-4c2a-abe2-aa46379e4e0e)')
-2025-03-01 23:30:47,958 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: f11ec1f9-93b1-4336-ad96-6cd31c855089)')
-2025-03-01 23:30:48,009 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
-2025-03-01 23:30:48,009 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 9011d0ea-19b9-4e42-bf9b-4a77bced8aa5)')
-2025-03-01 23:30:48,178 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: bde69c55-7c2c-4e21-baa4-eced7bbf5dc2)')
-2025-03-01 23:30:48,178 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 6868f905-fe77-4f77-ad25-afa05469f62d)')
-2025-03-01 23:30:48,302 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 4d4c50c0-a644-4095-9f35-cd42708bfc2e)')
-2025-03-01 23:30:48,357 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 6b6e866e-a65e-4211-a090-9de364c9d71d)')
-2025-03-01 23:30:48,360 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 3bb4e0ce-c12c-458a-a3b8-824f87e5d067)')
-2025-03-01 23:30:48,360 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
-2025-03-01 23:30:48,398 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 8fed6fb3-f1b5-4f5d-88ad-ff9266d91737)')
-2025-03-01 23:30:48,421 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: c7d225ff-6e2b-4ae3-9409-7a0ce2592ada)')
-2025-03-01 23:30:48,477 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 1e7fda2d-c31d-4427-b7a5-bab7c72cac5e)')
-2025-03-01 23:30:48,515 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: a408aaef-aaa0-4513-91ca-a1be0d002b21)')
-2025-03-01 23:30:48,537 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: fd15df76-84b8-4092-8679-afac61b3b229)')
-2025-03-01 23:30:48,600 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 29af3274-f446-431d-a827-89416a12378a)')
-2025-03-01 23:30:48,603 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
-2025-03-01 23:30:48,633 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: d488b55c-6cdc-47fa-915e-7af1d2580e67)')
-2025-03-01 23:30:48,648 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: a53c472b-60d4-4944-af6a-d99b20f8c7ac)')
-2025-03-01 23:30:48,653 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
-2025-03-01 23:30:48,749 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 66e9532c-9d7d-485f-9869-21dcb8db8c5a)')
-2025-03-01 23:30:48,749 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
-2025-03-01 23:30:48,756 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
-2025-03-01 23:30:48,756 - root - ERROR - Error in pipeline: cannot access local variable 'jobs_df' where it is not associated with a value
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
-    results = app.run_full_pipeline(
-              ^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 245, in run_full_pipeline
-    jobs_df
-UnboundLocalError: cannot access local variable 'jobs_df' where it is not associated with a value
-2025-03-01 23:31:16,040 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 23:31:16,040 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 23:31:16,040 - resume_matcher.main - INFO - Running full resume matching pipeline
-2025-03-01 23:31:16,040 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
-2025-03-01 23:31:27,594 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
-2025-03-01 23:31:29,967 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
-2025-03-01 23:31:30,998 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
-2025-03-01 23:31:32,425 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
-2025-03-01 23:31:40,516 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
-2025-03-01 23:31:40,519 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
-2025-03-01 23:31:40,519 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
-2025-03-01 23:31:40,520 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
-2025-03-01 23:31:40,520 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
-2025-03-01 23:31:40,518 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
-2025-03-01 23:31:45,627 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
-2025-03-01 23:31:48,536 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
-2025-03-01 23:31:50,187 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
-2025-03-01 23:31:56,423 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
-2025-03-01 23:32:02,485 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
-2025-03-01 23:32:04,371 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
-2025-03-01 23:32:04,527 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
-2025-03-01 23:32:04,535 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
-2025-03-01 23:32:04,537 - root - ERROR - Error in pipeline: cannot access local variable 'jobs_df' where it is not associated with a value
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
-    results = app.run_full_pipeline(
-              ^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 245, in run_full_pipeline
-    jobs_df
-UnboundLocalError: cannot access local variable 'jobs_df' where it is not associated with a value
-2025-03-01 23:34:46,258 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-01 23:34:46,258 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-01 23:34:46,258 - resume_matcher.main - INFO - Running full resume matching pipeline
-2025-03-01 23:34:46,258 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
-2025-03-01 23:34:48,217 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
-2025-03-01 23:34:48,368 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
-2025-03-01 23:34:48,501 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
-2025-03-01 23:34:48,716 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
-2025-03-01 23:34:49,305 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
-2025-03-01 23:34:49,308 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
-2025-03-01 23:34:49,313 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
-2025-03-01 23:34:49,315 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
-2025-03-01 23:34:49,315 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
-2025-03-01 23:34:49,316 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
-2025-03-01 23:34:50,150 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
-2025-03-01 23:34:50,514 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
-2025-03-01 23:34:50,732 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
-2025-03-01 23:34:51,486 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
-2025-03-01 23:34:51,615 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
-2025-03-01 23:34:51,727 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
-2025-03-01 23:34:55,129 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
-2025-03-01 23:34:55,134 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
-2025-03-01 23:34:55,134 - resume_matcher.main - INFO - Loading data from files
-2025-03-01 23:34:55,171 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-01 23:34:55,200 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-01 23:34:55,200 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-01 23:34:55,200 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-01 23:34:55,200 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-01 23:34:55,200 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-01 23:34:55,200 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
-2025-03-01 23:35:14,092 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-01 23:35:14,094 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-01 23:35:16,144 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-01 23:35:16,935 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-01 23:35:16,935 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-01 23:35:16,966 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-01 23:35:23,392 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
-2025-03-01 23:35:23,392 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
-2025-03-01 23:35:23,398 - resume_matcher.matching.matching_engine - INFO - Saving matching results
-2025-03-01 23:35:23,406 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
-2025-03-02 00:15:36,357 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-02 00:15:36,357 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-02 00:15:36,373 - resume_matcher.main - INFO - Running full resume matching pipeline
-2025-03-02 00:15:36,373 - resume_matcher.main - INFO - Loading data from files
-2025-03-02 00:15:36,389 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-02 00:15:36,405 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-02 00:15:36,405 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-02 00:15:36,405 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-02 00:15:36,420 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-02 00:15:36,420 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-02 00:15:36,420 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 34 items
-2025-03-02 00:15:36,420 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-02 00:15:36,548 - resume_matcher.data.embedding_service - ERROR - API request failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-2025-03-02 00:15:36,611 - backoff - INFO - Backing off _query_api(...) for 1.0s (requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)'))))
-2025-03-02 00:15:37,646 - resume_matcher.data.embedding_service - ERROR - API request failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-2025-03-02 00:15:37,646 - backoff - INFO - Backing off _query_api(...) for 0.8s (requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)'))))
-2025-03-02 00:15:38,553 - resume_matcher.data.embedding_service - ERROR - API request failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-2025-03-02 00:15:38,553 - backoff - ERROR - Giving up _query_api(...) after 3 tries (requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)'))))
-2025-03-02 00:15:38,553 - root - ERROR - Error in pipeline: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-Traceback (most recent call last):
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
-    self._validate_conn(conn)
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
-    conn.connect()
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connection.py", line 730, in connect
-    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connection.py", line 909, in _ssl_wrap_socket_and_match_hostname
-    ssl_sock = ssl_wrap_socket(
-               ^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
-    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
-    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\ssl.py", line 517, in wrap_socket
-    return self.sslsocket_class._create(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\ssl.py", line 1104, in _create
-    self.do_handshake()
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\ssl.py", line 1382, in do_handshake
-    self._sslobj.do_handshake()
-ssl.SSLError: [SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
-    response = self._make_request(
-               ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
-    raise new_e
-urllib3.exceptions.SSLError: [SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\adapters.py", line 667, in send
-    resp = conn.urlopen(
-           ^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
-    retries = retries.increment(
-              ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
-    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
-    results = app.run_full_pipeline(
-              ^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 328, in run_full_pipeline
-    candidates_df, jobs_df = self.prepare_and_embed_data(
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 225, in prepare_and_embed_data
-    candidates_df = self.embedding_service.embed_dataframe(
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 130, in embed_dataframe
-    embeddings = self.generate_embeddings(texts_to_embed)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 84, in generate_embeddings
-    batch_embeddings = self._query_api(batch_texts)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\backoff\_sync.py", line 105, in retry
-    ret = target(*args, **kwargs)
-          ^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 49, in _query_api
-    response = requests.post(
-               ^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\api.py", line 115, in post
-    return request("post", url, data=data, json=json, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\api.py", line 59, in request
-    return session.request(method=method, url=url, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\sessions.py", line 589, in request
-    resp = self.send(prep, **send_kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\sessions.py", line 703, in send
-    r = adapter.send(request, **kwargs)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\adapters.py", line 698, in send
-    raise SSLError(e, request=request)
-requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
-2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Running full resume matching pipeline
-2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Loading data from files
-2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-02 00:16:13,493 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-02 00:16:13,493 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-02 00:16:13,509 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-02 00:16:13,510 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 34 items
-2025-03-02 00:16:13,510 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-02 00:16:28,846 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-02 00:16:29,569 - root - ERROR - Error in pipeline: Must have equal len keys and value when setting with an iterable
-Traceback (most recent call last):
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
-    return self._engine.get_loc(casted_key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
-  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
-  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
-KeyError: 'hf_embedding'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\frame.py", line 4561, in _set_value
-    icol = self.columns.get_loc(col)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
-    raise KeyError(key) from err
-KeyError: 'hf_embedding'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
-    results = app.run_full_pipeline(
-              ^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 328, in run_full_pipeline
-    candidates_df, jobs_df = self.prepare_and_embed_data(
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 225, in prepare_and_embed_data
-    candidates_df = self.embedding_service.embed_dataframe(
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 138, in embed_dataframe
-    df.at[idx, embedding_column] = embeddings[i]
-    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 2586, in __setitem__
-    return super().__setitem__(key, value)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 2542, in __setitem__
-    self.obj._set_value(*key, value=value, takeable=self._takeable)
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\frame.py", line 4575, in _set_value
-    self.loc[index, col] = value
-    ~~~~~~~~^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 911, in __setitem__
-    iloc._setitem_with_indexer(indexer, value, self.name)
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1890, in _setitem_with_indexer
-    self._setitem_with_indexer(new_indexer, value, name)
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1942, in _setitem_with_indexer
-    self._setitem_with_indexer_split_path(indexer, value, name)
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1998, in _setitem_with_indexer_split_path
-    raise ValueError(
-ValueError: Must have equal len keys and value when setting with an iterable
-2025-03-02 00:17:00,845 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-02 00:17:00,845 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-02 00:17:00,845 - resume_matcher.main - INFO - Running full resume matching pipeline
-2025-03-02 00:17:00,845 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
-2025-03-02 00:17:03,167 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
-2025-03-02 00:17:03,167 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
-2025-03-02 00:17:03,292 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
-2025-03-02 00:17:03,308 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
-2025-03-02 00:17:04,358 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
-2025-03-02 00:17:04,392 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
-2025-03-02 00:17:04,397 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
-2025-03-02 00:17:04,400 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
-2025-03-02 00:17:04,408 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
-2025-03-02 00:17:04,396 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
-2025-03-02 00:17:04,408 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
-2025-03-02 00:17:04,510 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
-2025-03-02 00:17:05,042 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
-2025-03-02 00:17:05,691 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
-2025-03-02 00:17:05,693 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
-2025-03-02 00:17:05,903 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
-2025-03-02 00:17:06,174 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
-2025-03-02 00:17:06,194 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
-2025-03-02 00:17:06,195 - resume_matcher.main - INFO - Loading data from files
-2025-03-02 00:17:06,197 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-02 00:17:06,199 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-02 00:17:06,199 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-02 00:17:06,199 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-02 00:17:06,201 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-02 00:17:06,201 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-02 00:17:06,203 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
-2025-03-02 00:17:06,203 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
-2025-03-02 00:17:07,012 - root - ERROR - Error in pipeline: Must have equal len keys and value when setting with an iterable
-Traceback (most recent call last):
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
-    return self._engine.get_loc(casted_key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
-  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
-  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
-KeyError: 'hf_embedding'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\frame.py", line 4561, in _set_value
-    icol = self.columns.get_loc(col)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
-    raise KeyError(key) from err
-KeyError: 'hf_embedding'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
-    results = app.run_full_pipeline(
-              ^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 328, in run_full_pipeline
-    candidates_df, jobs_df = self.prepare_and_embed_data(
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 225, in prepare_and_embed_data
-    candidates_df = self.embedding_service.embed_dataframe(
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 138, in embed_dataframe
-    df.at[idx, embedding_column] = embeddings[i]
-    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 2586, in __setitem__
-    return super().__setitem__(key, value)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 2542, in __setitem__
-    self.obj._set_value(*key, value=value, takeable=self._takeable)
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\frame.py", line 4575, in _set_value
-    self.loc[index, col] = value
-    ~~~~~~~~^^^^^^^^^^^^
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 911, in __setitem__
-    iloc._setitem_with_indexer(indexer, value, self.name)
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1890, in _setitem_with_indexer
-    self._setitem_with_indexer(new_indexer, value, name)
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1942, in _setitem_with_indexer
-    self._setitem_with_indexer_split_path(indexer, value, name)
-  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1998, in _setitem_with_indexer_split_path
-    raise ValueError(
-ValueError: Must have equal len keys and value when setting with an iterable
-2025-03-02 00:21:41,830 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-02 00:21:41,830 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-02 00:21:41,846 - resume_matcher.main - INFO - Running full resume matching pipeline
-2025-03-02 00:21:41,848 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
-2025-03-02 00:21:43,498 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
-2025-03-02 00:21:43,611 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
-2025-03-02 00:21:43,706 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
-2025-03-02 00:21:43,912 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
-2025-03-02 00:21:44,599 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
-2025-03-02 00:21:44,601 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
-2025-03-02 00:21:44,603 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
-2025-03-02 00:21:44,603 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
-2025-03-02 00:21:44,603 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
-2025-03-02 00:21:44,604 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
-2025-03-02 00:21:44,932 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
-2025-03-02 00:21:45,043 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
-2025-03-02 00:21:45,228 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
-2025-03-02 00:21:45,650 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
-2025-03-02 00:21:46,093 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
-2025-03-02 00:21:46,317 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
-2025-03-02 00:21:46,416 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
-2025-03-02 00:21:46,416 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
-2025-03-02 00:21:46,416 - resume_matcher.main - INFO - Loading data from files
-2025-03-02 00:21:46,434 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-02 00:21:46,437 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-02 00:21:46,437 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-02 00:21:46,437 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-02 00:21:46,442 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-02 00:21:46,442 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-02 00:21:46,444 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
-2025-03-02 00:21:46,444 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
-2025-03-02 00:21:47,241 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-02 00:21:47,243 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
-2025-03-02 00:21:47,243 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-02 00:21:48,119 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-02 00:21:48,738 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-02 00:21:48,738 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-02 00:21:48,772 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-02 00:21:53,277 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
-2025-03-02 00:21:53,396 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
-2025-03-02 00:21:53,400 - resume_matcher.matching.matching_engine - INFO - Saving matching results
-2025-03-02 00:21:53,406 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
-2025-03-02 00:26:26,948 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
-2025-03-02 00:26:26,948 - resume_matcher.main - INFO - Initializing Resume Matcher application
-2025-03-02 00:26:26,948 - resume_matcher.main - INFO - Running full resume matching pipeline
-2025-03-02 00:26:26,948 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
-2025-03-02 00:26:28,744 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
-2025-03-02 00:26:28,757 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
-2025-03-02 00:26:28,974 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
-2025-03-02 00:26:29,434 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
-2025-03-02 00:26:30,233 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
-2025-03-02 00:26:30,233 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
-2025-03-02 00:26:30,245 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
-2025-03-02 00:26:30,245 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
-2025-03-02 00:26:30,246 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
-2025-03-02 00:26:30,246 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
-2025-03-02 00:26:30,569 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
-2025-03-02 00:26:30,664 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
-2025-03-02 00:26:30,822 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
-2025-03-02 00:26:31,323 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
-2025-03-02 00:26:31,871 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
-2025-03-02 00:26:31,951 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
-2025-03-02 00:26:31,966 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
-2025-03-02 00:26:31,966 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
-2025-03-02 00:26:31,976 - resume_matcher.main - INFO - Loading data from files
-2025-03-02 00:26:31,979 - resume_matcher.main - INFO - Loaded 34 candidates
-2025-03-02 00:26:31,988 - resume_matcher.main - INFO - Loaded 35 job listings
-2025-03-02 00:26:31,996 - resume_matcher.main - INFO - Preparing and embedding data
-2025-03-02 00:26:31,998 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
-2025-03-02 00:26:32,000 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
-2025-03-02 00:26:32,000 - resume_matcher.main - INFO - Generating embeddings for candidates
-2025-03-02 00:26:32,002 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
-2025-03-02 00:26:32,002 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
-2025-03-02 00:26:32,958 - resume_matcher.main - INFO - Generating embeddings for job listings
-2025-03-02 00:26:32,958 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
-2025-03-02 00:26:32,958 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
-2025-03-02 00:26:33,744 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
-2025-03-02 00:26:34,242 - resume_matcher.main - INFO - Matching candidates to jobs
-2025-03-02 00:26:34,242 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
-2025-03-02 00:26:34,272 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
-2025-03-02 00:26:37,177 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
-2025-03-02 00:26:37,212 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
-2025-03-02 00:26:37,227 - resume_matcher.matching.matching_engine - INFO - Saving matching results
-2025-03-02 00:26:37,235 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 08:05:20,914 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 08:05:20,914 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 08:05:20,934 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 08:05:20,934 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 08:05:20,934 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 08:05:23,502 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:05:23,521 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 08:05:23,558 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 08:05:23,593 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 08:05:25,192 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 08:05:25,212 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 08:05:25,212 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 08:05:25,212 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 08:05:25,212 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 08:05:25,212 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 08:05:25,377 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 08:05:25,574 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 08:05:25,841 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 08:05:26,307 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 08:05:26,609 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 08:05:26,821 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 08:05:26,894 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:05:26,906 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 08:05:26,906 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 08:05:26,936 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 08:05:26,968 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 08:05:26,968 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 08:05:26,968 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 08:05:26,971 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 08:05:26,973 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 08:05:26,973 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 08:05:26,973 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:05:27,828 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 08:05:27,828 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 08:05:27,828 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 08:05:28,579 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 08:05:29,092 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 08:05:29,094 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 08:05:29,116 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 08:05:32,767 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 08:05:32,769 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 08:05:32,777 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 08:05:32,785 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 08:07:08,231 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 08:07:08,231 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 08:07:08,235 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 08:07:08,235 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 08:07:08,235 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 08:07:09,925 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 08:07:09,982 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 08:07:09,995 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 08:07:10,058 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:07:11,210 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 08:07:11,216 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 08:07:11,216 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 08:07:11,314 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 08:07:11,214 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 08:07:11,329 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 08:07:11,329 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 08:07:11,439 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 08:07:11,788 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 08:07:12,781 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 08:07:12,795 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 08:07:12,876 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:07:12,940 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 08:07:12,940 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 08:07:12,940 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 08:07:12,956 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 08:07:12,957 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 08:07:12,957 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 08:07:12,957 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 08:07:12,957 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 08:07:12,957 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 08:07:12,957 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 08:07:12,957 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:07:13,785 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 08:07:13,787 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 08:07:13,787 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 08:07:14,605 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 08:07:15,084 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 08:07:15,084 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 08:07:15,122 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 08:07:18,692 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 08:07:18,694 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 08:07:18,701 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 08:07:18,713 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 08:17:08,421 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 08:17:08,425 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 08:17:08,447 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 08:17:08,447 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 08:17:08,447 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 08:17:08,447 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:17:09,195 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 08:17:09,215 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 08:17:09,216 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 08:17:09,244 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 08:17:09,244 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 08:17:11,083 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 08:17:11,360 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 08:17:11,451 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:17:11,483 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 08:17:12,202 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 08:17:12,213 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 08:17:12,217 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 08:17:12,217 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 08:17:12,217 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 08:17:12,218 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 08:17:12,594 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 08:17:12,817 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 08:17:13,119 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 08:17:13,355 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 08:17:13,999 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 08:17:14,031 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 08:17:14,147 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:17:14,156 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 08:17:14,158 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 08:17:14,213 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 08:17:14,242 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 08:17:14,244 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 08:17:14,244 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 08:17:14,247 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 08:17:14,247 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 08:17:14,247 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 08:17:14,247 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:17:15,250 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 08:17:15,250 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 08:17:15,250 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 08:17:16,050 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 08:17:16,566 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 08:17:16,566 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 08:17:16,596 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 08:17:22,035 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 08:17:22,035 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 08:17:22,043 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 08:17:22,053 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 08:18:49,271 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 08:18:49,271 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 08:18:49,273 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 08:18:49,273 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 08:18:49,275 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 08:18:49,275 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:18:49,927 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 08:18:49,927 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 08:18:49,927 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 08:18:49,931 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 08:18:49,931 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 08:18:51,482 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 08:18:51,719 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:18:51,735 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 08:18:51,788 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 08:18:52,722 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 08:18:52,730 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 08:18:52,730 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 08:18:52,730 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 08:18:52,730 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 08:18:52,726 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 08:18:52,939 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 08:18:53,229 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 08:18:53,703 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 08:18:54,201 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 08:18:54,517 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 08:18:54,609 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 08:18:54,740 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:18:54,754 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 08:18:54,756 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 08:18:54,763 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 08:18:54,770 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 08:18:54,770 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 08:18:54,772 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 08:18:54,777 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 08:18:54,777 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 08:18:54,782 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 08:18:54,782 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:18:55,584 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 08:18:55,586 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 08:18:55,588 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 08:18:56,453 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 08:18:56,944 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 08:18:56,944 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 08:18:56,969 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 08:19:00,633 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 08:19:00,635 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 08:19:00,641 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 08:19:00,666 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 08:59:52,962 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 08:59:52,962 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 08:59:52,978 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 08:59:52,978 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 08:59:52,978 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 08:59:52,978 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 09:00:06,847 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 09:00:06,847 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 09:00:06,847 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 09:00:06,895 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 09:00:06,895 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 09:00:10,236 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 09:00:10,853 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 09:00:16,970 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 09:00:18,556 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 09:00:22,692 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 09:00:22,708 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 09:00:22,708 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 09:00:22,708 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 09:00:22,708 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 09:00:22,708 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 09:00:23,644 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 09:00:24,561 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 09:00:25,430 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 09:00:26,016 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 09:00:29,119 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 09:00:35,109 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 09:00:37,616 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 09:00:37,616 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 09:00:37,616 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 09:00:37,664 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 09:00:37,695 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 09:00:37,695 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 09:00:37,695 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 09:00:37,695 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 09:00:37,695 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 09:00:37,695 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 09:00:37,695 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 09:00:38,725 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 09:00:38,725 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 09:00:38,725 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 09:00:39,500 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 09:00:39,992 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 09:00:39,992 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 09:00:40,024 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 09:00:47,715 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 09:00:47,715 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 09:00:47,721 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 09:00:47,729 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 09:29:37,574 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 09:29:37,574 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 09:29:37,588 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 09:29:37,588 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 09:29:37,588 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 09:29:37,595 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 09:29:38,304 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 09:29:38,304 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 09:29:38,304 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 09:29:38,352 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 09:29:38,352 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 09:29:40,982 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 09:29:41,219 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 09:29:41,283 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 09:29:41,425 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 09:29:42,361 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 09:29:42,393 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 09:29:42,393 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 09:29:42,393 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 09:29:42,393 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 09:29:42,409 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 09:29:42,844 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 09:29:42,989 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 09:29:43,407 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 09:29:43,613 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 09:29:44,468 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 09:29:44,500 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 09:29:44,754 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 09:29:44,773 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 09:29:44,775 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 09:29:44,802 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 09:29:44,833 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 09:29:44,833 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 09:29:44,833 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 09:29:44,833 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 09:29:44,838 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 09:29:44,840 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 09:29:44,840 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 09:29:57,018 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 09:29:57,018 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 09:29:57,018 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 09:29:57,796 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 09:29:58,273 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 09:29:58,273 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 09:29:58,305 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 09:30:05,464 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 09:30:05,467 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 09:30:05,473 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 09:30:05,480 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 12:14:36,319 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 12:14:36,319 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 12:14:36,355 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 12:14:36,355 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 12:14:36,355 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 12:14:36,358 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 12:15:06,661 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 12:15:06,682 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 12:15:06,682 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 12:16:53,553 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 12:16:53,553 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 12:16:53,560 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 12:16:53,560 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 12:16:53,560 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 12:16:53,562 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 12:16:54,199 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 12:16:54,215 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 12:16:54,215 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 12:16:54,215 - resume_matcher.main - INFO - CHECK MARK: Embedding storage test passed - storage is working correctly
