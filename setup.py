@@ -22,7 +22,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Sam Nazari, Ph.D.",
     author_email="sam@cognym.ai",
-    url="https://github.com/yourusername/resume-matcher",
+    url="https://github.com/samnazari/resume-matcher",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
