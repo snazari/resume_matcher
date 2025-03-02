@@ -1,0 +1,1 @@
+from resume_matcher.cli.commands import main

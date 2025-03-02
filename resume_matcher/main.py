@@ -49,9 +49,19 @@ class ResumeMatcherApp:
 
     def _init_components(self):
         """Initialize application components."""
+<<<<<<< Updated upstream
         # Create embedding storage
         embedding_storage_dir = self.config.file_paths.output_dir / "embeddings"
         self.embedding_storage = EmbeddingStorage(embedding_storage_dir)
+=======
+        # Set up logging
+        logging.basicConfig(level=logging.INFO)
+
+        # Create vector database
+        storage_dir = Path(self.config.file_paths.output_dir) / "embeddings"
+        from resume_matcher.data.vector_database import VectorDatabase
+        self.embedding_storage = VectorDatabase(storage_dir)
+>>>>>>> Stashed changes
 
         # Create embedding service
         self.embedding_service = EmbeddingService(
@@ -73,6 +83,12 @@ class ResumeMatcherApp:
         else:
             self.resume_extractor = None
 
+<<<<<<< Updated upstream
+=======
+        # Remove the debug mode test
+        if self.config.debug_mode:
+            self.logger.info("Debug mode is enabled")
+>>>>>>> Stashed changes
     def prepare_and_embed_data(
             self,
             candidates_df: pd.DataFrame,
@@ -80,6 +96,7 @@ class ResumeMatcherApp:
     ) -> Tuple[pd.DataFrame, pd.DataFrame]:
         """
         Prepare and generate embeddings for candidate and job data.
+<<<<<<< Updated upstream
 
         Args:
             candidates_df: DataFrame with candidate information
@@ -97,19 +114,69 @@ class ResumeMatcherApp:
         jobs_df = self.matching_engine.prepare_job_data(jobs_df)
 
         # Try to load stored embeddings for candidates
+=======
+
+        Args:
+            candidates_df: DataFrame with candidate information
+            jobs_df: DataFrame with job listing information
+
+        Returns:
+            Tuple of (candidates DataFrame with embeddings, jobs DataFrame with embeddings)
+        """
+        self.logger.info("Preparing and embedding data")
+
+        # Prepare candidate and job data
+        candidates_df = self.matching_engine.prepare_candidate_data(candidates_df)
+        jobs_df = self.matching_engine.prepare_job_data(jobs_df)
+
+        self.logger.info("Checking for stored embeddings...")
+
+        # Handle Candidate Embeddings
+        self.logger.info("Loading candidate embeddings from vector database...")
+>>>>>>> Stashed changes
         candidates_df, candidates_mask = self.embedding_storage.load_candidate_embeddings(
             candidates_df,
             id_column='Name ',
             embedding_column='hf_embedding'
         )
+<<<<<<< Updated upstream
 
         # Try to load stored embeddings for jobs
+=======
+
+        self.logger.info(f"Need to generate embeddings for {candidates_mask.sum()} of {len(candidates_df)} candidates")
+
+        if candidates_mask.any():
+            self.logger.info(f"Generating embeddings for {candidates_mask.sum()} candidates")
+            texts_to_embed = candidates_df.loc[candidates_mask, 'text_to_embed'].tolist()
+            new_embeddings = self.embedding_service.generate_embeddings(texts_to_embed)
+
+            if new_embeddings:
+                idx_list = candidates_df.loc[candidates_mask].index.tolist()
+                for i, idx in enumerate(idx_list):
+                    candidates_df.at[idx, 'hf_embedding'] = new_embeddings[i]
+
+                self.logger.info("Storing new candidate embeddings in vector database...")
+                self.embedding_storage.store_candidate_embeddings(
+                    candidates_df.loc[candidates_mask],
+                    id_column='Name ',
+                    embedding_column='hf_embedding'
+                )
+            else:
+                self.logger.warning("Failed to generate embeddings for candidates")
+        else:
+            self.logger.info("All candidate embeddings loaded from vector database - no new embeddings needed")
+
+        # Handle Job Embeddings
+        self.logger.info("Loading job embeddings from vector database...")
+>>>>>>> Stashed changes
         jobs_df, jobs_mask = self.embedding_storage.load_job_embeddings(
             jobs_df,
             id_column='Role',
             embedding_column='hf_embedding'
         )
 
+<<<<<<< Updated upstream
         # Generate embeddings only for candidates that need them
         if candidates_mask.any():
             self.logger.info(f"Generating embeddings for {candidates_mask.sum()} candidates")
@@ -147,6 +214,30 @@ class ResumeMatcherApp:
             )
         else:
             self.logger.info("All job embeddings loaded from storage")
+=======
+        self.logger.info(f"Need to generate embeddings for {jobs_mask.sum()} of {len(jobs_df)} jobs")
+
+        if jobs_mask.any():
+            self.logger.info(f"Generating embeddings for {jobs_mask.sum()} job listings")
+            texts_to_embed = jobs_df.loc[jobs_mask, 'listing_to_embed'].tolist()
+            new_embeddings = self.embedding_service.generate_embeddings(texts_to_embed)
+
+            if new_embeddings:
+                idx_list = jobs_df.loc[jobs_mask].index.tolist()
+                for i, idx in enumerate(idx_list):
+                    jobs_df.at[idx, 'hf_embedding'] = new_embeddings[i]
+
+                self.logger.info("Storing new job embeddings in vector database...")
+                self.embedding_storage.store_job_embeddings(
+                    jobs_df.loc[jobs_mask],
+                    id_column='Role',
+                    embedding_column='hf_embedding'
+                )
+            else:
+                self.logger.warning("Failed to generate embeddings for jobs")
+        else:
+            self.logger.info("All job embeddings loaded from vector database - no new embeddings needed")
+>>>>>>> Stashed changes
 
         return candidates_df, jobs_df
 
@@ -197,47 +288,6 @@ class ResumeMatcherApp:
 
         return candidates_df, jobs_df
 
-    def prepare_and_embed_data(
-            self,
-            candidates_df: pd.DataFrame,
-            jobs_df: pd.DataFrame
-    ) -> Tuple[pd.DataFrame, pd.DataFrame]:
-        """
-        Prepare and generate embeddings for candidate and job data.
-
-        Args:
-            candidates_df: DataFrame with candidate information
-            jobs_df: DataFrame with job listing information
-
-        Returns:
-            Tuple of (candidates DataFrame with embeddings, jobs DataFrame with embeddings)
-        """
-        self.logger.info("Preparing and embedding data")
-
-        # Prepare candidate data
-        candidates_df = self.matching_engine.prepare_candidate_data(candidates_df)
-
-        # Prepare job data
-        jobs_df = self.matching_engine.prepare_job_data(jobs_df)
-
-        # Generate embeddings for candidates
-        self.logger.info("Generating embeddings for candidates")
-        candidates_df = self.embedding_service.embed_dataframe(
-            candidates_df,
-            text_column='text_to_embed',
-            embedding_column='hf_embedding'
-        )
-
-        # Generate embeddings for jobs
-        self.logger.info("Generating embeddings for job listings")
-        jobs_df = self.embedding_service.embed_dataframe(
-            jobs_df,
-            text_column='listing_to_embed',
-            embedding_column='hf_embedding'
-        )
-
-        return candidates_df, jobs_df
-
     def match_candidates_to_jobs(
             self,
             candidates_df: pd.DataFrame,
@@ -245,7 +295,7 @@ class ResumeMatcherApp:
             visualize: bool = True
     ) -> Dict[str, Any]:
         """
-        Match candidates to job listings.
+        Match candidates to job listings using the vector database for efficient similarity computation.
 
         Args:
             candidates_df: DataFrame with candidate embeddings
@@ -255,12 +305,16 @@ class ResumeMatcherApp:
         Returns:
             Dictionary with results and output file paths
         """
-        self.logger.info("Matching candidates to jobs")
+        self.logger.info("Matching candidates to jobs using vector database")
 
-        # Calculate similarity
-        similarity_df = self.matching_engine.calculate_similarity(
+        from resume_matcher.matching.enhanced_matching import faiss_similarity_calculation
+
+        # Calculate similarity using vector database
+        similarity_df = faiss_similarity_calculation(
+            self.matching_engine,
             candidates_df,
-            jobs_df
+            jobs_df,
+            self.embedding_storage
         )
 
         # Create visualizations if requested
@@ -282,7 +336,7 @@ class ResumeMatcherApp:
         )
 
         # Add top matches to output paths
-        top_matches_path = self.config.file_paths.output_dir / "top_matches.csv"
+        top_matches_path = Path(self.config.file_paths.output_dir) / "top_matches.csv"
         top_matches_df.to_csv(top_matches_path, index=False)
         output_paths["top_matches"] = str(top_matches_path)
 
@@ -291,7 +345,6 @@ class ResumeMatcherApp:
             "top_matches": top_matches_df,
             "output_paths": output_paths
         }
-
     def run_full_pipeline(
             self,
             process_resumes: bool = False,
@@ -341,7 +394,10 @@ class ResumeMatcherApp:
 
         return results
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 if __name__ == "__main__":
     import os
     from pathlib import Path

@@ -20,8 +20,8 @@ setup(
     description="Match candidate resumes with job openings using NLP and embeddings",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Sam Nazari, Ph.D.",
+    author_email="sam@cognym.ai",
     url="https://github.com/yourusername/resume-matcher",
     packages=find_packages(),
     include_package_data=True,
@@ -41,6 +41,7 @@ setup(
         "python-docx>=0.8.11",
         "python-dotenv>=0.19.0",
         "PyPDF2>=2.0.0",
+        "faiss-cpu>=1.7.2",  # Added FAISS for vector database
     ],
     extras_require={
         "dev": [

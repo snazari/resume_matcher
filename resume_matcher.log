@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 2025-02-28 18:59:32,960 - resume_matcher.main - INFO - Initializing Resume Matcher application
 2025-02-28 18:59:32,977 - root - ERROR - Error processing resumes: Candidate file not found: data\candidates.csv
 Traceback (most recent call last):
@@ -1270,3 +1271,441 @@ ValueError: Must have equal len keys and value when setting with an iterable
 2025-03-02 00:26:37,212 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
 2025-03-02 00:26:37,227 - resume_matcher.matching.matching_engine - INFO - Saving matching results
 2025-03-02 00:26:37,235 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+=======
+2025-03-02 08:05:20,914 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 08:05:20,914 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 08:05:20,934 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 08:05:20,934 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 08:05:20,934 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 08:05:23,502 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:05:23,521 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 08:05:23,558 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 08:05:23,593 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 08:05:25,192 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 08:05:25,212 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 08:05:25,212 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 08:05:25,212 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 08:05:25,212 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 08:05:25,212 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 08:05:25,377 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 08:05:25,574 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 08:05:25,841 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 08:05:26,307 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 08:05:26,609 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 08:05:26,821 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 08:05:26,894 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:05:26,906 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 08:05:26,906 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 08:05:26,936 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 08:05:26,968 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 08:05:26,968 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 08:05:26,968 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 08:05:26,971 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 08:05:26,973 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 08:05:26,973 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 08:05:26,973 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:05:27,828 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 08:05:27,828 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 08:05:27,828 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 08:05:28,579 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 08:05:29,092 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 08:05:29,094 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 08:05:29,116 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 08:05:32,767 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 08:05:32,769 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 08:05:32,777 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 08:05:32,785 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 08:07:08,231 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 08:07:08,231 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 08:07:08,235 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 08:07:08,235 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 08:07:08,235 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 08:07:09,925 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 08:07:09,982 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 08:07:09,995 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 08:07:10,058 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:07:11,210 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 08:07:11,216 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 08:07:11,216 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 08:07:11,314 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 08:07:11,214 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 08:07:11,329 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 08:07:11,329 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 08:07:11,439 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 08:07:11,788 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 08:07:12,781 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 08:07:12,795 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 08:07:12,876 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:07:12,940 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 08:07:12,940 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 08:07:12,940 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 08:07:12,956 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 08:07:12,957 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 08:07:12,957 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 08:07:12,957 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 08:07:12,957 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 08:07:12,957 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 08:07:12,957 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 08:07:12,957 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:07:13,785 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 08:07:13,787 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 08:07:13,787 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 08:07:14,605 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 08:07:15,084 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 08:07:15,084 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 08:07:15,122 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 08:07:18,692 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 08:07:18,694 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 08:07:18,701 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 08:07:18,713 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 08:17:08,421 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 08:17:08,425 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 08:17:08,447 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 08:17:08,447 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 08:17:08,447 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 08:17:08,447 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:17:09,195 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 08:17:09,215 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 08:17:09,216 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 08:17:09,244 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 08:17:09,244 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 08:17:11,083 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 08:17:11,360 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 08:17:11,451 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:17:11,483 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 08:17:12,202 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 08:17:12,213 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 08:17:12,217 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 08:17:12,217 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 08:17:12,217 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 08:17:12,218 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 08:17:12,594 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 08:17:12,817 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 08:17:13,119 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 08:17:13,355 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 08:17:13,999 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 08:17:14,031 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 08:17:14,147 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:17:14,156 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 08:17:14,158 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 08:17:14,213 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 08:17:14,242 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 08:17:14,244 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 08:17:14,244 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 08:17:14,247 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 08:17:14,247 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 08:17:14,247 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 08:17:14,247 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:17:15,250 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 08:17:15,250 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 08:17:15,250 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 08:17:16,050 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 08:17:16,566 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 08:17:16,566 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 08:17:16,596 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 08:17:22,035 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 08:17:22,035 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 08:17:22,043 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 08:17:22,053 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 08:18:49,271 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 08:18:49,271 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 08:18:49,273 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 08:18:49,273 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 08:18:49,275 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 08:18:49,275 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:18:49,927 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 08:18:49,927 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 08:18:49,927 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 08:18:49,931 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 08:18:49,931 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 08:18:51,482 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 08:18:51,719 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:18:51,735 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 08:18:51,788 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 08:18:52,722 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 08:18:52,730 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 08:18:52,730 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 08:18:52,730 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 08:18:52,730 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 08:18:52,726 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 08:18:52,939 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 08:18:53,229 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 08:18:53,703 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 08:18:54,201 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 08:18:54,517 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 08:18:54,609 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 08:18:54,740 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 08:18:54,754 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 08:18:54,756 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 08:18:54,763 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 08:18:54,770 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 08:18:54,770 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 08:18:54,772 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 08:18:54,777 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 08:18:54,777 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 08:18:54,782 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 08:18:54,782 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 08:18:55,584 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 08:18:55,586 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 08:18:55,588 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 08:18:56,453 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 08:18:56,944 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 08:18:56,944 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 08:18:56,969 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 08:19:00,633 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 08:19:00,635 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 08:19:00,641 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 08:19:00,666 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 08:59:52,962 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 08:59:52,962 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 08:59:52,978 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 08:59:52,978 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 08:59:52,978 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 08:59:52,978 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 09:00:06,847 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 09:00:06,847 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 09:00:06,847 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 09:00:06,895 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 09:00:06,895 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 09:00:10,236 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 09:00:10,853 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 09:00:16,970 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 09:00:18,556 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 09:00:22,692 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 09:00:22,708 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 09:00:22,708 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 09:00:22,708 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 09:00:22,708 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 09:00:22,708 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 09:00:23,644 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 09:00:24,561 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 09:00:25,430 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 09:00:26,016 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 09:00:29,119 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 09:00:35,109 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 09:00:37,616 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 09:00:37,616 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 09:00:37,616 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 09:00:37,664 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 09:00:37,695 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 09:00:37,695 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 09:00:37,695 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 09:00:37,695 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 09:00:37,695 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 09:00:37,695 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 09:00:37,695 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 09:00:38,725 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 09:00:38,725 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 09:00:38,725 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 09:00:39,500 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 09:00:39,992 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 09:00:39,992 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 09:00:40,024 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 09:00:47,715 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 09:00:47,715 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 09:00:47,721 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 09:00:47,729 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 09:29:37,574 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 09:29:37,574 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 09:29:37,588 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 09:29:37,588 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 09:29:37,588 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 09:29:37,595 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 09:29:38,304 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 09:29:38,304 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 09:29:38,304 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 09:29:38,352 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 09:29:38,352 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 09:29:40,982 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 09:29:41,219 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 09:29:41,283 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 09:29:41,425 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 09:29:42,361 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 09:29:42,393 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 09:29:42,393 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 09:29:42,393 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 09:29:42,393 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 09:29:42,409 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 09:29:42,844 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 09:29:42,989 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 09:29:43,407 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 09:29:43,613 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 09:29:44,468 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 09:29:44,500 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 09:29:44,754 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 09:29:44,773 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 09:29:44,775 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 09:29:44,802 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 09:29:44,833 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 09:29:44,833 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 09:29:44,833 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 09:29:44,833 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 09:29:44,838 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 09:29:44,840 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 09:29:44,840 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 09:29:57,018 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 09:29:57,018 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 09:29:57,018 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 09:29:57,796 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 09:29:58,273 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 09:29:58,273 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 09:29:58,305 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 09:30:05,464 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 09:30:05,467 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 09:30:05,473 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 09:30:05,480 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 12:14:36,319 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 12:14:36,319 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 12:14:36,355 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 12:14:36,355 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 12:14:36,355 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 12:14:36,358 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 12:15:06,661 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 12:15:06,682 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 12:15:06,682 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 12:16:53,553 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 12:16:53,553 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 12:16:53,560 - resume_matcher.data.simplified_embedding_storage - INFO - Initialized embedding storage at output\embeddings
+2025-03-02 12:16:53,560 - resume_matcher.main - INFO - Debug mode is enabled, testing embedding storage
+2025-03-02 12:16:53,560 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 12:16:53,562 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 12:16:54,199 - resume_matcher.data.simplified_embedding_storage - INFO - Stored 2 candidate embeddings
+2025-03-02 12:16:54,215 - resume_matcher.data.simplified_embedding_storage - INFO - Loaded 2 stored candidate embeddings, 0 need to be generated
+2025-03-02 12:16:54,215 - resume_matcher.main - INFO - Test complete. Mask shows 0 of 2 need generating
+2025-03-02 12:16:54,215 - resume_matcher.main - INFO - CHECK MARK: Embedding storage test passed - storage is working correctly
+2025-03-02 14:27:58,027 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 14:27:58,027 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 14:27:58,050 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-03-02 14:27:58,398 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-03-02 14:27:58,398 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-03-02 14:27:58,398 - resume_matcher.data.vector_database - INFO - Initialized vector database at output\embeddings
+2025-03-02 14:27:58,398 - resume_matcher.main - INFO - Debug mode is enabled, testing vector database
+2025-03-02 14:27:58,398 - resume_matcher.main - INFO - Testing embedding storage...
+2025-03-02 14:27:58,398 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 14:28:12,060 - root - ERROR - Error in pipeline: 'VectorDatabase' object has no attribute 'store_embeddings'
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli\commands.py", line 219, in command_pipeline
+    app = ResumeMatcherApp(config_path=args.config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 36, in __init__
+    self._init_components()
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 87, in _init_components
+    storage_working = self.test_embedding_storage()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 352, in test_embedding_storage
+    self.embedding_storage.store_embeddings(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'VectorDatabase' object has no attribute 'store_embeddings'
+2025-03-02 14:34:20,556 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 14:34:20,556 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 14:34:20,572 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-03-02 14:34:20,887 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-03-02 14:34:20,903 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-03-02 14:34:20,903 - resume_matcher.data.vector_database - INFO - Initialized vector database at output\embeddings
+2025-03-02 14:34:20,903 - resume_matcher.main - INFO - Debug mode is enabled
+2025-03-02 14:34:20,903 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 14:34:20,903 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 14:34:33,653 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 14:34:37,719 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 14:34:46,205 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 14:34:57,457 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 14:35:05,538 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 14:35:05,569 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 14:35:05,569 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 14:35:05,569 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 14:35:05,569 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 14:35:05,569 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 14:35:15,164 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 14:35:20,515 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 14:35:23,789 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 14:35:36,241 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 14:35:36,714 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 14:36:07,137 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 14:37:31,844 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: 504 Server Error: Gateway Time-out for url: https://api-inference.huggingface.co/models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions
+2025-03-02 14:37:31,844 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 14:37:31,873 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 14:37:31,873 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 14:37:31,903 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 14:37:31,938 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 14:37:31,938 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 14:37:31,938 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 14:37:31,948 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 14:37:31,954 - resume_matcher.main - INFO - Checking for stored embeddings...
+2025-03-02 14:37:31,954 - resume_matcher.main - INFO - Loading candidate embeddings from vector database...
+2025-03-02 14:37:31,956 - resume_matcher.data.vector_database - INFO - No candidate index found, all candidates need embedding generation
+2025-03-02 14:37:31,958 - resume_matcher.main - INFO - Need to generate embeddings for 12 of 12 candidates
+2025-03-02 14:37:31,958 - resume_matcher.main - INFO - Generating embeddings for 12 candidates
+2025-03-02 14:37:31,958 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 14:37:34,201 - resume_matcher.main - INFO - Storing new candidate embeddings in vector database...
+2025-03-02 14:37:34,201 - resume_matcher.data.vector_database - INFO - Initialized new candidate index with dimension 384
+2025-03-02 14:37:34,215 - resume_matcher.data.vector_database - INFO - Saved candidate index with 12 vectors
+2025-03-02 14:37:34,219 - resume_matcher.data.vector_database - INFO - Stored 12 new candidate embeddings
+2025-03-02 14:37:34,219 - resume_matcher.main - INFO - Loading job embeddings from vector database...
+2025-03-02 14:37:34,221 - resume_matcher.data.vector_database - INFO - No job index found, all jobs need embedding generation
+2025-03-02 14:37:34,221 - resume_matcher.main - INFO - Need to generate embeddings for 35 of 35 jobs
+2025-03-02 14:37:34,221 - resume_matcher.main - INFO - Generating embeddings for 35 job listings
+2025-03-02 14:37:34,221 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 14:37:35,782 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 14:37:36,378 - resume_matcher.main - INFO - Storing new job embeddings in vector database...
+2025-03-02 14:37:36,378 - resume_matcher.data.vector_database - INFO - Initialized new job index with dimension 384
+2025-03-02 14:37:36,392 - resume_matcher.data.vector_database - INFO - Saved job index with 35 vectors
+2025-03-02 14:37:36,394 - resume_matcher.data.vector_database - INFO - Stored 35 new job embeddings
+2025-03-02 14:37:36,394 - resume_matcher.main - INFO - Matching candidates to jobs using vector database
+2025-03-02 14:37:36,396 - resume_matcher.matching.enhanced_matching - INFO - Using vector database for efficient similarity calculation
+2025-03-02 14:37:36,398 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 14:37:42,477 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 14:37:42,477 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 14:37:42,481 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 14:37:42,487 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 14:40:49,777 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 14:40:49,777 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 14:40:49,783 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-03-02 14:40:49,797 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-03-02 14:40:49,805 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-03-02 14:40:49,805 - resume_matcher.data.vector_database - INFO - Loaded candidate index with 12 vectors
+2025-03-02 14:40:49,805 - resume_matcher.data.vector_database - INFO - Loaded job index with 35 vectors
+2025-03-02 14:40:49,805 - resume_matcher.data.vector_database - INFO - Initialized vector database at output\embeddings
+2025-03-02 14:40:49,805 - resume_matcher.main - INFO - Debug mode is enabled
+2025-03-02 14:40:49,809 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 14:40:49,809 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 14:40:51,729 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 14:40:51,838 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 14:40:51,965 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 14:40:52,013 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 14:40:52,823 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 14:40:52,825 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 14:40:52,825 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 14:40:52,827 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 14:40:52,827 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 14:40:52,825 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 14:40:53,100 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 14:40:53,581 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 14:40:53,626 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 14:40:53,878 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 14:40:54,271 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 14:40:54,724 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 14:40:54,880 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 14:40:54,884 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 14:40:54,884 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 14:40:54,887 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 14:40:54,888 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 14:40:54,890 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 14:40:54,890 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 14:40:54,890 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 14:40:54,896 - resume_matcher.main - INFO - Checking for stored embeddings...
+2025-03-02 14:40:54,896 - resume_matcher.main - INFO - Loading candidate embeddings from vector database...
+2025-03-02 14:40:54,898 - resume_matcher.data.vector_database - INFO - Loaded 12 stored candidate embeddings, 0 need to be generated
+2025-03-02 14:40:54,900 - resume_matcher.main - INFO - Need to generate embeddings for 0 of 12 candidates
+2025-03-02 14:40:54,900 - resume_matcher.main - INFO - All candidate embeddings loaded from vector database - no new embeddings needed
+2025-03-02 14:40:54,900 - resume_matcher.main - INFO - Loading job embeddings from vector database...
+2025-03-02 14:40:54,903 - resume_matcher.data.vector_database - INFO - Loaded 35 stored job embeddings, 0 need to be generated
+2025-03-02 14:40:54,903 - resume_matcher.main - INFO - Need to generate embeddings for 0 of 35 jobs
+2025-03-02 14:40:54,903 - resume_matcher.main - INFO - All job embeddings loaded from vector database - no new embeddings needed
+2025-03-02 14:40:54,903 - resume_matcher.main - INFO - Matching candidates to jobs using vector database
+2025-03-02 14:40:54,905 - resume_matcher.matching.enhanced_matching - INFO - Using vector database for efficient similarity calculation
+2025-03-02 14:40:54,907 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 14:40:57,837 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 14:40:57,844 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 14:40:57,851 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 14:40:57,859 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+>>>>>>> Stashed changes
