@@ -7,4 +7,8 @@ hugging_face:
   model_id: "sentence-transformers/all-MiniLM-L12-v2" #"sentence-transformers/all-MiniLM-L6-v2" #sentence-transformers/all-MiniLM-L12-v2
   hf_token: "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"
 
+llm:
+  model_id: "meta-llama/Llama-3.3-70B-Instruct"
+  api_token: "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"
+
 debug_mode: true

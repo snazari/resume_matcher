@@ -1,0 +1,24 @@
+2025-03-01 21:31:17,860 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 21:31:17,860 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 21:31:17,860 - root - ERROR - Error in pipeline: Failed to load configuration: [Errno 2] No such file or directory: 'config.yaml'
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 53, in _load_config
+    with open(self.config_path, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'config.yaml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 215, in command_pipeline
+    app = ResumeMatcherApp(config_path=args.config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 28, in __init__
+    self.config_manager = ConfigManager(config_path)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 47, in __init__
+    self.config_data = self._load_config()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 62, in _load_config
+    raise ValueError(f"Failed to load configuration: {str(e)}")
+ValueError: Failed to load configuration: [Errno 2] No such file or directory: 'config.yaml'

@@ -18,11 +18,17 @@ class HuggingFaceConfig:
     api_token: str
     api_url: str
 
+@dataclass
+class LLMConfig:
+    model_id: str
+    api_token: str
+
 
 @dataclass
 class AppConfig:
     file_paths: FilePaths
     huggingface: HuggingFaceConfig
+    llm: Optional[LLMConfig] = None  # Add this line
     top_candidates_file: Optional[Path] = None
     debug_mode: bool = False
 
@@ -74,10 +80,19 @@ class ConfigManager:
             api_url=f"https://api-inference.huggingface.co/pipeline/feature-extraction/{self.config_data['hugging_face']['model_id']}"
         )
 
+        # Create LLM config if it exists in the config data
+        llm_config = None
+        if 'llm' in self.config_data:
+            llm_config = LLMConfig(
+                model_id=self.config_data['llm']['model_id'],
+                api_token=self._resolve_env_vars(self.config_data['llm']['api_token'])
+            )
+
         # Create AppConfig
         app_config = AppConfig(
             file_paths=file_paths,
             huggingface=huggingface,
+            llm=llm_config,
             debug_mode=self.config_data.get('debug_mode', False)
         )
 

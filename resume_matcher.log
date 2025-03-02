@@ -538,3 +538,96 @@ TypeError: imshow() got an unexpected keyword argument 'colorscale'
 2025-03-01 19:02:38,328 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
 2025-03-01 19:02:38,328 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
 2025-03-01 19:02:38,336 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-01 20:43:27,995 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 20:43:27,995 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 20:43:28,013 - root - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-01 20:43:28,013 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-01 20:43:28,013 - root - ERROR - Error processing resumes: Resume extractor not configured
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 150, in command_process
+    candidates_df = app.process_resumes(str(resume_dir))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 84, in process_resumes
+    raise ValueError("Resume extractor not configured")
+ValueError: Resume extractor not configured
+2025-03-01 21:01:49,891 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 21:01:49,891 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 21:01:49,906 - root - ERROR - Error processing resumes: AppConfig.__init__() got an unexpected keyword argument 'llm'
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 141, in command_process
+    app = ResumeMatcherApp(config_path=args.config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 28, in __init__
+    self.config_manager = ConfigManager(config_path)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 47, in __init__
+    self.app_config = self._create_app_config()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 91, in _create_app_config
+    app_config = AppConfig(
+                 ^^^^^^^^^^
+TypeError: AppConfig.__init__() got an unexpected keyword argument 'llm'
+2025-03-01 21:07:20,034 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 21:07:20,034 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 21:07:20,034 - root - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-01 21:07:20,034 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-01 21:07:32,651 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-01 21:07:34,449 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-01 21:07:36,197 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-01 21:07:38,026 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-01 21:07:46,495 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-01 21:07:46,511 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-01 21:07:46,511 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-01 21:07:46,511 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-01 21:07:46,513 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-01 21:07:46,513 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-01 21:07:46,638 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-01 21:07:54,406 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-01 21:07:55,177 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-01 21:08:00,011 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-01 21:08:05,834 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-01 21:08:06,026 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-01 21:08:09,050 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-01 21:08:09,113 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-01 21:08:09,113 - root - INFO - Saved extracted candidate data to candidates-v2.csv
+2025-03-01 21:24:23,488 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 21:24:23,488 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 21:24:23,504 - resume_matcher.main - INFO - Loading data from files
+2025-03-01 21:24:23,511 - resume_matcher.main - INFO - Loaded 12 candidates
+2025-03-01 21:24:23,547 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-01 21:24:23,550 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-01 21:24:23,550 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-01 21:24:23,557 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-01 21:24:23,559 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-01 21:24:23,559 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-01 21:24:38,069 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-01 21:24:38,069 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-01 21:24:39,600 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-01 21:24:40,478 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-01 21:24:40,480 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-01 21:24:40,818 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-01 21:24:44,695 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-01 21:24:44,697 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-01 21:24:44,703 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-01 21:32:01,030 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 21:32:01,030 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 21:32:01,065 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-01 21:32:01,065 - resume_matcher.main - INFO - Loading data from files
+2025-03-01 21:32:01,095 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-01 21:32:01,135 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-01 21:32:01,135 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-01 21:32:01,135 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-01 21:32:01,141 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-01 21:32:01,141 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-01 21:32:01,141 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-01 21:32:03,262 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-01 21:32:03,971 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-01 21:32:03,971 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-01 21:32:04,733 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-01 21:32:05,213 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-01 21:32:05,213 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-01 21:32:05,247 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-01 21:32:14,225 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-01 21:32:14,226 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-01 21:32:14,238 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-01 21:32:14,272 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
