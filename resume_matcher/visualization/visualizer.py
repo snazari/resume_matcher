@@ -46,7 +46,7 @@ class Visualizer:
             xaxis_title="Job Openings",
             yaxis_title="Candidates",
             height=800,
-            width=1200,
+            width=2000,
             font=dict(size=12)
         )
         
@@ -99,7 +99,7 @@ class Visualizer:
         fig.update_layout(
             title="Candidate Information",
             height=600,
-            width=1000
+            width=2000
         )
         
         return fig
@@ -147,7 +147,7 @@ class Visualizer:
         fig.update_layout(
             title="Top Candidate-Job Matches",
             height=600,
-            width=1000
+            width=2000
         )
         
         return fig
@@ -254,7 +254,7 @@ class Visualizer:
             xaxis_title="Job Openings (Grouped by Category)",
             yaxis_title="Candidates",
             height=1000,
-            width=1400,
+            width=2000,
             margin=dict(t=50, b=100),
             font=dict(size=12)
         )

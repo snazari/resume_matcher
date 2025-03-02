@@ -631,3 +631,300 @@ TypeError: AppConfig.__init__() got an unexpected keyword argument 'llm'
 2025-03-01 21:32:14,226 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
 2025-03-01 21:32:14,238 - resume_matcher.matching.matching_engine - INFO - Saving matching results
 2025-03-01 21:32:14,272 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-01 21:40:49,665 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 21:40:49,665 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 21:40:49,673 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-01 21:40:49,673 - resume_matcher.main - INFO - Loading data from files
+2025-03-01 21:40:49,677 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-01 21:40:49,679 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-01 21:40:49,679 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-01 21:40:49,679 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-01 21:40:49,679 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-01 21:40:49,679 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-01 21:40:49,679 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-01 21:40:51,522 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-01 21:40:52,115 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-01 21:40:52,116 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-01 21:40:53,106 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-01 21:40:53,887 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-01 21:40:53,887 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-01 21:40:53,920 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-01 21:40:56,013 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-01 21:40:56,013 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-01 21:40:56,019 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-01 21:40:56,035 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-01 21:42:19,094 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 21:42:19,094 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 21:42:19,103 - root - ERROR - Error in pipeline: Failed to load configuration: while scanning a double-quoted scalar
+  in "config.yaml", line 2, column 19
+expected escape sequence of 8 hexadecimal numbers, but found 's'
+  in "config.yaml", line 2, column 24
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 54, in _load_config
+    config = yaml.safe_load(file)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\composer.py", line 64, in compose_node
+    if self.check_event(AliasEvent):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\parser.py", line 449, in parse_block_mapping_value
+    if not self.check_token(KeyToken, ValueToken, BlockEndToken):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 251, in fetch_more_tokens
+    return self.fetch_double()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 655, in fetch_double
+    self.fetch_flow_scalar(style='"')
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 666, in fetch_flow_scalar
+    self.tokens.append(self.scan_flow_scalar(style))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 1149, in scan_flow_scalar
+    chunks.extend(self.scan_flow_scalar_non_spaces(double, start_mark))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\yaml\scanner.py", line 1213, in scan_flow_scalar_non_spaces
+    raise ScannerError("while scanning a double-quoted scalar", start_mark,
+yaml.scanner.ScannerError: while scanning a double-quoted scalar
+  in "config.yaml", line 2, column 19
+expected escape sequence of 8 hexadecimal numbers, but found 's'
+  in "config.yaml", line 2, column 24
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 215, in command_pipeline
+    app = ResumeMatcherApp(config_path=args.config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 28, in __init__
+    self.config_manager = ConfigManager(config_path)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 47, in __init__
+    self.config_data = self._load_config()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 62, in _load_config
+    raise ValueError(f"Failed to load configuration: {str(e)}")
+ValueError: Failed to load configuration: while scanning a double-quoted scalar
+  in "config.yaml", line 2, column 19
+expected escape sequence of 8 hexadecimal numbers, but found 's'
+  in "config.yaml", line 2, column 24
+2025-03-01 21:43:29,961 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 21:43:29,963 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 21:43:29,963 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-01 21:43:29,965 - resume_matcher.main - INFO - Loading data from files
+2025-03-01 21:43:29,965 - root - ERROR - Error in pipeline: [Errno 13] Permission denied: 'C:\\Users\\Sam.Nazari\\PycharmProjects\\resume-pixy-dust\\semantic_search\\data\\t04'
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
+    results = app.run_full_pipeline(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 240, in run_full_pipeline
+    candidates_df, jobs_df = self.load_data()
+                             ^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 109, in load_data
+    candidates_df = pd.read_csv(self.config.file_paths.candidate_file)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Sam.Nazari\\PycharmProjects\\resume-pixy-dust\\semantic_search\\data\\t04'
+2025-03-01 21:44:42,474 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 21:44:42,474 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 21:44:42,474 - root - ERROR - Error in pipeline: Candidate file not found: r"C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04"
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 215, in command_pipeline
+    app = ResumeMatcherApp(config_path=args.config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 32, in __init__
+    self.config_manager.validate_paths()
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\config\config_manager.py", line 119, in validate_paths
+    raise FileNotFoundError(f"Candidate file not found: {self.app_config.file_paths.candidate_file}")
+FileNotFoundError: Candidate file not found: r"C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04"
+2025-03-01 23:30:44,181 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 23:30:44,181 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 23:30:44,205 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-01 23:30:44,205 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-01 23:30:45,749 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: ebeba42a-bf66-4bff-80b5-dc896a8f521a)')
+2025-03-01 23:30:45,749 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 448bc15f-a713-4282-a5c2-d14290bfa2f7)')
+2025-03-01 23:30:45,749 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: fa872082-6620-4b7e-a820-b576acaac604)')
+2025-03-01 23:30:45,753 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: aebd3055-fc34-4998-b37a-3878aeee7783)')
+2025-03-01 23:30:45,877 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 5735746c-cdb0-43b9-9b4d-75f5d20080bd)')
+2025-03-01 23:30:45,877 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 44d222c6-b5b0-4573-93c1-a115f79f5757)')
+2025-03-01 23:30:45,884 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 04d43bf8-c3e3-4f86-adc5-711c56d9ff84)')
+2025-03-01 23:30:45,884 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: e5174610-3484-43b4-ad77-941f1f36bb94)')
+2025-03-01 23:30:46,012 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 16783e0f-dd4e-42fd-a238-be501490b07c)')
+2025-03-01 23:30:46,014 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 200905ca-458a-4f46-b4f9-3c189e414427)')
+2025-03-01 23:30:46,014 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 55bf97be-62a5-4a50-9e6c-44dd172255cc)')
+2025-03-01 23:30:46,016 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 90b0f6ec-b325-4cd6-a45a-4da92ce61215)')
+2025-03-01 23:30:46,140 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: a1cb1491-839d-4e1c-b153-444f147f0d4a)')
+2025-03-01 23:30:46,144 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-01 23:30:46,144 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 2ff6ba66-2ced-4a5e-97a1-29448df73281)')
+2025-03-01 23:30:46,164 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 222eda0f-65f0-4d60-83bb-5a602e78aae7)')
+2025-03-01 23:30:46,164 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 14a5fc62-e3bb-4492-88e9-bf612dc82c76)')
+2025-03-01 23:30:46,196 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-01 23:30:46,278 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-01 23:30:46,294 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-01 23:30:46,809 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 10d0182c-4f62-4871-832b-f5c2df8af9b1)')
+2025-03-01 23:30:46,811 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: e3fc54ad-3f10-4e62-b152-8d3f735f08ef)')
+2025-03-01 23:30:47,005 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: df890597-a127-43f1-b612-2101e0c812bb)')
+2025-03-01 23:30:47,022 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 00f9a744-ad76-4253-9957-6613edfee11b)')
+2025-03-01 23:30:47,023 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: cccc659e-0e4c-4108-afe0-d8a2ed4546d4)')
+2025-03-01 23:30:47,227 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 81ca46de-7695-4e5f-b621-283b8fa11060)')
+2025-03-01 23:30:47,227 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 47af0f13-670c-4d42-a7b7-7596df0aabc4)')
+2025-03-01 23:30:47,286 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 6e25fa05-b944-4a65-99cc-84e15e387679)')
+2025-03-01 23:30:47,371 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 02d1dafa-6be9-4ca6-9480-0f3db450fd5e)')
+2025-03-01 23:30:47,373 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 37e72873-a66e-4a11-8570-bcacb428f587)')
+2025-03-01 23:30:47,374 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-01 23:30:47,374 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: ba7bd14c-8d19-4437-9332-0a33f6c2c6ed)')
+2025-03-01 23:30:47,395 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-01 23:30:47,395 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-01 23:30:47,395 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-01 23:30:47,395 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-01 23:30:47,395 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-01 23:30:47,431 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 320a7256-87f0-497e-9ef1-71d1f28b357f)')
+2025-03-01 23:30:47,465 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-01 23:30:47,529 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 4220f03e-3e80-46c0-99f0-f3486a428a57)')
+2025-03-01 23:30:47,529 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: aeedbf75-b2c6-46cb-aae6-1465f2598cfa)')
+2025-03-01 23:30:47,595 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-01 23:30:47,718 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: c95f60c9-b46c-42b8-b9e4-c45377196457)')
+2025-03-01 23:30:47,798 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: c1e27813-b023-4c2a-abe2-aa46379e4e0e)')
+2025-03-01 23:30:47,958 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: f11ec1f9-93b1-4336-ad96-6cd31c855089)')
+2025-03-01 23:30:48,009 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-01 23:30:48,009 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 9011d0ea-19b9-4e42-bf9b-4a77bced8aa5)')
+2025-03-01 23:30:48,178 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: bde69c55-7c2c-4e21-baa4-eced7bbf5dc2)')
+2025-03-01 23:30:48,178 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 6868f905-fe77-4f77-ad25-afa05469f62d)')
+2025-03-01 23:30:48,302 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 4d4c50c0-a644-4095-9f35-cd42708bfc2e)')
+2025-03-01 23:30:48,357 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 6b6e866e-a65e-4211-a090-9de364c9d71d)')
+2025-03-01 23:30:48,360 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 3bb4e0ce-c12c-458a-a3b8-824f87e5d067)')
+2025-03-01 23:30:48,360 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-01 23:30:48,398 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting name: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 8fed6fb3-f1b5-4f5d-88ad-ff9266d91737)')
+2025-03-01 23:30:48,421 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: c7d225ff-6e2b-4ae3-9409-7a0ce2592ada)')
+2025-03-01 23:30:48,477 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 1e7fda2d-c31d-4427-b7a5-bab7c72cac5e)')
+2025-03-01 23:30:48,515 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting years of experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: a408aaef-aaa0-4513-91ca-a1be0d002b21)')
+2025-03-01 23:30:48,537 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: fd15df76-84b8-4092-8679-afac61b3b229)')
+2025-03-01 23:30:48,600 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 29af3274-f446-431d-a827-89416a12378a)')
+2025-03-01 23:30:48,603 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-01 23:30:48,633 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting degree: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: d488b55c-6cdc-47fa-915e-7af1d2580e67)')
+2025-03-01 23:30:48,648 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: a53c472b-60d4-4944-af6a-d99b20f8c7ac)')
+2025-03-01 23:30:48,653 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-01 23:30:48,749 - resume_matcher.extraction.resume_extractor - ERROR - Error extracting experience: (MaxRetryError("HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/meta-llama/Llama-3.3-70B-Instruct/v1/chat/completions (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))"), '(Request ID: 66e9532c-9d7d-485f-9869-21dcb8db8c5a)')
+2025-03-01 23:30:48,749 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-01 23:30:48,756 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-01 23:30:48,756 - root - ERROR - Error in pipeline: cannot access local variable 'jobs_df' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
+    results = app.run_full_pipeline(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 245, in run_full_pipeline
+    jobs_df
+UnboundLocalError: cannot access local variable 'jobs_df' where it is not associated with a value
+2025-03-01 23:31:16,040 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 23:31:16,040 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 23:31:16,040 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-01 23:31:16,040 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-01 23:31:27,594 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-01 23:31:29,967 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-01 23:31:30,998 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-01 23:31:32,425 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-01 23:31:40,516 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-01 23:31:40,519 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-01 23:31:40,519 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-01 23:31:40,520 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-01 23:31:40,520 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-01 23:31:40,518 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-01 23:31:45,627 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-01 23:31:48,536 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-01 23:31:50,187 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-01 23:31:56,423 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-01 23:32:02,485 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-01 23:32:04,371 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-01 23:32:04,527 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-01 23:32:04,535 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-01 23:32:04,537 - root - ERROR - Error in pipeline: cannot access local variable 'jobs_df' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
+    results = app.run_full_pipeline(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 245, in run_full_pipeline
+    jobs_df
+UnboundLocalError: cannot access local variable 'jobs_df' where it is not associated with a value
+2025-03-01 23:34:46,258 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-01 23:34:46,258 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-01 23:34:46,258 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-01 23:34:46,258 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-01 23:34:48,217 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-01 23:34:48,368 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-01 23:34:48,501 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-01 23:34:48,716 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-01 23:34:49,305 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-01 23:34:49,308 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-01 23:34:49,313 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-01 23:34:49,315 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-01 23:34:49,315 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-01 23:34:49,316 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-01 23:34:50,150 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-01 23:34:50,514 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-01 23:34:50,732 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-01 23:34:51,486 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-01 23:34:51,615 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-01 23:34:51,727 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-01 23:34:55,129 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-01 23:34:55,134 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-01 23:34:55,134 - resume_matcher.main - INFO - Loading data from files
+2025-03-01 23:34:55,171 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-01 23:34:55,200 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-01 23:34:55,200 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-01 23:34:55,200 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-01 23:34:55,200 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-01 23:34:55,200 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-01 23:34:55,200 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-01 23:35:14,092 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-01 23:35:14,094 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-01 23:35:16,144 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-01 23:35:16,935 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-01 23:35:16,935 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-01 23:35:16,966 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-01 23:35:23,392 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-01 23:35:23,392 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-01 23:35:23,398 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-01 23:35:23,406 - resume_matcher.main - INFO - Resume matching pipeline completed successfully

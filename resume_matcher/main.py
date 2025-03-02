@@ -235,6 +235,9 @@ class ResumeMatcherApp:
                 raise ValueError("Resume directory must be provided when process_resumes is True")
 
             candidates_df = self.process_resumes(resume_dir)
+
+            # Need to also load jobs_df since it wasn't set above
+            _, jobs_df = self.load_data()
         else:
             # Load data from files
             candidates_df, jobs_df = self.load_data()
