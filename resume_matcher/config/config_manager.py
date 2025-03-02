@@ -54,7 +54,7 @@ class ConfigManager:
             return config
         except Exception as e:
             raise ValueError(f"Failed to load configuration: {str(e)}")
-    
+
     def _create_app_config(self) -> AppConfig:
         """Create and validate the application configuration."""
         # Create FilePaths config
@@ -63,27 +63,40 @@ class ConfigManager:
             listings_file=Path(self.config_data['file_paths']['listings_file']),
             output_dir=Path(self.config_data['file_paths']['output_dir'])
         )
-        
+
+        # Get HuggingFace token, resolving environment variables
+        hf_token = self._resolve_env_vars(self.config_data['hugging_face']['hf_token'])
+
         # Create HuggingFaceConfig
         huggingface = HuggingFaceConfig(
             model_id=self.config_data['hugging_face']['model_id'],
-            api_token=self.config_data['hugging_face']['hf_token'],
+            api_token=hf_token,
             api_url=f"https://api-inference.huggingface.co/pipeline/feature-extraction/{self.config_data['hugging_face']['model_id']}"
         )
-        
+
         # Create AppConfig
         app_config = AppConfig(
             file_paths=file_paths,
             huggingface=huggingface,
             debug_mode=self.config_data.get('debug_mode', False)
         )
-        
+
         # If top_candidates config exists, add it
         if 'top_candidates' in self.config_data:
             app_config.top_candidates_file = Path(self.config_data['top_candidates']['output_file'])
-        
+
         return app_config
-    
+
+    def _resolve_env_vars(self, value):
+        """Resolve environment variables in configuration values."""
+        if isinstance(value, str) and value.startswith('${') and value.endswith('}'):
+            env_var_name = value[2:-1]
+            env_value = os.environ.get(env_var_name)
+            if env_value is None:
+                raise ValueError(f"Environment variable {env_var_name} not found")
+            return env_value
+        return value
+
     def validate_paths(self) -> bool:
         """Validate that all required files and directories exist."""
         # Check input files

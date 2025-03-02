@@ -2,7 +2,7 @@ import logging
 import pandas as pd
 from pathlib import Path
 from typing import Dict, Any, Optional, List, Tuple
-
+from dotenv import load_dotenv
 from resume_matcher.config.config_manager import ConfigManager, AppConfig
 from resume_matcher.data.embedding_service import EmbeddingService
 from resume_matcher.extraction.resume_extractor import ResumeExtractor
@@ -257,6 +257,20 @@ class ResumeMatcherApp:
 
 
 if __name__ == "__main__":
+    import os
+    from pathlib import Path
+
+    # Get the directory where main.py is located
+    base_dir = Path(__file__).parent.parent.absolute()
+
+    # Load the .env file explicitly from that location
+    dotenv_path = base_dir / '.env'
+    print(f"Looking for .env at: {dotenv_path} (exists: {dotenv_path.exists()})")
+
+    load_dotenv(dotenv_path=dotenv_path)
+    print("HUGGINGFACE_TOKEN in environment:", "HUGGINGFACE_TOKEN" in os.environ)
+    if "HUGGINGFACE_TOKEN" in os.environ:
+        print("Token starts with:", os.environ["HUGGINGFACE_TOKEN"][:5] + "...")
     # Example usage
     app = ResumeMatcherApp()
     results = app.run_full_pipeline()

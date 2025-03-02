@@ -4,12 +4,11 @@ Engine for matching candidates with job listings based on embeddings.
 import pandas as pd
 import numpy as np
 import logging
-from typing import List, Dict, Tuple, Optional
+from typing import List, Dict, Tuple, Optional, Any
 from sklearn.metrics.pairwise import cosine_similarity
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
-
 
 class MatchingEngine:
     """Engine for matching candidates with job listings based on embeddings."""
@@ -147,3 +146,124 @@ class MatchingEngine:
             logger.info("Added contingent status to similarity matrix")
         
         return filtered_df
+
+    def visualize_similarity(self, similarity_df: pd.DataFrame) -> Tuple[Any, Any]:
+        """
+        Create visualizations for the similarity matrix.
+
+        Args:
+            similarity_df: DataFrame with similarity scores
+
+        Returns:
+            Tuple of (table figure, heatmap figure)
+        """
+        logger.info("Creating visualizations for similarity matrix")
+
+        import plotly.graph_objects as go
+        import plotly.express as px
+
+        # Create table visualization
+        table_fig = go.Figure(data=[go.Table(
+            header=dict(
+                values=[''] + list(similarity_df.columns),
+                fill_color='paleturquoise',
+                align='left'
+            ),
+            cells=dict(
+                values=[similarity_df.index] + [similarity_df[col] for col in similarity_df.columns],
+                fill_color='lavender',
+                align='left',
+                format=[None] + ['.2f'] * len(similarity_df.columns)
+            )
+        )])
+
+        table_fig.update_layout(
+            title="Candidate-Job Similarity Matrix (Table)",
+            width=1500,
+            height=1000
+        )
+
+        # Create heatmap visualization
+        heatmap_fig = px.imshow(
+            similarity_df,
+            labels=dict(x="Job Listing", y="Candidate", color="Similarity"),
+            x=similarity_df.columns,
+            y=similarity_df.index,
+            color_continuous_scale="RdBu_r"
+        )
+
+        heatmap_fig.update_layout(
+            title="Candidate-Job Similarity Matrix (Heatmap)",
+            width=1500,
+            height=1000
+        )
+
+        # Save the figures
+        table_fig.write_html(str(self.output_dir / "similarity_table.html"))
+        heatmap_fig.write_html(str(self.output_dir / "similarity_heatmap.html"))
+
+        return table_fig, heatmap_fig
+
+    def find_top_matches(self, similarity_df: pd.DataFrame, top_n: int = 5) -> pd.DataFrame:
+        """
+        Find top matching candidates for each job.
+
+        Args:
+            similarity_df: DataFrame with similarity scores
+            top_n: Number of top candidates to find per job
+
+        Returns:
+            DataFrame with top matches
+        """
+        logger.info(f"Finding top {top_n} matches per job")
+
+        from resume_matcher.matching.candidate_ranker import CandidateRanker
+
+        # Initialize candidate ranker
+        ranker = CandidateRanker()
+
+        # Rank candidates
+        top_matches_df = ranker.rank_candidates(similarity_df, top_n=top_n)
+
+        return top_matches_df
+
+    def save_results(
+            self,
+            candidates_df: pd.DataFrame,
+            jobs_df: pd.DataFrame,
+            similarity_df: pd.DataFrame
+    ) -> Dict[str, str]:
+        """
+        Save matching results to files.
+
+        Args:
+            candidates_df: DataFrame with candidate information
+            jobs_df: DataFrame with job listing information
+            similarity_df: DataFrame with similarity scores
+
+        Returns:
+            Dictionary with output file paths
+        """
+        logger.info("Saving matching results")
+
+        # Create output paths
+        similarity_csv_path = self.output_dir / "similarity_matrix.csv"
+        candidates_csv_path = self.output_dir / "candidates_with_embeddings.csv"
+        jobs_csv_path = self.output_dir / "jobs_with_embeddings.csv"
+
+        # Save files
+        similarity_df.to_csv(similarity_csv_path)
+
+        # Save candidates and jobs without the embedding column to avoid large files
+        candidates_to_save = candidates_df.drop(columns=['hf_embedding'], errors='ignore')
+        jobs_to_save = jobs_df.drop(columns=['hf_embedding'], errors='ignore')
+
+        candidates_to_save.to_csv(candidates_csv_path, index=False)
+        jobs_to_save.to_csv(jobs_csv_path, index=False)
+
+        # Return file paths
+        return {
+            "similarity_matrix": str(similarity_csv_path),
+            "candidates": str(candidates_csv_path),
+            "jobs": str(jobs_csv_path)
+        }

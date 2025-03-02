@@ -4,7 +4,7 @@ file_paths:
   output_dir: "./output"
 
 hugging_face:
-  model_id: "sentence-transformers/all-MiniLM-L6-v2"
-  hf_token: "${HUGGINGFACE_TOKEN}"
+  model_id: "sentence-transformers/all-MiniLM-L12-v2" #"sentence-transformers/all-MiniLM-L6-v2" #sentence-transformers/all-MiniLM-L12-v2
+  hf_token: "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"
 
 debug_mode: true

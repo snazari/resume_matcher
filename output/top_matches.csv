@@ -1,0 +1,176 @@
+Job,Candidate,Similarity,Rank
+TO Program Manager,Kameika Jones,0.5532246682697317,1
+TO Program Manager,LaTosha Wills,0.5523185172453036,2
+TO Program Manager,Caprice Washington,0.5513082224178043,3
+TO Program Manager,Elsie Conteh,0.5230860177218393,4
+TO Program Manager,Bethanne Poindexter,0.5171594005221163,5
+Advanced Information Security Professional,Bethanne Poindexter,0.6173754285951478,1
+Advanced Information Security Professional,Anjiline Sirsikar,0.5835341579540044,2
+Advanced Information Security Professional,Imari L. Gillispie,0.5542789748570465,3
+Advanced Information Security Professional,Kristin Laing,0.5415471387247908,4
+Advanced Information Security Professional,Caprice Washington,0.5225104251638433,5
+Basic Action Officer,Caprice Washington,0.5466436060646833,1
+Basic Action Officer,Sadoniya Whitaker,0.5200509608942336,2
+Basic Action Officer,Zi Zhou,0.516434226506187,3
+Basic Action Officer,Andrea Benn,0.49346747607449687,4
+Basic Action Officer,LaTosha Wills,0.4899555213901471,5
+Intermediate AI/Cybersecurity Advisor,Anjiline Sirsikar,0.6036874498032024,1
+Intermediate AI/Cybersecurity Advisor,Bethanne Poindexter,0.4808500723918014,2
+Intermediate AI/Cybersecurity Advisor,Veronica Boateng,0.47076501827231765,3
+Intermediate AI/Cybersecurity Advisor,Zi Zhou,0.42962523135976516,4
+Intermediate AI/Cybersecurity Advisor,Jeremy Pesner,0.4241613946593894,5
+Intermediate AI/ML Scientist,Bethanne Poindexter,0.5137625655967463,1
+Intermediate AI/ML Scientist,Veronica Boateng,0.49861107616034894,2
+Intermediate AI/ML Scientist,Jacqueline Griswold,0.48939794664737424,3
+Intermediate AI/ML Scientist,Kristin Laing,0.4795062296260902,4
+Intermediate AI/ML Scientist,Cristina Rios,0.4766770746592703,5
+Advanced AI/ML Scientist,Bethanne Poindexter,0.5815589703071594,1
+Advanced AI/ML Scientist,Veronica Boateng,0.56281773340229,2
+Advanced AI/ML Scientist,Zi Zhou,0.5396744807824848,3
+Advanced AI/ML Scientist,Jacqueline Griswold,0.539019909978608,4
+Advanced AI/ML Scientist,Elsie Conteh,0.5153362210023524,5
+Advanced Systems Analyst,Zi Zhou,0.5179148396192441,1
+Advanced Systems Analyst,Jacqueline Griswold,0.5012108757189808,2
+Advanced Systems Analyst,Elsie Conteh,0.47093880556691997,3
+Advanced Systems Analyst,Zain Abbas,0.4639349000928811,4
+Advanced Systems Analyst,Bethanne Poindexter,0.45519674791314857,5
+Intermediate Technical Advisor,Christal Hale,0.5409269299590795,1
+Intermediate Technical Advisor,Bethanne Poindexter,0.499414449893255,2
+Intermediate Technical Advisor,Veronica Boateng,0.4536459714589593,3
+Intermediate Technical Advisor,Kristin Laing,0.4470096816717888,4
+Intermediate Technical Advisor,Kameika Jones,0.4381136506337743,5
+Basic Software Developer,Bethanne Poindexter,0.5495419763838516,1
+Basic Software Developer,Veronica Boateng,0.5133289951373524,2
+Basic Software Developer,Imari L. Gillispie,0.48225871622837085,3
+Basic Software Developer,LaTosha Wills,0.4699386119603144,4
+Basic Software Developer,Kristin Laing,0.45469078512694927,5
+Basic Executive Assistant,Ariel Ausmer,0.5899132401273305,1
+Basic Executive Assistant,Zi Zhou,0.5726757689399322,2
+Basic Executive Assistant,Sadoniya Whitaker,0.55282201176249,3
+Basic Executive Assistant,Andrea Benn,0.5344278802678606,4
+Basic Executive Assistant,Caprice Washington,0.4956720234470501,5
+Intermediate Subject Matter Expert,LaTosha Wills,0.5232273028104988,1
+Intermediate Subject Matter Expert,Christal Hale,0.49698162412103086,2
+Intermediate Subject Matter Expert,Kristin Laing,0.4954974235259666,3
+Intermediate Subject Matter Expert,Bethanne Poindexter,0.48151661577505595,4
+Intermediate Subject Matter Expert,Sarah Zamanian,0.46490821508836966,5
+Intermediate Software Developer,Kristin Laing,0.5935166602402011,1
+Intermediate Software Developer,Bethanne Poindexter,0.5930097951958503,2
+Intermediate Software Developer,Kameika Jones,0.5402560039029768,3
+Intermediate Software Developer,LaTosha Wills,0.5345287567465051,4
+Intermediate Software Developer,Christal Hale,0.5248657183716641,5
+Advanced Cloud Architect,Kameika Jones,0.35630264688460045,1
+Advanced Cloud Architect,Anjiline Sirsikar,0.3485518577155515,2
+Advanced Cloud Architect,Caprice Washington,0.34183079407868916,3
+Advanced Cloud Architect,Veronica Boateng,0.32715485100777597,4
+Advanced Cloud Architect,Zain Abbas,0.32360015844526535,5
+Advanced Operational Data Science Lead,Caprice Washington,0.47211321156193753,1
+Advanced Operational Data Science Lead,Veronica Boateng,0.46156890744713486,2
+Advanced Operational Data Science Lead,Zain Abbas,0.4097654915031761,3
+Advanced Operational Data Science Lead,LaTosha Wills,0.39973404635366294,4
+Advanced Operational Data Science Lead,Neda Bostani,0.371156974366405,5
+Basic Subject Matter Expert (Data Strategy),Veronica Boateng,0.5634898997503887,1
+Basic Subject Matter Expert (Data Strategy),Neda Bostani,0.5475514984756287,2
+Basic Subject Matter Expert (Data Strategy),Zain Abbas,0.45628712282210016,3
+Basic Subject Matter Expert (Data Strategy),Zi Zhou,0.4296642473425216,4
+Basic Subject Matter Expert (Data Strategy),Christal Hale,0.42673522223090576,5
+Intermediate Security Specialist,Bethanne Poindexter,0.6340663056721372,1
+Intermediate Security Specialist,Imari L. Gillispie,0.5890573522381065,2
+Intermediate Security Specialist,Kristin Laing,0.5150446639310873,3
+Intermediate Security Specialist,Anjiline Sirsikar,0.5087508222268837,4
+Intermediate Security Specialist,Olakunbi Kekere-Ekun,0.5076948835165911,5
+Intermediate Technical Management Advisor,Christal Hale,0.6052828372839845,1
+Intermediate Technical Management Advisor,Bethanne Poindexter,0.5970510793921677,2
+Intermediate Technical Management Advisor,LaTosha Wills,0.5532027342842119,3
+Intermediate Technical Management Advisor,Kameika Jones,0.5318509556042754,4
+Intermediate Technical Management Advisor,Caprice Washington,0.5058387055914915,5
+Basic Design Strategist,Kristin Laing,0.4212364649734157,1
+Basic Design Strategist,Christal Hale,0.412379906058776,2
+Basic Design Strategist,Bethanne Poindexter,0.40472399816392157,3
+Basic Design Strategist,Andrea Benn,0.3969308022723793,4
+Basic Design Strategist,LaTosha Wills,0.393493410832796,5
+Intermediate Digital Forensics Analyst,Bethanne Poindexter,0.5232715835842143,1
+Intermediate Digital Forensics Analyst,Anjiline Sirsikar,0.5071251438530058,2
+Intermediate Digital Forensics Analyst,Kristin Laing,0.49858439074517036,3
+Intermediate Digital Forensics Analyst,Zain Abbas,0.4935317901448791,4
+Intermediate Digital Forensics Analyst,Caprice Washington,0.4758725424176383,5
+Intermediate Product Advisor ,LaTosha Wills,0.4727732326396875,1
+Intermediate Product Advisor ,Christal Hale,0.4591717511544483,2
+Intermediate Product Advisor ,Kristin Laing,0.4190904557644459,3
+Intermediate Product Advisor ,Bethanne Poindexter,0.41279959899718904,4
+Intermediate Product Advisor ,Caprice Washington,0.4127833210038018,5
+Basic Subject Matter Expert (AI/Cybersecurity),Anjiline Sirsikar,0.48226790181337126,1
+Basic Subject Matter Expert (AI/Cybersecurity),Veronica Boateng,0.377896628090719,2
+Basic Subject Matter Expert (AI/Cybersecurity),Zain Abbas,0.3408370402553317,3
+Basic Subject Matter Expert (AI/Cybersecurity),Bethanne Poindexter,0.33976718061308525,4
+Basic Subject Matter Expert (AI/Cybersecurity),Jeremy Pesner,0.3335208669695564,5
+Basic Subject Matter Expert (Cybersecurity Operations),Anjiline Sirsikar,0.5210310071622759,1
+Basic Subject Matter Expert (Cybersecurity Operations),Imari L. Gillispie,0.4342095649705745,2
+Basic Subject Matter Expert (Cybersecurity Operations),Caprice Washington,0.4085195611419152,3
+Basic Subject Matter Expert (Cybersecurity Operations),Bethanne Poindexter,0.40723230896625917,4
+Basic Subject Matter Expert (Cybersecurity Operations),Zain Abbas,0.39252870981477267,5
+Basic Subject Matter Expert (Cybersecurity Engineering),Anjiline Sirsikar,0.5206884145403852,1
+Basic Subject Matter Expert (Cybersecurity Engineering),Bethanne Poindexter,0.4105658835069328,2
+Basic Subject Matter Expert (Cybersecurity Engineering),Imari L. Gillispie,0.39668675156073663,3
+Basic Subject Matter Expert (Cybersecurity Engineering),Zain Abbas,0.3953270298954299,4
+Basic Subject Matter Expert (Cybersecurity Engineering),Kristin Laing,0.3846767393295034,5
+Basic Scientist/Engineer (Data modeler),Veronica Boateng,0.5557797128375226,1
+Basic Scientist/Engineer (Data modeler),Yuqing Mao,0.4688425377442453,2
+Basic Scientist/Engineer (Data modeler),Zain Abbas,0.4542245467415824,3
+Basic Scientist/Engineer (Data modeler),Neda Bostani,0.4184304092380938,4
+Basic Scientist/Engineer (Data modeler),Jacqueline Griswold,0.40936573323530157,5
+Basic License Tracking,Veronica Boateng,0.4364536110114531,1
+Basic License Tracking,Bethanne Poindexter,0.42690090441717443,2
+Basic License Tracking,Zain Abbas,0.40397637405970555,3
+Basic License Tracking,Jeremy Pesner,0.3841736423995381,4
+Basic License Tracking,LaTosha Wills,0.37744740934356236,5
+Basic Acquisition Support,Christal Hale,0.4624286805690823,1
+Basic Acquisition Support,LaTosha Wills,0.45677059901823275,2
+Basic Acquisition Support,Kristin Laing,0.44150602124515564,3
+Basic Acquisition Support,Caprice Washington,0.43083101713458,4
+Basic Acquisition Support,Bethanne Poindexter,0.42529971265244393,5
+Intermediate Advisor for Customer Delivery,LaTosha Wills,0.5318513571891779,1
+Intermediate Advisor for Customer Delivery,Kameika Jones,0.5112967256499464,2
+Intermediate Advisor for Customer Delivery,Caprice Washington,0.5067549081137592,3
+Intermediate Advisor for Customer Delivery,Bethanne Poindexter,0.503615935645352,4
+Intermediate Advisor for Customer Delivery,Kristin Laing,0.48753975613114564,5
+Intermediate Product Advisor,LaTosha Wills,0.4893370058188977,1
+Intermediate Product Advisor,Kameika Jones,0.4775399849393611,2
+Intermediate Product Advisor,Christal Hale,0.4760318831370209,3
+Intermediate Product Advisor,Bethanne Poindexter,0.44770987894584735,4
+Intermediate Product Advisor,Caprice Washington,0.44544290678930254,5
+Advanced Systems Architect,Veronica Boateng,0.4612947445735507,1
+Advanced Systems Architect,Caprice Washington,0.4350233865447447,2
+Advanced Systems Architect,Bethanne Poindexter,0.4054006731213505,3
+Advanced Systems Architect,LaTosha Wills,0.3722048388220305,4
+Advanced Systems Architect,Hewan Teklu,0.35100540829291993,5
+"Advanced Scientist, Engineer",Bethanne Poindexter,0.5859612372785252,1
+"Advanced Scientist, Engineer",Veronica Boateng,0.5272118713286864,2
+"Advanced Scientist, Engineer",Jacqueline Griswold,0.5118454741796893,3
+"Advanced Scientist, Engineer",Zi Zhou,0.5099892772920952,4
+"Advanced Scientist, Engineer",Kristin Laing,0.5076235773038942,5
+Intermediate Policy Analyst,Anjiline Sirsikar,0.644685762051588,1
+Intermediate Policy Analyst,Jeremy Pesner,0.624029233205335,2
+Intermediate Policy Analyst,Bethanne Poindexter,0.46566935769394024,3
+Intermediate Policy Analyst,Zain Abbas,0.4161554445160997,4
+Intermediate Policy Analyst,Caprice Washington,0.405822090774168,5
+Intermediate Data Scientist,Veronica Boateng,0.6151859740542659,1
+Intermediate Data Scientist,Bethanne Poindexter,0.5111787722317804,2
+Intermediate Data Scientist,Yuri Piterskii,0.4991472580470778,3
+Intermediate Data Scientist,Neda Bostani,0.47214110859442426,4
+Intermediate Data Scientist,Andrea Benn,0.44208764339633777,5
+Basic Database Specilaist,Caprice Washington,0.43148483006939964,1
+Basic Database Specilaist,Hewan Teklu,0.405899343540819,2
+Basic Database Specilaist,Scarlette Cella,0.39756229813346866,3
+Basic Database Specilaist,Elsie Conteh,0.3926707535891091,4
+Basic Database Specilaist,Christal Hale,0.3917879120028712,5
+Intermediate Travel Specialist,Yuri Piterskii,0.6444268870488727,1
+Intermediate Travel Specialist,Bethanne Poindexter,0.6420439045239109,2
+Intermediate Travel Specialist,Kristin Laing,0.5819793540574622,3
+Intermediate Travel Specialist,Andrea Benn,0.5482866307796136,4
+Intermediate Travel Specialist,Kameika Jones,0.5455609357728404,5
+Intermediate Conference/Events Planner,Soraya Schwartz,0.6496793268844085,1
+Intermediate Conference/Events Planner,LaTosha Wills,0.464974927587013,2
+Intermediate Conference/Events Planner,Bethanne Poindexter,0.45967169497787763,3
+Intermediate Conference/Events Planner,Scarlette Cella,0.4515251184536967,4
+Intermediate Conference/Events Planner,Kristin Laing,0.43730186936389115,5
