@@ -267,7 +267,7 @@ class EmbeddingStorage:
         # Ensure embedding column exists
         if embedding_column not in result_df.columns:
             result_df[embedding_column] = None
-    
+
         # Track which jobs need new embeddings
         jobs_to_embed = []
 

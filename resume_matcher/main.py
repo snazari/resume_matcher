@@ -47,11 +47,19 @@ class ResumeMatcherApp:
         )
         self.logger = logging.getLogger(__name__)
 
+    """
+    Updated methods for ResumeMatcherApp to correctly use embedding storage
+    """
+
     def _init_components(self):
         """Initialize application components."""
+        # Set up logging
+        logging.basicConfig(level=logging.INFO)
+
         # Create embedding storage
-        embedding_storage_dir = self.config.file_paths.output_dir / "embeddings"
-        self.embedding_storage = EmbeddingStorage(embedding_storage_dir)
+        storage_dir = Path(self.config.file_paths.output_dir) / "embeddings"
+        from resume_matcher.data.simplified_embedding_storage import SimpleEmbeddingStorage
+        self.embedding_storage = SimpleEmbeddingStorage(storage_dir)
 
         # Create embedding service
         self.embedding_service = EmbeddingService(
@@ -73,83 +81,86 @@ class ResumeMatcherApp:
         else:
             self.resume_extractor = None
 
+            # Test embedding storage functionality
+        if self.config.debug_mode:
+            self.logger.info("Debug mode is enabled, testing embedding storage")
+            storage_working = self.test_embedding_storage()
+            if storage_working:
+                self.logger.info("CHECK MARK: Embedding storage test passed - storage is working correctly")
+            else:
+                self.logger.warning("NO CHECK MARK: Embedding storage test failed - storage may not be working")
+
     def prepare_and_embed_data(
             self,
             candidates_df: pd.DataFrame,
             jobs_df: pd.DataFrame
     ) -> Tuple[pd.DataFrame, pd.DataFrame]:
-        """
-        Prepare and generate embeddings for candidate and job data.
-
-        Args:
-            candidates_df: DataFrame with candidate information
-            jobs_df: DataFrame with job listing information
-
-        Returns:
-            Tuple of (candidates DataFrame with embeddings, jobs DataFrame with embeddings)
-        """
         self.logger.info("Preparing and embedding data")
-
-        # Prepare candidate data
         candidates_df = self.matching_engine.prepare_candidate_data(candidates_df)
-
-        # Prepare job data
         jobs_df = self.matching_engine.prepare_job_data(jobs_df)
+        print(candidates_df)
+        print(jobs_df)
+        self.logger.info("Checking for stored embeddings...")
 
-        # Try to load stored embeddings for candidates
-        candidates_df, candidates_mask = self.embedding_storage.load_candidate_embeddings(
+        # Handle Candidate Embeddings
+        self.logger.info("Loading candidate embeddings from storage...")
+        candidates_df, candidates_mask = self.embedding_storage.load_embeddings(
             candidates_df,
             id_column='Name ',
-            embedding_column='hf_embedding'
+            embedding_column='hf_embedding',
+            is_candidate=True
         )
-
-        # Try to load stored embeddings for jobs
-        jobs_df, jobs_mask = self.embedding_storage.load_job_embeddings(
-            jobs_df,
-            id_column='Role',
-            embedding_column='hf_embedding'
-        )
-
-        # Generate embeddings only for candidates that need them
+        self.logger.info(f"Need to generate embeddings for {candidates_mask.sum()} of {len(candidates_df)} candidates")
         if candidates_mask.any():
             self.logger.info(f"Generating embeddings for {candidates_mask.sum()} candidates")
-            candidates_df = self.embedding_service.embed_dataframe(
-                candidates_df,
-                text_column='text_to_embed',
-                embedding_column='hf_embedding',
-                mask=candidates_mask
-            )
-
-            # Store the newly generated embeddings
-            self.embedding_storage.store_candidate_embeddings(
-                candidates_df[candidates_mask],
-                id_column='Name ',
-                embedding_column='hf_embedding'
-            )
+            texts_to_embed = candidates_df.loc[candidates_mask, 'text_to_embed'].tolist()
+            new_embeddings = self.embedding_service.generate_embeddings(texts_to_embed)
+            if new_embeddings:
+                idx_list = candidates_df.loc[candidates_mask].index.tolist()
+                for i, idx in enumerate(idx_list):
+                    candidates_df.at[idx, 'hf_embedding'] = new_embeddings[i]
+                self.logger.info("Storing new candidate embeddings...")
+                self.embedding_storage.store_embeddings(
+                    candidates_df.loc[candidates_mask],
+                    id_column='Name ',
+                    embedding_column='hf_embedding',
+                    is_candidate=True
+                )
+            else:
+                self.logger.warning("Failed to generate embeddings for candidates")
         else:
-            self.logger.info("All candidate embeddings loaded from storage")
+            self.logger.info("All candidate embeddings loaded from storage - no new embeddings needed")
 
-        # Generate embeddings only for jobs that need them
+        # Handle Job Embeddings
+        self.logger.info("Loading job embeddings from storage...")
+        jobs_df, jobs_mask = self.embedding_storage.load_embeddings(
+            jobs_df,
+            id_column='Role',
+            embedding_column='hf_embedding',
+            is_candidate=False
+        )
+        self.logger.info(f"Need to generate embeddings for {jobs_mask.sum()} of {len(jobs_df)} jobs")
         if jobs_mask.any():
             self.logger.info(f"Generating embeddings for {jobs_mask.sum()} job listings")
-            jobs_df = self.embedding_service.embed_dataframe(
-                jobs_df,
-                text_column='listing_to_embed',
-                embedding_column='hf_embedding',
-                mask=jobs_mask
-            )
-
-            # Store the newly generated embeddings
-            self.embedding_storage.store_job_embeddings(
-                jobs_df[jobs_mask],
-                id_column='Role',
-                embedding_column='hf_embedding'
-            )
+            texts_to_embed = jobs_df.loc[jobs_mask, 'listing_to_embed'].tolist()
+            new_embeddings = self.embedding_service.generate_embeddings(texts_to_embed)
+            if new_embeddings:
+                idx_list = jobs_df.loc[jobs_mask].index.tolist()
+                for i, idx in enumerate(idx_list):
+                    jobs_df.at[idx, 'hf_embedding'] = new_embeddings[i]
+                self.logger.info("Storing new job embeddings...")
+                self.embedding_storage.store_embeddings(
+                    jobs_df.loc[jobs_mask],
+                    id_column='Role',
+                    embedding_column='hf_embedding',
+                    is_candidate=False
+                )
+            else:
+                self.logger.warning("Failed to generate embeddings for jobs")
         else:
-            self.logger.info("All job embeddings loaded from storage")
+            self.logger.info("All job embeddings loaded from storage - no new embeddings needed")
 
         return candidates_df, jobs_df
-
     def process_resumes(self, directory_path: str) -> pd.DataFrame:
         """
         Process resume files to extract information.
@@ -341,6 +352,44 @@ class ResumeMatcherApp:
 
         return results
 
+    def test_embedding_storage(self):
+        """Test that embedding storage is working properly."""
+        self.logger.info("Testing embedding storage...")
+
+        # Load a test file
+        test_df = pd.DataFrame({
+            'id': ['test1', 'test2'],
+            'text': ['This is a test', 'Another test'],
+            'embedding': [None, None]
+        })
+
+        # Generate embeddings
+        texts = test_df['text'].tolist()
+        embeddings = self.embedding_service.generate_embeddings(texts)
+
+        # Store embeddings
+        for i, idx in enumerate(test_df.index):
+            test_df.at[idx, 'embedding'] = embeddings[i]
+
+        # Store to disk
+        self.embedding_storage.store_embeddings(
+            test_df,
+            id_column='id',
+            embedding_column='embedding',
+            is_candidate=True
+        )
+
+        # Now try to load them
+        loaded_df, mask = self.embedding_storage.load_embeddings(
+            test_df.copy(),
+            id_column='id',
+            embedding_column='embedding',
+            is_candidate=True
+        )
+
+        # Check results
+        self.logger.info(f"Test complete. Mask shows {mask.sum()} of {len(mask)} need generating")
+        return mask.sum() == 0  # Should be 0 if all loaded correctly
 
 if __name__ == "__main__":
     import os
@@ -357,6 +406,7 @@ if __name__ == "__main__":
     print("HUGGINGFACE_TOKEN in environment:", "HUGGINGFACE_TOKEN" in os.environ)
     if "HUGGINGFACE_TOKEN" in os.environ:
         print("Token starts with:", os.environ["HUGGINGFACE_TOKEN"][:5] + "...")
+
     # Example usage
     app = ResumeMatcherApp()
     results = app.run_full_pipeline()
