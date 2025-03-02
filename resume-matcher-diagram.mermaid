@@ -1,0 +1,106 @@
+classDiagram
+    class ResumeMatcherApp {
+        -ConfigManager config_manager
+        -AppConfig config
+        -EmbeddingService embedding_service
+        -MatchingEngine matching_engine
+        -ResumeExtractor resume_extractor
+        +__init__(config_path)
+        +process_resumes(directory_path)
+        +load_data()
+        +prepare_and_embed_data(candidates_df, jobs_df)
+        +match_candidates_to_jobs(candidates_df, jobs_df, visualize)
+        +run_full_pipeline(process_resumes, resume_dir, visualize)
+    }
+    
+    class ConfigManager {
+        -str config_path
+        -dict config_data
+        -AppConfig app_config
+        +__init__(config_path)
+        -_load_config()
+        -_create_app_config()
+        -_resolve_env_vars(value)
+        +validate_paths()
+        +get_config()
+    }
+    
+    class AppConfig {
+        +FilePaths file_paths
+        +HuggingFaceConfig huggingface
+        +Path top_candidates_file
+        +bool debug_mode
+    }
+    
+    class FilePaths {
+        +Path candidate_file
+        +Path listings_file
+        +Path output_dir
+    }
+    
+    class HuggingFaceConfig {
+        +str model_id
+        +str api_token
+        +str api_url
+    }
+    
+    class EmbeddingService {
+        -str api_url
+        -dict headers
+        -int batch_size
+        -int max_retries
+        +__init__(api_url, api_token, batch_size, max_retries)
+        -_query_api(texts)
+        +generate_embeddings(texts)
+        +embed_dataframe(df, text_column, embedding_column)
+    }
+    
+    class MatchingEngine {
+        -Path output_dir
+        +__init__(output_dir)
+        +prepare_candidate_data(df)
+        +prepare_job_data(df)
+        +calculate_similarity(candidates_df, jobs_df)
+        +filter_candidates(similarity_df, candidates_df, threshold)
+        +visualize_similarity(similarity_df)
+        +find_top_matches(similarity_df, top_n)
+        +save_results(candidates_df, jobs_df, similarity_df)
+    }
+    
+    class CandidateRanker {
+        +__init__()
+        +rank_candidates(similarity_df, top_n)
+        +optimize_assignments(similarity_df, max_jobs_per_candidate)
+        +analyze_rankings(ranked_df)
+    }
+    
+    class ResumeExtractor {
+        -str llm_model_id
+        -str api_token
+        +__init__(llm_model_id, api_token)
+        +process_directory(directory_path)
+    }
+    
+    ResumeMatcherApp --> ConfigManager : uses
+    ResumeMatcherApp --> EmbeddingService : uses
+    ResumeMatcherApp --> MatchingEngine : uses
+    ResumeMatcherApp --> ResumeExtractor : uses
+    ResumeMatcherApp ..> AppConfig : depends on
+    
+    ConfigManager --> AppConfig : creates
+    AppConfig *-- FilePaths : contains
+    AppConfig *-- HuggingFaceConfig : contains
+    
+    MatchingEngine --> CandidateRanker : uses
+    
+    %% CLI and main application flow
+    class CLI {
+        +setup_logging(verbose)
+        +parse_args(args)
+        +command_process(args)
+        +command_match(args)
+        +command_pipeline(args)
+        +main(args)
+    }
+    
+    CLI --> ResumeMatcherApp : instantiates

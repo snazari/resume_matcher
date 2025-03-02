@@ -23,6 +23,7 @@ class ResumeMatcherApp:
         self._setup_logging()
 
         # Load configuration
+        self.logger.info("Sam Nazari, Ph.D.")
         self.logger.info("Initializing Resume Matcher application")
         self.config_manager = ConfigManager(config_path)
         self.config = self.config_manager.get_config()
