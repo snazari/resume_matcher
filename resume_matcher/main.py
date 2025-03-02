@@ -5,6 +5,7 @@ from typing import Dict, Any, Optional, List, Tuple
 from dotenv import load_dotenv
 from resume_matcher.config.config_manager import ConfigManager, AppConfig
 from resume_matcher.data.embedding_service import EmbeddingService
+from resume_matcher.data.embedding_storage import EmbeddingStorage
 from resume_matcher.extraction.resume_extractor import ResumeExtractor
 from resume_matcher.matching.matching_engine import MatchingEngine
 
@@ -48,6 +49,10 @@ class ResumeMatcherApp:
 
     def _init_components(self):
         """Initialize application components."""
+        # Create embedding storage
+        embedding_storage_dir = self.config.file_paths.output_dir / "embeddings"
+        self.embedding_storage = EmbeddingStorage(embedding_storage_dir)
+
         # Create embedding service
         self.embedding_service = EmbeddingService(
             api_url=self.config.huggingface.api_url,
@@ -67,6 +72,83 @@ class ResumeMatcherApp:
             )
         else:
             self.resume_extractor = None
+
+    def prepare_and_embed_data(
+            self,
+            candidates_df: pd.DataFrame,
+            jobs_df: pd.DataFrame
+    ) -> Tuple[pd.DataFrame, pd.DataFrame]:
+        """
+        Prepare and generate embeddings for candidate and job data.
+
+        Args:
+            candidates_df: DataFrame with candidate information
+            jobs_df: DataFrame with job listing information
+
+        Returns:
+            Tuple of (candidates DataFrame with embeddings, jobs DataFrame with embeddings)
+        """
+        self.logger.info("Preparing and embedding data")
+
+        # Prepare candidate data
+        candidates_df = self.matching_engine.prepare_candidate_data(candidates_df)
+
+        # Prepare job data
+        jobs_df = self.matching_engine.prepare_job_data(jobs_df)
+
+        # Try to load stored embeddings for candidates
+        candidates_df, candidates_mask = self.embedding_storage.load_candidate_embeddings(
+            candidates_df,
+            id_column='Name ',
+            embedding_column='hf_embedding'
+        )
+
+        # Try to load stored embeddings for jobs
+        jobs_df, jobs_mask = self.embedding_storage.load_job_embeddings(
+            jobs_df,
+            id_column='Role',
+            embedding_column='hf_embedding'
+        )
+
+        # Generate embeddings only for candidates that need them
+        if candidates_mask.any():
+            self.logger.info(f"Generating embeddings for {candidates_mask.sum()} candidates")
+            candidates_df = self.embedding_service.embed_dataframe(
+                candidates_df,
+                text_column='text_to_embed',
+                embedding_column='hf_embedding',
+                mask=candidates_mask
+            )
+
+            # Store the newly generated embeddings
+            self.embedding_storage.store_candidate_embeddings(
+                candidates_df[candidates_mask],
+                id_column='Name ',
+                embedding_column='hf_embedding'
+            )
+        else:
+            self.logger.info("All candidate embeddings loaded from storage")
+
+        # Generate embeddings only for jobs that need them
+        if jobs_mask.any():
+            self.logger.info(f"Generating embeddings for {jobs_mask.sum()} job listings")
+            jobs_df = self.embedding_service.embed_dataframe(
+                jobs_df,
+                text_column='listing_to_embed',
+                embedding_column='hf_embedding',
+                mask=jobs_mask
+            )
+
+            # Store the newly generated embeddings
+            self.embedding_storage.store_job_embeddings(
+                jobs_df[jobs_mask],
+                id_column='Role',
+                embedding_column='hf_embedding'
+            )
+        else:
+            self.logger.info("All job embeddings loaded from storage")
+
+        return candidates_df, jobs_df
 
     def process_resumes(self, directory_path: str) -> pd.DataFrame:
         """

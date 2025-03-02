@@ -928,3 +928,345 @@ UnboundLocalError: cannot access local variable 'jobs_df' where it is not associ
 2025-03-01 23:35:23,392 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
 2025-03-01 23:35:23,398 - resume_matcher.matching.matching_engine - INFO - Saving matching results
 2025-03-01 23:35:23,406 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 00:15:36,357 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 00:15:36,357 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 00:15:36,373 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 00:15:36,373 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 00:15:36,389 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 00:15:36,405 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 00:15:36,405 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 00:15:36,405 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 00:15:36,420 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 00:15:36,420 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 00:15:36,420 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 34 items
+2025-03-02 00:15:36,420 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 00:15:36,548 - resume_matcher.data.embedding_service - ERROR - API request failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
+2025-03-02 00:15:36,611 - backoff - INFO - Backing off _query_api(...) for 1.0s (requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)'))))
+2025-03-02 00:15:37,646 - resume_matcher.data.embedding_service - ERROR - API request failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
+2025-03-02 00:15:37,646 - backoff - INFO - Backing off _query_api(...) for 0.8s (requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)'))))
+2025-03-02 00:15:38,553 - resume_matcher.data.embedding_service - ERROR - API request failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
+2025-03-02 00:15:38,553 - backoff - ERROR - Giving up _query_api(...) after 3 tries (requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)'))))
+2025-03-02 00:15:38,553 - root - ERROR - Error in pipeline: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
+Traceback (most recent call last):
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connection.py", line 730, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connection.py", line 909, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
+    results = app.run_full_pipeline(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 328, in run_full_pipeline
+    candidates_df, jobs_df = self.prepare_and_embed_data(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 225, in prepare_and_embed_data
+    candidates_df = self.embedding_service.embed_dataframe(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 130, in embed_dataframe
+    embeddings = self.generate_embeddings(texts_to_embed)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 84, in generate_embeddings
+    batch_embeddings = self._query_api(batch_texts)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\backoff\_sync.py", line 105, in retry
+    ret = target(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 49, in _query_api
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /pipeline/feature-extraction/sentence-transformers/all-MiniLM-L12-v2 (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
+2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 00:16:13,493 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 00:16:13,493 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 00:16:13,493 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 00:16:13,509 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 00:16:13,510 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 34 items
+2025-03-02 00:16:13,510 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 00:16:28,846 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 00:16:29,569 - root - ERROR - Error in pipeline: Must have equal len keys and value when setting with an iterable
+Traceback (most recent call last):
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'hf_embedding'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\frame.py", line 4561, in _set_value
+    icol = self.columns.get_loc(col)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'hf_embedding'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
+    results = app.run_full_pipeline(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 328, in run_full_pipeline
+    candidates_df, jobs_df = self.prepare_and_embed_data(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 225, in prepare_and_embed_data
+    candidates_df = self.embedding_service.embed_dataframe(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 138, in embed_dataframe
+    df.at[idx, embedding_column] = embeddings[i]
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 2586, in __setitem__
+    return super().__setitem__(key, value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 2542, in __setitem__
+    self.obj._set_value(*key, value=value, takeable=self._takeable)
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\frame.py", line 4575, in _set_value
+    self.loc[index, col] = value
+    ~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 911, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1890, in _setitem_with_indexer
+    self._setitem_with_indexer(new_indexer, value, name)
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1942, in _setitem_with_indexer
+    self._setitem_with_indexer_split_path(indexer, value, name)
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1998, in _setitem_with_indexer_split_path
+    raise ValueError(
+ValueError: Must have equal len keys and value when setting with an iterable
+2025-03-02 00:17:00,845 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 00:17:00,845 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 00:17:00,845 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 00:17:00,845 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 00:17:03,167 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 00:17:03,167 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 00:17:03,292 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 00:17:03,308 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 00:17:04,358 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 00:17:04,392 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 00:17:04,397 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 00:17:04,400 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 00:17:04,408 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 00:17:04,396 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 00:17:04,408 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 00:17:04,510 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 00:17:05,042 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 00:17:05,691 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 00:17:05,693 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 00:17:05,903 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 00:17:06,174 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 00:17:06,194 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 00:17:06,195 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 00:17:06,197 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 00:17:06,199 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 00:17:06,199 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 00:17:06,199 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 00:17:06,201 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 00:17:06,201 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 00:17:06,203 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 00:17:06,203 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 00:17:07,012 - root - ERROR - Error in pipeline: Must have equal len keys and value when setting with an iterable
+Traceback (most recent call last):
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'hf_embedding'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\frame.py", line 4561, in _set_value
+    icol = self.columns.get_loc(col)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'hf_embedding'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\cli.py", line 234, in command_pipeline
+    results = app.run_full_pipeline(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 328, in run_full_pipeline
+    candidates_df, jobs_df = self.prepare_and_embed_data(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\main.py", line 225, in prepare_and_embed_data
+    candidates_df = self.embedding_service.embed_dataframe(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\sam.nazari\pycharmprojects\resume_matcher\resume_matcher\data\embedding_service.py", line 138, in embed_dataframe
+    df.at[idx, embedding_column] = embeddings[i]
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 2586, in __setitem__
+    return super().__setitem__(key, value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 2542, in __setitem__
+    self.obj._set_value(*key, value=value, takeable=self._takeable)
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\frame.py", line 4575, in _set_value
+    self.loc[index, col] = value
+    ~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 911, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1890, in _setitem_with_indexer
+    self._setitem_with_indexer(new_indexer, value, name)
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1942, in _setitem_with_indexer
+    self._setitem_with_indexer_split_path(indexer, value, name)
+  File "C:\Users\Sam.Nazari\AppData\Local\anaconda3-NOV24\envs\fin-pixy\Lib\site-packages\pandas\core\indexing.py", line 1998, in _setitem_with_indexer_split_path
+    raise ValueError(
+ValueError: Must have equal len keys and value when setting with an iterable
+2025-03-02 00:21:41,830 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 00:21:41,830 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 00:21:41,846 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 00:21:41,848 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 00:21:43,498 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 00:21:43,611 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 00:21:43,706 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 00:21:43,912 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 00:21:44,599 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 00:21:44,601 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 00:21:44,603 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 00:21:44,603 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 00:21:44,603 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 00:21:44,604 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 00:21:44,932 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 00:21:45,043 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 00:21:45,228 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 00:21:45,650 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 00:21:46,093 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 00:21:46,317 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 00:21:46,416 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 00:21:46,416 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 00:21:46,416 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 00:21:46,434 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 00:21:46,437 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 00:21:46,437 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 00:21:46,437 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 00:21:46,442 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 00:21:46,442 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 00:21:46,444 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 00:21:46,444 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 00:21:47,241 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 00:21:47,243 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 00:21:47,243 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 00:21:48,119 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 00:21:48,738 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 00:21:48,738 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 00:21:48,772 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 00:21:53,277 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 00:21:53,396 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 00:21:53,400 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 00:21:53,406 - resume_matcher.main - INFO - Resume matching pipeline completed successfully
+2025-03-02 00:26:26,948 - resume_matcher.main - INFO - Sam Nazari, Ph.D.
+2025-03-02 00:26:26,948 - resume_matcher.main - INFO - Initializing Resume Matcher application
+2025-03-02 00:26:26,948 - resume_matcher.main - INFO - Running full resume matching pipeline
+2025-03-02 00:26:26,948 - resume_matcher.main - INFO - Processing resumes from C:\Users\Sam.Nazari\PycharmProjects\resume-pixy-dust\semantic_search\data\t04
+2025-03-02 00:26:28,744 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Bisar Barua.pdf
+2025-03-02 00:26:28,757 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Christine Clermont.pdf
+2025-03-02 00:26:28,974 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 00:26:29,434 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Earl Vialpando.pdf
+2025-03-02 00:26:30,233 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed HOWARD UNDERWOOD.pdf
+2025-03-02 00:26:30,233 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-03-02 00:26:30,245 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-03-02 00:26:30,245 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-03-02 00:26:30,246 - pypdf._reader - WARNING - Ignoring wrong pointing object 12 0 (offset 0)
+2025-03-02 00:26:30,246 - pypdf._reader - WARNING - Ignoring wrong pointing object 14 0 (offset 0)
+2025-03-02 00:26:30,569 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Fatima Khokhar.pdf
+2025-03-02 00:26:30,664 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Joshua Zarb.pdf
+2025-03-02 00:26:30,822 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed LU WANG.pdf
+2025-03-02 00:26:31,323 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed MARQUITTA L. FOSTER.pdf
+2025-03-02 00:26:31,871 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Steven Strasburg.pdf
+2025-03-02 00:26:31,951 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Tracey Beason.pdf
+2025-03-02 00:26:31,966 - resume_matcher.extraction.resume_extractor - INFO - Successfully processed Transcripts ASHLEY THEO J. SAVAGE.pdf
+2025-03-02 00:26:31,966 - resume_matcher.main - INFO - Saved extracted candidate data to output\extracted_candidates.csv
+2025-03-02 00:26:31,976 - resume_matcher.main - INFO - Loading data from files
+2025-03-02 00:26:31,979 - resume_matcher.main - INFO - Loaded 34 candidates
+2025-03-02 00:26:31,988 - resume_matcher.main - INFO - Loaded 35 job listings
+2025-03-02 00:26:31,996 - resume_matcher.main - INFO - Preparing and embedding data
+2025-03-02 00:26:31,998 - resume_matcher.matching.matching_engine - INFO - Preparing candidate data for matching
+2025-03-02 00:26:32,000 - resume_matcher.matching.matching_engine - INFO - Preparing job listing data for matching
+2025-03-02 00:26:32,000 - resume_matcher.main - INFO - Generating embeddings for candidates
+2025-03-02 00:26:32,002 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 12 items
+2025-03-02 00:26:32,002 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 1
+2025-03-02 00:26:32,958 - resume_matcher.main - INFO - Generating embeddings for job listings
+2025-03-02 00:26:32,958 - resume_matcher.data.embedding_service - INFO - Generating embeddings for 35 items
+2025-03-02 00:26:32,958 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 1 of 2
+2025-03-02 00:26:33,744 - resume_matcher.data.embedding_service - INFO - Processing embedding batch 2 of 2
+2025-03-02 00:26:34,242 - resume_matcher.main - INFO - Matching candidates to jobs
+2025-03-02 00:26:34,242 - resume_matcher.matching.matching_engine - INFO - Calculating similarity between candidates and job listings
+2025-03-02 00:26:34,272 - resume_matcher.matching.matching_engine - INFO - Creating visualizations for similarity matrix
+2025-03-02 00:26:37,177 - resume_matcher.matching.matching_engine - INFO - Finding top 5 matches per job
+2025-03-02 00:26:37,212 - resume_matcher.matching.candidate_ranker - INFO - Ranking top 5 candidates for each job
+2025-03-02 00:26:37,227 - resume_matcher.matching.matching_engine - INFO - Saving matching results
+2025-03-02 00:26:37,235 - resume_matcher.main - INFO - Resume matching pipeline completed successfully

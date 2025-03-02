@@ -111,6 +111,55 @@ pytest
 black resume_matcher tests
 ```
 
-## License
+## TODO
 
-MIT
+I've built a system that extracts information from resumes, generates embeddings for candidates and job listings, and 
+calculates similarity scores to match candidates with positions. Here are recommendations for improving the codebase:
+
+1. **Testing Framework**: 
+   - Add unit tests for each module (pytest recommended)
+   - Create integration tests for the full pipeline
+   - Include test data fixtures
+
+2. **Dependency Management**:
+   - Use a `requirements.txt` or `pyproject.toml` file
+   - Consider using a virtual environment or Docker containerization
+
+3. **API Improvements**:
+   - Add API rate limiting and caching
+   - Consider implementing a local embedding model option to reduce API costs
+
+4. **ML Enhancements**:
+   - Explore more advanced embedding models (e.g., E5, SBERT)
+   - Consider using fine-tuned models for the domain
+   - Add model evaluation metrics to compare different approaches
+
+5. **User Interface**:
+   - Create a simple web UI using Streamlit or Flask
+   - Add interactive visualizations with Plotly
+
+6. **Pipeline Orchestration**:
+   - Consider using Airflow or Luigi for complex pipelines
+   - Add monitoring and alerting capabilities
+
+## 8. Migration Plan
+
+1. **Phase 1: Setup and Infrastructure**
+   - Create the package structure
+   - Set up configuration management
+   - Implement logging framework
+
+2. **Phase 2: Core Components**
+   - Implement EmbeddingService with improved error handling
+   - Develop the ResumeExtractor with parallel processing
+   - Create the MatchingEngine with visualization capabilities
+
+3. **Phase 3: Integration and Testing**
+   - Implement the main application class
+   - Write unit and integration tests
+   - Test with sample data
+
+4. **Phase 4: Enhancements**
+   - Add performance optimizations
+   - Implement advanced ML features
+   - Create web UI (if needed)

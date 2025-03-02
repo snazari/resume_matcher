@@ -95,25 +95,51 @@ class EmbeddingService:
             all_embeddings.extend(batch_embeddings)
         
         return all_embeddings
-    
-    def embed_dataframe(self, df: pd.DataFrame, text_column: str, embedding_column: str = 'hf_embedding') -> pd.DataFrame:
+
+    def embed_dataframe(
+            self,
+            df: pd.DataFrame,
+            text_column: str,
+            embedding_column: str = 'hf_embedding',
+            mask: Optional[pd.Series] = None
+    ) -> pd.DataFrame:
         """
         Add embeddings to a DataFrame.
-        
+
         Args:
             df: pandas DataFrame containing the texts
             text_column: Name of the column containing the texts to embed
             embedding_column: Name of the column to store the embeddings
-            
+            mask: Boolean mask indicating which rows need new embeddings (True = needs embedding)
+
         Returns:
-            DataFrame with embeddings added or None if embedding generation failed
+            DataFrame with embeddings added
         """
-        texts = df[text_column].tolist()
-        embeddings = self.generate_embeddings(texts)
-        
+        # Make sure the embedding_column exists
+        if embedding_column not in df.columns:
+            df[embedding_column] = None
+
+        # If no mask provided, embed all rows
+        if mask is None:
+            mask = pd.Series(True, index=df.index)
+
+        # Get only the texts that need embedding
+        texts_to_embed = df.loc[mask, text_column].tolist()
+
+        if not texts_to_embed:
+            logger.info("No texts need embedding")
+            return df  # All embeddings already loaded
+
+        logger.info(f"Generating embeddings for {len(texts_to_embed)} items")
+        embeddings = self.generate_embeddings(texts_to_embed)
+
         if embeddings is None:
-            logger.error("Failed to generate embeddings for DataFrame")
+            logger.error("Failed to generate embeddings")
             return df  # Return original DataFrame without embeddings
-        
-        df[embedding_column] = embeddings
+
+        # Update only the rows that needed embedding
+        masked_indices = df.loc[mask].index
+        for i, idx in enumerate(masked_indices):
+            df.at[idx, embedding_column] = embeddings[i]
+
         return df
