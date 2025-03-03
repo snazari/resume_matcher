@@ -49,11 +49,10 @@ class ResumeMatcherApp:
 
     def _init_components(self):
         """Initialize application components."""
-<<<<<<< Updated upstream
         # Create embedding storage
         embedding_storage_dir = self.config.file_paths.output_dir / "embeddings"
         self.embedding_storage = EmbeddingStorage(embedding_storage_dir)
-=======
+
         # Set up logging
         logging.basicConfig(level=logging.INFO)
 
@@ -61,7 +60,6 @@ class ResumeMatcherApp:
         storage_dir = Path(self.config.file_paths.output_dir) / "embeddings"
         from resume_matcher.data.vector_database import VectorDatabase
         self.embedding_storage = VectorDatabase(storage_dir)
->>>>>>> Stashed changes
 
         # Create embedding service
         self.embedding_service = EmbeddingService(
@@ -83,12 +81,9 @@ class ResumeMatcherApp:
         else:
             self.resume_extractor = None
 
-<<<<<<< Updated upstream
-=======
         # Remove the debug mode test
         if self.config.debug_mode:
             self.logger.info("Debug mode is enabled")
->>>>>>> Stashed changes
     def prepare_and_embed_data(
             self,
             candidates_df: pd.DataFrame,
@@ -96,7 +91,6 @@ class ResumeMatcherApp:
     ) -> Tuple[pd.DataFrame, pd.DataFrame]:
         """
         Prepare and generate embeddings for candidate and job data.
-<<<<<<< Updated upstream
 
         Args:
             candidates_df: DataFrame with candidate information
@@ -113,16 +107,6 @@ class ResumeMatcherApp:
         # Prepare job data
         jobs_df = self.matching_engine.prepare_job_data(jobs_df)
 
-        # Try to load stored embeddings for candidates
-=======
-
-        Args:
-            candidates_df: DataFrame with candidate information
-            jobs_df: DataFrame with job listing information
-
-        Returns:
-            Tuple of (candidates DataFrame with embeddings, jobs DataFrame with embeddings)
-        """
         self.logger.info("Preparing and embedding data")
 
         # Prepare candidate and job data
@@ -133,16 +117,11 @@ class ResumeMatcherApp:
 
         # Handle Candidate Embeddings
         self.logger.info("Loading candidate embeddings from vector database...")
->>>>>>> Stashed changes
         candidates_df, candidates_mask = self.embedding_storage.load_candidate_embeddings(
             candidates_df,
             id_column='Name ',
             embedding_column='hf_embedding'
         )
-<<<<<<< Updated upstream
-
-        # Try to load stored embeddings for jobs
-=======
 
         self.logger.info(f"Need to generate embeddings for {candidates_mask.sum()} of {len(candidates_df)} candidates")
 
@@ -169,14 +148,12 @@ class ResumeMatcherApp:
 
         # Handle Job Embeddings
         self.logger.info("Loading job embeddings from vector database...")
->>>>>>> Stashed changes
         jobs_df, jobs_mask = self.embedding_storage.load_job_embeddings(
             jobs_df,
             id_column='Role',
             embedding_column='hf_embedding'
         )
 
-<<<<<<< Updated upstream
         # Generate embeddings only for candidates that need them
         if candidates_mask.any():
             self.logger.info(f"Generating embeddings for {candidates_mask.sum()} candidates")
@@ -214,7 +191,7 @@ class ResumeMatcherApp:
             )
         else:
             self.logger.info("All job embeddings loaded from storage")
-=======
+
         self.logger.info(f"Need to generate embeddings for {jobs_mask.sum()} of {len(jobs_df)} jobs")
 
         if jobs_mask.any():
@@ -237,7 +214,6 @@ class ResumeMatcherApp:
                 self.logger.warning("Failed to generate embeddings for jobs")
         else:
             self.logger.info("All job embeddings loaded from vector database - no new embeddings needed")
->>>>>>> Stashed changes
 
         return candidates_df, jobs_df
 
@@ -394,10 +370,6 @@ class ResumeMatcherApp:
 
         return results
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 if __name__ == "__main__":
     import os
     from pathlib import Path

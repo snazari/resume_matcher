@@ -3,12 +3,14 @@ file_paths:
   listings_file: "./data/t04_itid.csv"
   output_dir: "./output"
 
+#C:\Users\Sam.Nazari\.cache\huggingface\hub\models--sentence-transformers--all-mpnet-base-v2\snapshots\9a3225965996d404b775526de6dbfe85d3368642
 hugging_face:
-  model_id: "sentence-transformers/all-MiniLM-L12-v2" #"sentence-transformers/all-MiniLM-L6-v2" #sentence-transformers/all-MiniLM-L12-v2
+  model_id: r"C:\Users\Sam.Nazari\.cache\huggingface\hub\models--sentence-transformers--all-mpnet-base-v2\snapshots\9a3225965996d404b775526de6dbfe85d3368642" #"sentence-transformers/all-MiniLM-L12-v2" #"sentence-transformers/all-MiniLM-L6-v2" #sentence-transformers/all-MiniLM-L12-v2
   hf_token: "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"
 
+# C:\Users\Sam.Nazari\.cache\huggingface\hub\models--sentence-transformers--all-MiniLM-L6-v2\snapshots\8b3219a92973c328a8e22fadcfa821b5dc75636a
 llm:
-  model_id: "meta-llama/Llama-3.3-70B-Instruct"
+  model_id: r"C:\Users\Sam.Nazari\.cache\huggingface\hub\models--sentence-transformers--all-MiniLM-L6-v2\snapshots\8b3219a92973c328a8e22fadcfa821b5dc75636a" #"meta-llama/Llama-3.3-70B-Instruct"
   api_token: "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"
 
 debug_mode: true

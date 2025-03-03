@@ -1,354 +1,106 @@
 Job,Candidate,Similarity,Rank
-<<<<<<< Updated upstream
-TO Program Manager,Ashley Savage,0.407535309783708,1
-TO Program Manager,ASHLEY THEO J. SAVAGE,0.3618782978600252,2
-TO Program Manager,Joshua Zarb,0.3594754948759248,3
-TO Program Manager,Fatima Khokhar,0.32851036822955304,4
-TO Program Manager,HOWARD R. UNDERWOOD,0.31910745527501083,5
-Advanced Information Security Professional,Ashley Savage,0.5655394150765269,1
-Advanced Information Security Professional,ASHLEY THEO J. SAVAGE,0.45327219841163113,2
-Advanced Information Security Professional,STEVEN S. STRASBURG,0.36971958593459636,3
-Advanced Information Security Professional,Fatima Khokhar,0.34147373095373434,4
-Advanced Information Security Professional,HOWARD R. UNDERWOOD,0.3350674058726204,5
-Basic Action Officer,Ashley Savage,0.2671588229375572,1
-Basic Action Officer,"LU WANG, MD, MCS, MSTAT",0.21920755646923912,2
-Basic Action Officer,STEVEN S. STRASBURG,0.21800416241674742,3
-Basic Action Officer,HOWARD R. UNDERWOOD,0.2175495367651391,4
-Basic Action Officer,ASHLEY THEO J. SAVAGE,0.21371104161490417,5
-Intermediate AI/Cybersecurity Advisor,Ashley Savage,0.47570899458581883,1
-Intermediate AI/Cybersecurity Advisor,ASHLEY THEO J. SAVAGE,0.42798322757206453,2
-Intermediate AI/Cybersecurity Advisor,STEVEN S. STRASBURG,0.3732855120743832,3
-Intermediate AI/Cybersecurity Advisor,Bisar Barua,0.363264051297172,4
-Intermediate AI/Cybersecurity Advisor,HOWARD R. UNDERWOOD,0.34273462901684043,5
-Intermediate AI/ML Scientist,HOWARD R. UNDERWOOD,0.4811027018102586,1
-Intermediate AI/ML Scientist,Joshua Zarb,0.39329975091448977,2
-Intermediate AI/ML Scientist,Ashley Savage,0.3719054956941875,3
-Intermediate AI/ML Scientist,STEVEN S. STRASBURG,0.29020390515925243,4
-Intermediate AI/ML Scientist,Earl Vialpando,0.27373979161901674,5
-Advanced AI/ML Scientist,HOWARD R. UNDERWOOD,0.5208565191695947,1
-Advanced AI/ML Scientist,Joshua Zarb,0.39802829065281853,2
-Advanced AI/ML Scientist,Ashley Savage,0.39411526011087206,3
-Advanced AI/ML Scientist,Fatima Khokhar,0.33545163998045235,4
-Advanced AI/ML Scientist,STEVEN S. STRASBURG,0.32499486254085996,5
-Advanced Systems Analyst,HOWARD R. UNDERWOOD,0.46647939280228706,1
-Advanced Systems Analyst,Fatima Khokhar,0.44102749956265963,2
-Advanced Systems Analyst,"LU WANG, MD, MCS, MSTAT",0.3723475106118366,3
-Advanced Systems Analyst,Ashley Savage,0.3619387097778489,4
-Advanced Systems Analyst,Christine Clermont,0.33029410814220816,5
-Intermediate Technical Advisor,Ashley Savage,0.3934641728549677,1
-Intermediate Technical Advisor,Joshua Zarb,0.30817856028981044,2
-Intermediate Technical Advisor,HOWARD R. UNDERWOOD,0.3060020994807249,3
-Intermediate Technical Advisor,STEVEN S. STRASBURG,0.28692618521157026,4
-Intermediate Technical Advisor,ASHLEY THEO J. SAVAGE,0.266145919248593,5
-Basic Software Developer,Ashley Savage,0.4087204589720435,1
-Basic Software Developer,HOWARD R. UNDERWOOD,0.3448390605544126,2
-Basic Software Developer,Joshua Zarb,0.2914235199579459,3
-Basic Software Developer,ASHLEY THEO J. SAVAGE,0.2775994368779815,4
-Basic Software Developer,STEVEN S. STRASBURG,0.24964341379271207,5
-Basic Executive Assistant,Ashley Savage,0.3238556034183841,1
-Basic Executive Assistant,HOWARD R. UNDERWOOD,0.25163147418584236,2
-Basic Executive Assistant,STEVEN S. STRASBURG,0.21440123973956832,3
-Basic Executive Assistant,ASHLEY THEO J. SAVAGE,0.2064483915934735,4
-Basic Executive Assistant,Fatima Khokhar,0.19644817391646735,5
-Intermediate Subject Matter Expert,HOWARD R. UNDERWOOD,0.30461770361909163,1
-Intermediate Subject Matter Expert,Ashley Savage,0.2837578811929474,2
-Intermediate Subject Matter Expert,STEVEN S. STRASBURG,0.2514374418749354,3
-Intermediate Subject Matter Expert,ASHLEY THEO J. SAVAGE,0.23283437409008406,4
-Intermediate Subject Matter Expert,Fatima Khokhar,0.22747225119348358,5
-Intermediate Software Developer,Ashley Savage,0.45500205750873846,1
-Intermediate Software Developer,HOWARD R. UNDERWOOD,0.38178562460202486,2
-Intermediate Software Developer,ASHLEY THEO J. SAVAGE,0.3563406156659763,3
-Intermediate Software Developer,Joshua Zarb,0.30999569152605744,4
-Intermediate Software Developer,STEVEN S. STRASBURG,0.2902161645472905,5
-Advanced Cloud Architect,Fatima Khokhar,0.2865953333127507,1
-Advanced Cloud Architect,Earl Vialpando,0.21162544761814245,2
-Advanced Cloud Architect,ASHLEY THEO J. SAVAGE,0.19443448924493,3
-Advanced Cloud Architect,"LU WANG, MD, MCS, MSTAT",0.17712988176348346,4
-Advanced Cloud Architect,HOWARD R. UNDERWOOD,0.17695700963332645,5
-Advanced Operational Data Science Lead,Fatima Khokhar,0.23603921983373607,1
-Advanced Operational Data Science Lead,Bisar Barua,0.23095136472958155,2
-Advanced Operational Data Science Lead,Earl Vialpando,0.2196658477337421,3
-Advanced Operational Data Science Lead,ASHLEY THEO J. SAVAGE,0.21629635202457087,4
-Advanced Operational Data Science Lead,STEVEN S. STRASBURG,0.21465582065980138,5
-Basic Subject Matter Expert (Data Strategy),Earl Vialpando,0.3517707722591445,1
-Basic Subject Matter Expert (Data Strategy),HOWARD R. UNDERWOOD,0.3309044608600131,2
-Basic Subject Matter Expert (Data Strategy),Joshua Zarb,0.3190407457805858,3
-Basic Subject Matter Expert (Data Strategy),Fatima Khokhar,0.3063087632768431,4
-Basic Subject Matter Expert (Data Strategy),"LU WANG, MD, MCS, MSTAT",0.3041666901179182,5
-Intermediate Security Specialist,Ashley Savage,0.5763231723706509,1
-Intermediate Security Specialist,ASHLEY THEO J. SAVAGE,0.41395592585842544,2
-Intermediate Security Specialist,STEVEN S. STRASBURG,0.38941240510363107,3
-Intermediate Security Specialist,HOWARD R. UNDERWOOD,0.369300453099175,4
-Intermediate Security Specialist,Joshua Zarb,0.3159770926613911,5
-Intermediate Technical Management Advisor,Ashley Savage,0.43130455631265097,1
-Intermediate Technical Management Advisor,ASHLEY THEO J. SAVAGE,0.3260157376455657,2
-Intermediate Technical Management Advisor,Joshua Zarb,0.323716355755238,3
-Intermediate Technical Management Advisor,HOWARD R. UNDERWOOD,0.31760497543180977,4
-Intermediate Technical Management Advisor,STEVEN S. STRASBURG,0.30687649819343876,5
-Basic Design Strategist,STEVEN S. STRASBURG,0.3121896027733464,1
-Basic Design Strategist,Ashley Savage,0.29355444356825044,2
-Basic Design Strategist,ASHLEY THEO J. SAVAGE,0.2310879929998709,3
-Basic Design Strategist,HOWARD R. UNDERWOOD,0.2153968259804763,4
-Basic Design Strategist,Joshua Zarb,0.14429852979012775,5
-Intermediate Digital Forensics Analyst,Ashley Savage,0.48517726931357963,1
-Intermediate Digital Forensics Analyst,ASHLEY THEO J. SAVAGE,0.40245747568273327,2
-Intermediate Digital Forensics Analyst,Bisar Barua,0.358801367731474,3
-Intermediate Digital Forensics Analyst,Fatima Khokhar,0.33618902209607326,4
-Intermediate Digital Forensics Analyst,HOWARD R. UNDERWOOD,0.3251139967195857,5
-Intermediate Product Advisor ,Ashley Savage,0.3355142468715099,1
-Intermediate Product Advisor ,ASHLEY THEO J. SAVAGE,0.28550850297886715,2
-Intermediate Product Advisor ,HOWARD R. UNDERWOOD,0.26874770560205724,3
-Intermediate Product Advisor ,STEVEN S. STRASBURG,0.2406665641602019,4
-Intermediate Product Advisor ,Joshua Zarb,0.22524168203697403,5
-Basic Subject Matter Expert (AI/Cybersecurity),Ashley Savage,0.3404615019740178,1
-Basic Subject Matter Expert (AI/Cybersecurity),ASHLEY THEO J. SAVAGE,0.3303792882074583,2
-Basic Subject Matter Expert (AI/Cybersecurity),Bisar Barua,0.28157251733979594,3
-Basic Subject Matter Expert (AI/Cybersecurity),STEVEN S. STRASBURG,0.22902058012724943,4
-Basic Subject Matter Expert (AI/Cybersecurity),Joshua Zarb,0.20548191221961876,5
-Basic Subject Matter Expert (Cybersecurity Operations),Ashley Savage,0.4645195857506478,1
-Basic Subject Matter Expert (Cybersecurity Operations),ASHLEY THEO J. SAVAGE,0.43134868298407875,2
-Basic Subject Matter Expert (Cybersecurity Operations),STEVEN S. STRASBURG,0.3007770866642926,3
-Basic Subject Matter Expert (Cybersecurity Operations),Bisar Barua,0.2989789563973031,4
-Basic Subject Matter Expert (Cybersecurity Operations),Fatima Khokhar,0.2474812957630414,5
-Basic Subject Matter Expert (Cybersecurity Engineering),Ashley Savage,0.4764013144221203,1
-Basic Subject Matter Expert (Cybersecurity Engineering),ASHLEY THEO J. SAVAGE,0.4292565564182818,2
-Basic Subject Matter Expert (Cybersecurity Engineering),STEVEN S. STRASBURG,0.3097404573927369,3
-Basic Subject Matter Expert (Cybersecurity Engineering),Bisar Barua,0.30433564497666576,4
-Basic Subject Matter Expert (Cybersecurity Engineering),HOWARD R. UNDERWOOD,0.23228682714229015,5
-Basic Scientist/Engineer (Data modeler),HOWARD R. UNDERWOOD,0.4609315245529365,1
-Basic Scientist/Engineer (Data modeler),Joshua Zarb,0.4331532165324067,2
-Basic Scientist/Engineer (Data modeler),Fatima Khokhar,0.3272392738699367,3
-Basic Scientist/Engineer (Data modeler),"LU WANG, MD, MCS, MSTAT",0.27612918535501213,4
-Basic Scientist/Engineer (Data modeler),Earl Vialpando,0.27456816917612137,5
-Basic License Tracking,Ashley Savage,0.36647643653518736,1
-Basic License Tracking,Joshua Zarb,0.3264969975413967,2
-Basic License Tracking,HOWARD R. UNDERWOOD,0.2812945584329757,3
-Basic License Tracking,Fatima Khokhar,0.2261052474875711,4
-Basic License Tracking,ASHLEY THEO J. SAVAGE,0.21794656496300763,5
-Basic Acquisition Support,Ashley Savage,0.3332109894815979,1
-Basic Acquisition Support,Joshua Zarb,0.2889631228662402,2
-Basic Acquisition Support,HOWARD R. UNDERWOOD,0.26114559885932187,3
-Basic Acquisition Support,STEVEN S. STRASBURG,0.2512437009894449,4
-Basic Acquisition Support,ASHLEY THEO J. SAVAGE,0.2071071046048136,5
-Intermediate Advisor for Customer Delivery,Ashley Savage,0.36895563951174615,1
-Intermediate Advisor for Customer Delivery,ASHLEY THEO J. SAVAGE,0.35062845499060824,2
-Intermediate Advisor for Customer Delivery,Fatima Khokhar,0.2949923384352545,3
-Intermediate Advisor for Customer Delivery,STEVEN S. STRASBURG,0.2767185542043002,4
-Intermediate Advisor for Customer Delivery,HOWARD R. UNDERWOOD,0.23604320917465982,5
-Intermediate Product Advisor,Ashley Savage,0.34089447806574996,1
-Intermediate Product Advisor,ASHLEY THEO J. SAVAGE,0.2832796670092588,2
-Intermediate Product Advisor,HOWARD R. UNDERWOOD,0.23975043578189198,3
-Intermediate Product Advisor,Fatima Khokhar,0.2347207129326902,4
-Intermediate Product Advisor,Earl Vialpando,0.22340928200345353,5
-Advanced Systems Architect,Ashley Savage,0.3123525411415543,1
-Advanced Systems Architect,Fatima Khokhar,0.30403245793101075,2
-Advanced Systems Architect,"LU WANG, MD, MCS, MSTAT",0.2686145651537005,3
-Advanced Systems Architect,ASHLEY THEO J. SAVAGE,0.2595235199124049,4
-Advanced Systems Architect,HOWARD R. UNDERWOOD,0.25799181345142613,5
-"Advanced Scientist, Engineer",Ashley Savage,0.45308554892368763,1
-"Advanced Scientist, Engineer",HOWARD R. UNDERWOOD,0.4258208169111657,2
-"Advanced Scientist, Engineer",Joshua Zarb,0.3504588443520261,3
-"Advanced Scientist, Engineer","LU WANG, MD, MCS, MSTAT",0.33634906295481437,4
-"Advanced Scientist, Engineer",ASHLEY THEO J. SAVAGE,0.32091809353558665,5
-Intermediate Policy Analyst,Ashley Savage,0.3758713927509446,1
-Intermediate Policy Analyst,Joshua Zarb,0.29773464523026466,2
-Intermediate Policy Analyst,STEVEN S. STRASBURG,0.27797246323587277,3
-Intermediate Policy Analyst,HOWARD R. UNDERWOOD,0.265412821768398,4
-Intermediate Policy Analyst,ASHLEY THEO J. SAVAGE,0.2504205957048412,5
-Intermediate Data Scientist,HOWARD R. UNDERWOOD,0.36288939454635327,1
-Intermediate Data Scientist,Ashley Savage,0.3343190176204133,2
-Intermediate Data Scientist,Joshua Zarb,0.30099238245948706,3
-Intermediate Data Scientist,Fatima Khokhar,0.20918173271838514,4
-Intermediate Data Scientist,STEVEN S. STRASBURG,0.2016285323428352,5
-Basic Database Specilaist,Joshua Zarb,0.298650339285081,1
-Basic Database Specilaist,Fatima Khokhar,0.25640236758355395,2
-Basic Database Specilaist,"LU WANG, MD, MCS, MSTAT",0.25186515926609215,3
-Basic Database Specilaist,ASHLEY THEO J. SAVAGE,0.23037402504565838,4
-Basic Database Specilaist,STEVEN S. STRASBURG,0.21493518608808404,5
-Intermediate Travel Specialist,Ashley Savage,0.40338907711089944,1
-Intermediate Travel Specialist,HOWARD R. UNDERWOOD,0.3553507153073323,2
-Intermediate Travel Specialist,STEVEN S. STRASBURG,0.30817125915630433,3
-Intermediate Travel Specialist,Fatima Khokhar,0.2676494927288601,4
-Intermediate Travel Specialist,Joshua Zarb,0.25048025051168066,5
-Intermediate Conference/Events Planner,Ashley Savage,0.26420400145428335,1
-Intermediate Conference/Events Planner,HOWARD R. UNDERWOOD,0.23809446716665394,2
-Intermediate Conference/Events Planner,Fatima Khokhar,0.22446737154736224,3
-Intermediate Conference/Events Planner,Joshua Zarb,0.17599287132891975,4
-Intermediate Conference/Events Planner,"LU WANG, MD, MCS, MSTAT",0.17160874218547384,5
-=======
-TO Program Manager,Ashley Savage,0.42890198175842187,1
-TO Program Manager,Joshua Zarb,0.3466929184917191,2
-TO Program Manager,ASHLEY THEO J. SAVAGE,0.34515658422065343,3
-TO Program Manager,Fatima Khokhar,0.3237248032936577,4
-TO Program Manager,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.32019752611829944,5
-Advanced Information Security Professional,Ashley Savage,0.5857456279872437,1
-Advanced Information Security Professional,ASHLEY THEO J. SAVAGE,0.5042179301972123,2
-Advanced Information Security Professional,Bisar Barua,0.3770167450007236,3
-Advanced Information Security Professional,Steven S. Strasburg,0.3685632611118308,4
-Advanced Information Security Professional,Joshua Zarb,0.32418722542377054,5
-Basic Action Officer,Ashley Savage,0.30740433629380703,1
-Basic Action Officer,"LU WANG, MD, MCS, MSTAT",0.2581120427184942,2
-Basic Action Officer,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.23716280276516244,3
-Basic Action Officer,Joshua Zarb,0.23289912061982676,4
-Basic Action Officer,ASHLEY THEO J. SAVAGE,0.2211279032680693,5
-Intermediate AI/Cybersecurity Advisor,Ashley Savage,0.4523279605712034,1
-Intermediate AI/Cybersecurity Advisor,ASHLEY THEO J. SAVAGE,0.43039760695907603,2
-Intermediate AI/Cybersecurity Advisor,Bisar Barua,0.40533584732190775,3
-Intermediate AI/Cybersecurity Advisor,Steven S. Strasburg,0.3693226119084727,4
-Intermediate AI/Cybersecurity Advisor,Joshua Zarb,0.3529040254783169,5
-Intermediate AI/ML Scientist,Ashley Savage,0.4019570344781229,1
-Intermediate AI/ML Scientist,Joshua Zarb,0.39307949245937124,2
-Intermediate AI/ML Scientist,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.3080006332313303,3
-Intermediate AI/ML Scientist,Steven S. Strasburg,0.2892028671739979,4
-Intermediate AI/ML Scientist,Earl Vialpando,0.26869578983757947,5
-Advanced AI/ML Scientist,Ashley Savage,0.44449322694338633,1
-Advanced AI/ML Scientist,Joshua Zarb,0.39724977758987734,2
-Advanced AI/ML Scientist,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.3588990642919896,3
-Advanced AI/ML Scientist,Fatima Khokhar,0.3337660618621783,4
-Advanced AI/ML Scientist,Steven S. Strasburg,0.32428188047435214,5
-Advanced Systems Analyst,Fatima Khokhar,0.4271758946236943,1
-Advanced Systems Analyst,Ashley Savage,0.40991074039331465,2
-Advanced Systems Analyst,"LU WANG, MD, MCS, MSTAT",0.37863681920131853,3
-Advanced Systems Analyst,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.34812536591771703,4
-Advanced Systems Analyst,MARQUITTA L. FOSTER,0.3445280601187548,5
-Intermediate Technical Advisor,Ashley Savage,0.3919984923074651,1
-Intermediate Technical Advisor,Joshua Zarb,0.3427620511502525,2
-Intermediate Technical Advisor,ASHLEY THEO J. SAVAGE,0.28886127817940377,3
-Intermediate Technical Advisor,Steven S. Strasburg,0.28333802579754774,4
-Intermediate Technical Advisor,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.2626110439584579,5
-Basic Software Developer,Ashley Savage,0.46255646975594544,1
-Basic Software Developer,Joshua Zarb,0.38841554735719797,2
-Basic Software Developer,ASHLEY THEO J. SAVAGE,0.2934551069255349,3
-Basic Software Developer,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.2499041657174459,4
-Basic Software Developer,Steven S. Strasburg,0.24989993141295486,5
-Basic Executive Assistant,Ashley Savage,0.321322686483704,1
-Basic Executive Assistant,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.29193446918554145,2
-Basic Executive Assistant,Joshua Zarb,0.22358388678205188,3
-Basic Executive Assistant,Steven S. Strasburg,0.21445376741712607,4
-Basic Executive Assistant,"LU WANG, MD, MCS, MSTAT",0.2064147887826948,5
-Intermediate Subject Matter Expert,Ashley Savage,0.36077008614727646,1
-Intermediate Subject Matter Expert,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.2894505851224878,2
-Intermediate Subject Matter Expert,Joshua Zarb,0.2718426503639577,3
-Intermediate Subject Matter Expert,ASHLEY THEO J. SAVAGE,0.24891724975051943,4
-Intermediate Subject Matter Expert,Steven S. Strasburg,0.24137848106391147,5
-Intermediate Software Developer,Ashley Savage,0.4244179212172412,1
-Intermediate Software Developer,Joshua Zarb,0.3808073010681525,2
-Intermediate Software Developer,ASHLEY THEO J. SAVAGE,0.37362417517508106,3
-Intermediate Software Developer,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.3565514045439784,4
-Intermediate Software Developer,Steven S. Strasburg,0.28585409311431675,5
-Advanced Cloud Architect,Fatima Khokhar,0.28392719206782857,1
-Advanced Cloud Architect,Ashley Savage,0.24247276147877983,2
-Advanced Cloud Architect,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.20339007228471218,3
-Advanced Cloud Architect,Bisar Barua,0.19278241636390447,4
-Advanced Cloud Architect,"LU WANG, MD, MCS, MSTAT",0.18900782834850816,5
-Advanced Operational Data Science Lead,Fatima Khokhar,0.23599249145237877,1
-Advanced Operational Data Science Lead,Joshua Zarb,0.2294384497977262,2
-Advanced Operational Data Science Lead,"LU WANG, MD, MCS, MSTAT",0.22219685163604908,3
-Advanced Operational Data Science Lead,Ashley Savage,0.21960122035986274,4
-Advanced Operational Data Science Lead,Bisar Barua,0.21849502033068546,5
-Basic Subject Matter Expert (Data Strategy),Earl Vialpando,0.3563759956552346,1
-Basic Subject Matter Expert (Data Strategy),Joshua Zarb,0.3497047075006705,2
-Basic Subject Matter Expert (Data Strategy),"LU WANG, MD, MCS, MSTAT",0.3273237961084021,3
-Basic Subject Matter Expert (Data Strategy),Fatima Khokhar,0.30911356624448416,4
-Basic Subject Matter Expert (Data Strategy),Ashley Savage,0.26239097975778236,5
-Intermediate Security Specialist,Ashley Savage,0.5321875542539374,1
-Intermediate Security Specialist,ASHLEY THEO J. SAVAGE,0.4698576854716521,2
-Intermediate Security Specialist,Steven S. Strasburg,0.3895621654329986,3
-Intermediate Security Specialist,Joshua Zarb,0.33714481928461026,4
-Intermediate Security Specialist,Bisar Barua,0.309655199269109,5
-Intermediate Technical Management Advisor,Ashley Savage,0.40388566545880167,1
-Intermediate Technical Management Advisor,ASHLEY THEO J. SAVAGE,0.3673107415032675,2
-Intermediate Technical Management Advisor,Joshua Zarb,0.33356720585094735,3
-Intermediate Technical Management Advisor,Steven S. Strasburg,0.30468359187986493,4
-Intermediate Technical Management Advisor,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.303226444610317,5
-Basic Design Strategist,Ashley Savage,0.3461317957496419,1
-Basic Design Strategist,Steven S. Strasburg,0.30748121985424604,2
-Basic Design Strategist,ASHLEY THEO J. SAVAGE,0.24743558612678385,3
-Basic Design Strategist,Joshua Zarb,0.22939331256144868,4
-Basic Design Strategist,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.17044341240963945,5
-Intermediate Digital Forensics Analyst,Ashley Savage,0.48418355313599903,1
-Intermediate Digital Forensics Analyst,ASHLEY THEO J. SAVAGE,0.45550367403473047,2
-Intermediate Digital Forensics Analyst,Bisar Barua,0.39343733624579613,3
-Intermediate Digital Forensics Analyst,Joshua Zarb,0.32598135441114096,4
-Intermediate Digital Forensics Analyst,Fatima Khokhar,0.30876544163975694,5
-Intermediate Product Advisor ,Earl Vialpando,0.0,1
-Intermediate Product Advisor ,ASHLEY THEO J. SAVAGE,0.0,2
-Intermediate Product Advisor ,Christine Clermont,0.0,3
-Intermediate Product Advisor ,Bisar Barua,0.0,4
-Intermediate Product Advisor ,Fatima Khokhar,0.0,5
-Basic Subject Matter Expert (AI/Cybersecurity),Ashley Savage,0.4129939537222569,1
-Basic Subject Matter Expert (AI/Cybersecurity),ASHLEY THEO J. SAVAGE,0.3444731898242068,2
-Basic Subject Matter Expert (AI/Cybersecurity),Bisar Barua,0.31868909047721417,3
-Basic Subject Matter Expert (AI/Cybersecurity),Joshua Zarb,0.25834566599370845,4
-Basic Subject Matter Expert (AI/Cybersecurity),Steven S. Strasburg,0.2291240895918918,5
-Basic Subject Matter Expert (Cybersecurity Operations),Ashley Savage,0.5107880851015647,1
-Basic Subject Matter Expert (Cybersecurity Operations),ASHLEY THEO J. SAVAGE,0.44786023504593686,2
-Basic Subject Matter Expert (Cybersecurity Operations),Bisar Barua,0.334397112684762,3
-Basic Subject Matter Expert (Cybersecurity Operations),Steven S. Strasburg,0.29898037661416055,4
-Basic Subject Matter Expert (Cybersecurity Operations),Joshua Zarb,0.2560759757678852,5
-Basic Subject Matter Expert (Cybersecurity Engineering),Ashley Savage,0.5317702177373871,1
-Basic Subject Matter Expert (Cybersecurity Engineering),ASHLEY THEO J. SAVAGE,0.44214709187883017,2
-Basic Subject Matter Expert (Cybersecurity Engineering),Bisar Barua,0.3443511566082904,3
-Basic Subject Matter Expert (Cybersecurity Engineering),Steven S. Strasburg,0.3082028473504579,4
-Basic Subject Matter Expert (Cybersecurity Engineering),Joshua Zarb,0.2444335884897555,5
-Basic Scientist/Engineer (Data modeler),Joshua Zarb,0.38142918474429166,1
-Basic Scientist/Engineer (Data modeler),Ashley Savage,0.3392685397747073,2
-Basic Scientist/Engineer (Data modeler),Fatima Khokhar,0.3160551349518457,3
-Basic Scientist/Engineer (Data modeler),"LU WANG, MD, MCS, MSTAT",0.28252829413395375,4
-Basic Scientist/Engineer (Data modeler),Earl Vialpando,0.28160851186304825,5
-Basic License Tracking,Ashley Savage,0.37277809810591833,1
-Basic License Tracking,Joshua Zarb,0.2830232955048402,2
-Basic License Tracking,ASHLEY THEO J. SAVAGE,0.24314684404316012,3
-Basic License Tracking,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.23796110430518524,4
-Basic License Tracking,Bisar Barua,0.23275071908162204,5
-Basic Acquisition Support,Ashley Savage,0.3365219381257418,1
-Basic Acquisition Support,Joshua Zarb,0.3004688911632627,2
-Basic Acquisition Support,Steven S. Strasburg,0.24775876471346692,3
-Basic Acquisition Support,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.22867523079901275,4
-Basic Acquisition Support,Bisar Barua,0.22034837424587295,5
-Intermediate Advisor for Customer Delivery,ASHLEY THEO J. SAVAGE,0.34941986028388783,1
-Intermediate Advisor for Customer Delivery,Ashley Savage,0.3309420077454135,2
-Intermediate Advisor for Customer Delivery,Joshua Zarb,0.3165660262416168,3
-Intermediate Advisor for Customer Delivery,Fatima Khokhar,0.28065468204249555,4
-Intermediate Advisor for Customer Delivery,Steven S. Strasburg,0.26937495992103777,5
-Intermediate Product Advisor,Ashley Savage,0.3319216877097233,1
-Intermediate Product Advisor,ASHLEY THEO J. SAVAGE,0.28283799339225624,2
-Intermediate Product Advisor,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.24143662769267138,3
-Intermediate Product Advisor,Fatima Khokhar,0.24004622524807928,4
-Intermediate Product Advisor,Joshua Zarb,0.22642363922523145,5
-Advanced Systems Architect,Ashley Savage,0.42434897975373786,1
-Advanced Systems Architect,Fatima Khokhar,0.2964951550511614,2
-Advanced Systems Architect,"LU WANG, MD, MCS, MSTAT",0.2651197675774881,3
-Advanced Systems Architect,Joshua Zarb,0.24145982698825463,4
-Advanced Systems Architect,ASHLEY THEO J. SAVAGE,0.2399492241883081,5
-"Advanced Scientist, Engineer",Ashley Savage,0.42843750259768854,1
-"Advanced Scientist, Engineer",Joshua Zarb,0.3703687490730019,2
-"Advanced Scientist, Engineer",ASHLEY THEO J. SAVAGE,0.33891521137044833,3
-"Advanced Scientist, Engineer","LU WANG, MD, MCS, MSTAT",0.3335736742988047,4
-"Advanced Scientist, Engineer",Steven S. Strasburg,0.30312371165189234,5
-Intermediate Policy Analyst,Ashley Savage,0.3516689284603842,1
-Intermediate Policy Analyst,Steven S. Strasburg,0.2726639986505859,2
-Intermediate Policy Analyst,Joshua Zarb,0.25200757345304936,3
-Intermediate Policy Analyst,Bisar Barua,0.24564968849719548,4
-Intermediate Policy Analyst,ASHLEY THEO J. SAVAGE,0.23417006027190723,5
-Intermediate Data Scientist,Ashley Savage,0.3944777005665898,1
-Intermediate Data Scientist,Joshua Zarb,0.3620522271100697,2
-Intermediate Data Scientist,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.2237355488242585,3
-Intermediate Data Scientist,Fatima Khokhar,0.21776248620925998,4
-Intermediate Data Scientist,"LU WANG, MD, MCS, MSTAT",0.21601324436366554,5
-Basic Database Specilaist,Joshua Zarb,0.3313287548494088,1
-Basic Database Specilaist,"LU WANG, MD, MCS, MSTAT",0.2883095588543867,2
-Basic Database Specilaist,Fatima Khokhar,0.2639747091754714,3
-Basic Database Specilaist,ASHLEY THEO J. SAVAGE,0.25362193401320354,4
-Basic Database Specilaist,Ashley Savage,0.2443204540121542,5
-Intermediate Travel Specialist,Ashley Savage,0.36503977946085087,1
-Intermediate Travel Specialist,Joshua Zarb,0.32055832361890424,2
-Intermediate Travel Specialist,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.3165384304438419,3
-Intermediate Travel Specialist,Steven S. Strasburg,0.30456662634102827,4
-Intermediate Travel Specialist,ASHLEY THEO J. SAVAGE,0.2633338395348801,5
-Intermediate Conference/Events Planner,Ashley Savage,0.2512321251080891,1
-Intermediate Conference/Events Planner,Joshua Zarb,0.23229198638625803,2
-Intermediate Conference/Events Planner,"HOWARD R. UNDERWOOD, MD, FSA, CHIE",0.22083402583989908,3
-Intermediate Conference/Events Planner,Fatima Khokhar,0.211166215829671,4
-Intermediate Conference/Events Planner,"LU WANG, MD, MCS, MSTAT",0.18912169051620253,5
->>>>>>> Stashed changes
+TO Program Manager,Adebisi (Bisi) Alli,0.2472896211928628,1
+TO Program Manager,Dr. David Ricketts,0.2287766499641677,2
+TO Program Manager,Dr. Ian Gut,0.18060791720841252,3
+Advanced Information Security Professional,Dr. David Ricketts,0.34264218244695144,1
+Advanced Information Security Professional,Adebisi (Bisi) Alli,0.22950326751649186,2
+Advanced Information Security Professional,Dr. Ian Gut,0.22397274172351445,3
+Basic Action Officer,Adebisi (Bisi) Alli,0.1975120186616266,1
+Basic Action Officer,Dr. David Ricketts,0.1678607006432955,2
+Basic Action Officer,Dr. Ian Gut,0.10735152172434681,3
+Intermediate AI/Cybersecurity Advisor,Dr. Ian Gut,0.29923569918128123,1
+Intermediate AI/Cybersecurity Advisor,Dr. David Ricketts,0.29698870635291286,2
+Intermediate AI/Cybersecurity Advisor,Adebisi (Bisi) Alli,0.14959376496597088,3
+Intermediate AI/ML Scientist,Dr. David Ricketts,0.3082168694253369,1
+Intermediate AI/ML Scientist,Adebisi (Bisi) Alli,0.27336115513708137,2
+Intermediate AI/ML Scientist,Dr. Ian Gut,0.21092243149245604,3
+Advanced AI/ML Scientist,Dr. David Ricketts,0.34361243587073176,1
+Advanced AI/ML Scientist,Adebisi (Bisi) Alli,0.31461748278120893,2
+Advanced AI/ML Scientist,Dr. Ian Gut,0.22155827783421245,3
+Advanced Systems Analyst,Adebisi (Bisi) Alli,0.33414071126684775,1
+Advanced Systems Analyst,Dr. Ian Gut,0.28308696081182205,2
+Advanced Systems Analyst,Dr. David Ricketts,0.2769134605787755,3
+Intermediate Technical Advisor,Dr. David Ricketts,0.25181072317297293,1
+Intermediate Technical Advisor,Adebisi (Bisi) Alli,0.14735216523779826,2
+Intermediate Technical Advisor,Dr. Ian Gut,0.10767419687424962,3
+Basic Software Developer,Dr. David Ricketts,0.24802120483774814,1
+Basic Software Developer,Adebisi (Bisi) Alli,0.21777187984386615,2
+Basic Software Developer,Dr. Ian Gut,0.06606548227102138,3
+Basic Executive Assistant,Adebisi (Bisi) Alli,0.2243444244891677,1
+Basic Executive Assistant,Dr. David Ricketts,0.19808127605165282,2
+Basic Executive Assistant,Dr. Ian Gut,0.10111562936207719,3
+Intermediate Subject Matter Expert,Dr. David Ricketts,0.2869280433216943,1
+Intermediate Subject Matter Expert,Adebisi (Bisi) Alli,0.2518352215076831,2
+Intermediate Subject Matter Expert,Dr. Ian Gut,0.14016856743270978,3
+Intermediate Software Developer,Dr. David Ricketts,0.28434897698591044,1
+Intermediate Software Developer,Adebisi (Bisi) Alli,0.20037256735565734,2
+Intermediate Software Developer,Dr. Ian Gut,0.07837117131563787,3
+Advanced Cloud Architect,Dr. David Ricketts,0.16932473528901681,1
+Advanced Cloud Architect,Adebisi (Bisi) Alli,0.14797396067203294,2
+Advanced Cloud Architect,Dr. Ian Gut,0.0804342048777471,3
+Advanced Operational Data Science Lead,Adebisi (Bisi) Alli,0.22835434698634316,1
+Advanced Operational Data Science Lead,Dr. David Ricketts,0.18357600120017992,2
+Advanced Operational Data Science Lead,Dr. Ian Gut,0.08085513283720047,3
+Basic Subject Matter Expert (Data Strategy),Dr. David Ricketts,0.3019724442811409,1
+Basic Subject Matter Expert (Data Strategy),Dr. Ian Gut,0.2771575776913551,2
+Basic Subject Matter Expert (Data Strategy),Adebisi (Bisi) Alli,0.2394298693170569,3
+Intermediate Security Specialist,Dr. David Ricketts,0.293242670369402,1
+Intermediate Security Specialist,Adebisi (Bisi) Alli,0.18573992410113505,2
+Intermediate Security Specialist,Dr. Ian Gut,0.1631024767431697,3
+Intermediate Technical Management Advisor,Dr. David Ricketts,0.2934365430295358,1
+Intermediate Technical Management Advisor,Adebisi (Bisi) Alli,0.14777102659510888,2
+Intermediate Technical Management Advisor,Dr. Ian Gut,0.11406308622667183,3
+Basic Design Strategist,Adebisi (Bisi) Alli,0.2136040806928392,1
+Basic Design Strategist,Dr. David Ricketts,0.21274690429867604,2
+Basic Design Strategist,Dr. Ian Gut,0.06781136672790922,3
+Intermediate Digital Forensics Analyst,Dr. David Ricketts,0.2890132477940597,1
+Intermediate Digital Forensics Analyst,Dr. Ian Gut,0.23029624983288954,2
+Intermediate Digital Forensics Analyst,Adebisi (Bisi) Alli,0.20228885843862798,3
+Intermediate Product Advisor ,Adebisi (Bisi) Alli,0.0,1
+Intermediate Product Advisor ,Dr. David Ricketts,0.0,2
+Intermediate Product Advisor ,Dr. Ian Gut,0.0,3
+Basic Subject Matter Expert (AI/Cybersecurity),Dr. David Ricketts,0.265168326102156,1
+Basic Subject Matter Expert (AI/Cybersecurity),Dr. Ian Gut,0.2055463411872367,2
+Basic Subject Matter Expert (AI/Cybersecurity),Adebisi (Bisi) Alli,0.14178812508134087,3
+Basic Subject Matter Expert (Cybersecurity Operations),Dr. David Ricketts,0.29778415948203474,1
+Basic Subject Matter Expert (Cybersecurity Operations),Dr. Ian Gut,0.25493466433223944,2
+Basic Subject Matter Expert (Cybersecurity Operations),Adebisi (Bisi) Alli,0.18101608682260917,3
+Basic Subject Matter Expert (Cybersecurity Engineering),Dr. David Ricketts,0.3356965169680777,1
+Basic Subject Matter Expert (Cybersecurity Engineering),Dr. Ian Gut,0.26788908192745,2
+Basic Subject Matter Expert (Cybersecurity Engineering),Adebisi (Bisi) Alli,0.16700957281020123,3
+Basic Scientist/Engineer (Data modeler),Adebisi (Bisi) Alli,0.3157296820478379,1
+Basic Scientist/Engineer (Data modeler),Dr. David Ricketts,0.2652332128167174,2
+Basic Scientist/Engineer (Data modeler),Dr. Ian Gut,0.25069153850721904,3
+Basic License Tracking,Dr. David Ricketts,0.22963703793240597,1
+Basic License Tracking,Adebisi (Bisi) Alli,0.10795812186208309,2
+Basic License Tracking,Dr. Ian Gut,0.07869564484297342,3
+Basic Acquisition Support,Adebisi (Bisi) Alli,0.20129566924480713,1
+Basic Acquisition Support,Dr. David Ricketts,0.18867591248042004,2
+Basic Acquisition Support,Dr. Ian Gut,0.11957897280626639,3
+Intermediate Advisor for Customer Delivery,Dr. David Ricketts,0.253036751333525,1
+Intermediate Advisor for Customer Delivery,Adebisi (Bisi) Alli,0.15228665081752268,2
+Intermediate Advisor for Customer Delivery,Dr. Ian Gut,0.09696099466134456,3
+Intermediate Product Advisor,Dr. David Ricketts,0.2435468973604813,1
+Intermediate Product Advisor,Adebisi (Bisi) Alli,0.09643656481926399,2
+Intermediate Product Advisor,Dr. Ian Gut,0.0613298296076934,3
+Advanced Systems Architect,Dr. David Ricketts,0.29016578285136774,1
+Advanced Systems Architect,Adebisi (Bisi) Alli,0.18243130377047123,2
+Advanced Systems Architect,Dr. Ian Gut,0.05585731115700554,3
+"Advanced Scientist, Engineer",Dr. David Ricketts,0.370468673485874,1
+"Advanced Scientist, Engineer",Adebisi (Bisi) Alli,0.3226421507863222,2
+"Advanced Scientist, Engineer",Dr. Ian Gut,0.1800326450934051,3
+Intermediate Policy Analyst,Dr. David Ricketts,0.2612375673955327,1
+Intermediate Policy Analyst,Dr. Ian Gut,0.145039027998763,2
+Intermediate Policy Analyst,Adebisi (Bisi) Alli,0.07374385283826967,3
+Intermediate Data Scientist,Dr. David Ricketts,0.21829395793508866,1
+Intermediate Data Scientist,Adebisi (Bisi) Alli,0.19263518291977988,2
+Intermediate Data Scientist,Dr. Ian Gut,0.09083703211347682,3
+Basic Database Specilaist,Adebisi (Bisi) Alli,0.1988650709608848,1
+Basic Database Specilaist,Dr. David Ricketts,0.17747192577018467,2
+Basic Database Specilaist,Dr. Ian Gut,0.03433556742808719,3
+Intermediate Travel Specialist,Dr. David Ricketts,0.2783069396795952,1
+Intermediate Travel Specialist,Adebisi (Bisi) Alli,0.2270284951478061,2
+Intermediate Travel Specialist,Dr. Ian Gut,0.10053964481892308,3
+Intermediate Conference/Events Planner,Adebisi (Bisi) Alli,0.16502273759754615,1
+Intermediate Conference/Events Planner,Dr. David Ricketts,0.14767655440765992,2
+Intermediate Conference/Events Planner,Dr. Ian Gut,0.04093985073654238,3
