@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 class DocumentLoader:
     """Class for loading and processing various document types."""
     
-    def __init__(self, chunk_size: int = 1000, chunk_overlap: int = 200):
+    def __init__(self, chunk_size: int = 512, chunk_overlap: int = 50):
         """
         Initialize the document loader.
         

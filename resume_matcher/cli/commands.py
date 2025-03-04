@@ -141,7 +141,7 @@ def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
 def command_process(args: argparse.Namespace) -> int:
     """Handle the 'process' command."""
     try:
-        # Initialize the application
+        # Initialize the application with config_path
         app = ResumeMatcherApp(config_path=args.config)
 
         # Process resumes
@@ -168,7 +168,7 @@ def command_process(args: argparse.Namespace) -> int:
 def command_match(args: argparse.Namespace) -> int:
     """Handle the 'match' command."""
     try:
-        # Initialize the application
+        # Initialize the application with config_path
         app = ResumeMatcherApp(config_path=args.config)
 
         # Ensure output directory exists
@@ -215,7 +215,7 @@ def command_match(args: argparse.Namespace) -> int:
 def command_pipeline(args: argparse.Namespace) -> int:
     """Handle the 'pipeline' command."""
     try:
-        # Initialize the application
+        # Initialize the application with config_path
         app = ResumeMatcherApp(config_path=args.config)
 
         # Ensure output directory exists
@@ -273,7 +273,7 @@ def main(args: Optional[List[str]] = None) -> int:
     elif parsed_args.command == "pipeline":
         return command_pipeline(parsed_args)
     elif parsed_args.command == "vectordb":
-        # Initialize the application
+        # Initialize the application with config_path
         app = ResumeMatcherApp(config_path=parsed_args.config)
         from resume_matcher.cli.vector_db_commands import handle_vectordb_command
         return handle_vectordb_command(parsed_args, app)

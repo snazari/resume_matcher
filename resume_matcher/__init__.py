@@ -2,7 +2,7 @@
 Resume Matcher - A system for matching candidate resumes to job listings using NLP.
 """
 
-__version__ = "1.0"
+__version__ = "1.5"
 
 # Import key classes for easier access
 from resume_matcher.main import ResumeMatcherApp

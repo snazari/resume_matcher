@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
 Name: resume-matcher
-Version: 1.0
+Version: 1.5
 Summary: Match candidate resumes with job openings using NLP and embeddings
-Home-page: https://github.com/yourusername/resume-matcher
+Home-page: https://github.com/samnazari/resume-matcher
 Author: Sam Nazari, Ph.D.
 Author-email: sam@cognym.ai
 Classifier: Development Status :: 4 - Beta
@@ -34,6 +34,7 @@ Requires-Dist: python-docx>=0.8.11
 Requires-Dist: python-dotenv>=0.19.0
 Requires-Dist: PyPDF2>=2.0.0
 Requires-Dist: faiss-cpu>=1.7.2
+Requires-Dist: sentence-transformers>=2.2.0
 Provides-Extra: dev
 Requires-Dist: pytest>=7.0.0; extra == "dev"
 Requires-Dist: black>=22.1.0; extra == "dev"

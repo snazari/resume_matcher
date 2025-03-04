@@ -18,7 +18,6 @@ resume_matcher/data/data_processor.py
 resume_matcher/data/document_loader.py
 resume_matcher/data/embedding_service.py
 resume_matcher/data/embedding_storage.py
-resume_matcher/data/simplified_embedding_storage.py
 resume_matcher/data/vector_database.py
 resume_matcher/extraction/__init__.py
 resume_matcher/extraction/resume_extractor.py
@@ -29,5 +28,6 @@ resume_matcher/matching/matching_engine.py
 resume_matcher/utils/__init__.py
 resume_matcher/utils/api_utils.py
 resume_matcher/utils/file_utils.py
+resume_matcher/utils/network_monitor_util.py
 resume_matcher/visualization/__init__.py
 resume_matcher/visualization/visualizer.py

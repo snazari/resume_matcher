@@ -8,24 +8,37 @@ from resume_matcher.data.embedding_service import EmbeddingService
 from resume_matcher.data.embedding_storage import EmbeddingStorage
 from resume_matcher.extraction.resume_extractor import ResumeExtractor
 from resume_matcher.matching.matching_engine import MatchingEngine
+from resume_matcher.data.vector_database import VectorDatabase  # This line should be present
 
+# import logging
+# from pathlib import Path
+# from typing import Tuple, Dict, Any, Optional
+# import pandas as pd
+# from resume_matcher.config import ConfigManager, AppConfig
+# from resume_matcher.embedding.embedding_service import EmbeddingService
+# from resume_matcher.embedding.embedding_storage import EmbeddingStorage
+# from resume_matcher.data.vector_database import VectorDatabase
+# from resume_matcher.matching.matching_engine import MatchingEngine
+# from resume_matcher.extraction.resume_extractor import ResumeExtractor
+#
 
 class ResumeMatcherApp:
     """Main application class for Resume Matcher system."""
 
-    def __init__(self, config_path: Optional[str] = None):
+    def __init__(self, config_path: str = "config.yaml"):
         """
         Initialize the Resume Matcher application.
 
         Args:
             config_path: Path to configuration file
         """
-        # Set up logging
+        # Set up logging first
         self._setup_logging()
 
-        # Load configuration
         self.logger.info("Sam Nazari, Ph.D.")
         self.logger.info("Initializing Resume Matcher application")
+
+        # Load configuration
         self.config_manager = ConfigManager(config_path)
         self.config = self.config_manager.get_config()
 
@@ -49,22 +62,14 @@ class ResumeMatcherApp:
 
     def _init_components(self):
         """Initialize application components."""
-        # Create embedding storage
-        embedding_storage_dir = self.config.file_paths.output_dir / "embeddings"
-        self.embedding_storage = EmbeddingStorage(embedding_storage_dir)
-
-        # Set up logging
-        logging.basicConfig(level=logging.INFO)
-
         # Create vector database
         storage_dir = Path(self.config.file_paths.output_dir) / "embeddings"
-        from resume_matcher.data.vector_database import VectorDatabase
         self.embedding_storage = VectorDatabase(storage_dir)
 
         # Create embedding service
         self.embedding_service = EmbeddingService(
-            api_url=self.config.huggingface.api_url,
-            api_token=self.config.huggingface.api_token
+            hf_config=self.config.huggingface,
+            batch_size=50  # Optional: adjust as needed
         )
 
         # Create matching engine
@@ -75,15 +80,16 @@ class ResumeMatcherApp:
         # Create resume extractor if needed
         if hasattr(self.config, 'llm') and self.config.llm:
             self.resume_extractor = ResumeExtractor(
-                llm_model_id=self.config.llm.model_id,
-                api_token=self.config.llm.api_token
+                model_id=self.config.llm.model_id,
+                api_token=self.config.llm.api_token,
+                use_local=True
             )
         else:
             self.resume_extractor = None
 
-        # Remove the debug mode test
         if self.config.debug_mode:
             self.logger.info("Debug mode is enabled")
+
     def prepare_and_embed_data(
             self,
             candidates_df: pd.DataFrame,
@@ -107,12 +113,6 @@ class ResumeMatcherApp:
         # Prepare job data
         jobs_df = self.matching_engine.prepare_job_data(jobs_df)
 
-        self.logger.info("Preparing and embedding data")
-
-        # Prepare candidate and job data
-        candidates_df = self.matching_engine.prepare_candidate_data(candidates_df)
-        jobs_df = self.matching_engine.prepare_job_data(jobs_df)
-
         self.logger.info("Checking for stored embeddings...")
 
         # Handle Candidate Embeddings
@@ -123,16 +123,13 @@ class ResumeMatcherApp:
             embedding_column='hf_embedding'
         )
 
-        self.logger.info(f"Need to generate embeddings for {candidates_mask.sum()} of {len(candidates_df)} candidates")
-
         if candidates_mask.any():
             self.logger.info(f"Generating embeddings for {candidates_mask.sum()} candidates")
             texts_to_embed = candidates_df.loc[candidates_mask, 'text_to_embed'].tolist()
             new_embeddings = self.embedding_service.generate_embeddings(texts_to_embed)
 
             if new_embeddings:
-                idx_list = candidates_df.loc[candidates_mask].index.tolist()
-                for i, idx in enumerate(idx_list):
+                for i, idx in enumerate(candidates_df.loc[candidates_mask].index):
                     candidates_df.at[idx, 'hf_embedding'] = new_embeddings[i]
 
                 self.logger.info("Storing new candidate embeddings in vector database...")
@@ -154,54 +151,13 @@ class ResumeMatcherApp:
             embedding_column='hf_embedding'
         )
 
-        # Generate embeddings only for candidates that need them
-        if candidates_mask.any():
-            self.logger.info(f"Generating embeddings for {candidates_mask.sum()} candidates")
-            candidates_df = self.embedding_service.embed_dataframe(
-                candidates_df,
-                text_column='text_to_embed',
-                embedding_column='hf_embedding',
-                mask=candidates_mask
-            )
-
-            # Store the newly generated embeddings
-            self.embedding_storage.store_candidate_embeddings(
-                candidates_df[candidates_mask],
-                id_column='Name ',
-                embedding_column='hf_embedding'
-            )
-        else:
-            self.logger.info("All candidate embeddings loaded from storage")
-
-        # Generate embeddings only for jobs that need them
-        if jobs_mask.any():
-            self.logger.info(f"Generating embeddings for {jobs_mask.sum()} job listings")
-            jobs_df = self.embedding_service.embed_dataframe(
-                jobs_df,
-                text_column='listing_to_embed',
-                embedding_column='hf_embedding',
-                mask=jobs_mask
-            )
-
-            # Store the newly generated embeddings
-            self.embedding_storage.store_job_embeddings(
-                jobs_df[jobs_mask],
-                id_column='Role',
-                embedding_column='hf_embedding'
-            )
-        else:
-            self.logger.info("All job embeddings loaded from storage")
-
-        self.logger.info(f"Need to generate embeddings for {jobs_mask.sum()} of {len(jobs_df)} jobs")
-
         if jobs_mask.any():
             self.logger.info(f"Generating embeddings for {jobs_mask.sum()} job listings")
             texts_to_embed = jobs_df.loc[jobs_mask, 'listing_to_embed'].tolist()
             new_embeddings = self.embedding_service.generate_embeddings(texts_to_embed)
 
             if new_embeddings:
-                idx_list = jobs_df.loc[jobs_mask].index.tolist()
-                for i, idx in enumerate(idx_list):
+                for i, idx in enumerate(jobs_df.loc[jobs_mask].index):
                     jobs_df.at[idx, 'hf_embedding'] = new_embeddings[i]
 
                 self.logger.info("Storing new job embeddings in vector database...")
@@ -321,6 +277,7 @@ class ResumeMatcherApp:
             "top_matches": top_matches_df,
             "output_paths": output_paths
         }
+
     def run_full_pipeline(
             self,
             process_resumes: bool = False,

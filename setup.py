@@ -41,7 +41,8 @@ setup(
         "python-docx>=0.8.11",
         "python-dotenv>=0.19.0",
         "PyPDF2>=2.0.0",
-        "faiss-cpu>=1.7.2",  # Added FAISS for vector database
+        "faiss-cpu>=1.7.2",
+        "sentence-transformers>=2.2.0",  # Added FAISS for vector database
     ],
     extras_require={
         "dev": [
